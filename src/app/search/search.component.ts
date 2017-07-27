@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Hotel } from "app/classes/hotel";
 
 @Component({
   selector: 'app-search',
@@ -7,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  public Hotel;
   constructor() { }
 
   ngOnInit() {
-    var searchResults = "{ 'name':'1','name':'1','name':'1','name':'1', }";//get service;
-    
-  
+	  public hotelCollection : Array<Hotel> = [];
+	  hotelCollection.push("{ 'name':'1' }");
+	  hotelCollection.push("{ 'name':'1' }");
+	  hotelCollection.push("{ 'name':'1' }");
+	  
     
   }
 
