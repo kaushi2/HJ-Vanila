@@ -11,6 +11,10 @@ export class SearchComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    var searchResults = "{ 'name':'1','name':'1','name':'1','name':'1', }";//get service;
+    
+  
+    
   }
 
 }
