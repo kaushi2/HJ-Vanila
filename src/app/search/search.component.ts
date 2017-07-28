@@ -8,15 +8,13 @@ import { Hotel } from "app/classes/hotel";
 })
 export class SearchComponent implements OnInit {
 
+  public hotelCollection : Array<Hotel> = [];
+
   constructor() { }
 
   ngOnInit() {
-	  public hotelCollection : Array<Hotel> = [];
-	  hotelCollection.push("{ 'name':'1' }");
-	  hotelCollection.push("{ 'name':'1' }");
-	  hotelCollection.push("{ 'name':'1' }");
-	  
-    
+	  var hotel = { Name:"1", Type:"Hotel" };
+	  this.hotelCollection.push(hotel);
   }
 
 }

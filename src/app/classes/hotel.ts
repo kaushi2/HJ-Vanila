@@ -1,4 +1,4 @@
 export interface Hotel {
-    Name: string;
-	Type: string;
+    Name?: string;
+	Type?: string;
 }
