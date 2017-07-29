@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://mandargogate.github.io/HJ-API/#authentication -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>HJ API</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="./HJ API_files/screen.css" rel="stylesheet" media="screen">
+    <link href="./HJ API_files/print.css" rel="stylesheet" media="print">
+      <script src="./HJ API_files/all.js.download"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="https://mandargogate.github.io/HJ-API/#" id="nav-button">
+      <span>
+        NAV
+        <img src="./HJ API_files/navbar.png" alt="Navbar">
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+    <img src="./HJ API_files/logo.png" alt="Logo">
+        <div class="lang-selector">
+              <a href="https://mandargogate.github.io/HJ-API/#" data-language-name="shell" class="active">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="tocify">
+      <ul id="tocify-header0" class="tocify-header"><li class="tocify-item" data-unique="hj-api-v0-6"><a>HJ API v0.6</a></li></ul><ul id="tocify-header1" class="tocify-header"><li class="tocify-item tocify-focus" data-unique="authentication"><a>Authentication</a></li><ul class="tocify-subheader" data-tag="2" style="display: block;"><li class="tocify-item" data-unique="login" style="cursor: pointer;"><a class="">Login</a></li><li class="tocify-item" data-unique="logout" style="cursor: pointer;"><a>Logout</a></li><li class="tocify-item" data-unique="register"><a>Register</a></li><li class="tocify-item" data-unique="verify-email"><a>Verify Email</a></li><li class="tocify-item" data-unique="forgot-password"><a>Forgot Password</a></li><li class="tocify-item" data-unique="password-reset-confirm"><a>Password Reset Confirm</a></li><li class="tocify-item" data-unique="change-password"><a>Change Password</a></li></ul></ul><ul id="tocify-header2" class="tocify-header"><li class="tocify-item" data-unique="profile"><a>Profile</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-profile"><a>Get Profile</a></li><li class="tocify-item" data-unique="update-profile"><a>Update Profile</a></li></ul></ul><ul id="tocify-header3" class="tocify-header"><li class="tocify-item" data-unique="country"><a>Country</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-all-countries"><a>Get All Countries</a></li><li class="tocify-item" data-unique="search-countries"><a>Search Countries</a></li></ul></ul><ul id="tocify-header4" class="tocify-header"><li class="tocify-item" data-unique="city"><a>City</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-all-cities"><a>Get All Cities</a></li><li class="tocify-item" data-unique="filter-cities"><a>Filter Cities</a></li><li class="tocify-item" data-unique="search-cities"><a>Search Cities</a></li><li class="tocify-item" data-unique="example-of-search-and-filter"><a>Example of search and filter</a></li></ul></ul><ul id="tocify-header5" class="tocify-header"><li class="tocify-item" data-unique="hotel"><a>Hotel</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-all-hotels"><a>Get All Hotels</a></li><li class="tocify-item" data-unique="filter-hotels"><a>Filter Hotels</a></li><li class="tocify-item" data-unique="search-hotels"><a>Search Hotels</a></li><li class="tocify-item" data-unique="example-of-search-and-filter24"><a>Example of search and filter</a></li></ul></ul><ul id="tocify-header6" class="tocify-header"><li class="tocify-item" data-unique="hotel-details"><a>Hotel Details</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-all-hotel-details"><a>Get All Hotel Details</a></li><li class="tocify-item" data-unique="filter-hotels27"><a>Filter Hotels</a></li><li class="tocify-item" data-unique="search-hotels28"><a>Search Hotels</a></li><li class="tocify-item" data-unique="example-of-search-and-filter29"><a>Example of search and filter</a></li></ul></ul><ul id="tocify-header7" class="tocify-header"><li class="tocify-item" data-unique="hj-rating" style="cursor: pointer;"><a>HJ Rating</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="get-hj-rating"><a>Get HJ Rating</a></li><li class="tocify-item" data-unique="filter"><a>Filter</a></li><li class="tocify-item" data-unique="search"><a>Search</a></li><li class="tocify-item" data-unique="filter-and-search"><a>Filter and Search</a></li><li class="tocify-item" data-unique="update-hj-rating"><a>Update HJ Rating</a></li></ul></ul><ul id="tocify-header8" class="tocify-header"><li class="tocify-item" data-unique="hotel-reservation"><a>Hotel Reservation</a></li><ul class="tocify-subheader" data-tag="2" style=""><li class="tocify-item" data-unique="hotel-search"><a>Hotel Search</a></li><li class="tocify-item" data-unique="hotel-policies"><a>Hotel Policies</a></li><li class="tocify-item" data-unique="hotel-booking"><a>Hotel Booking</a></li><li class="tocify-item" data-unique="get-hotel-booking-details"><a>Get Hotel Booking Details</a></li><li class="tocify-item" data-unique="cancel-hotel-booking"><a>Cancel Hotel Booking</a></li></ul></ul><ul id="tocify-header9" class="tocify-header"><li class="tocify-item" data-unique="subscription-list"><a>Subscription List</a></li></ul><ul id="tocify-header10" class="tocify-header"><li class="tocify-item" data-unique="handling-errors"><a>Handling Errors</a></li></ul><ul id="tocify-header11" class="tocify-header"><li class="tocify-item" data-unique="errors"><a>Errors</a></li></ul></div>
+        <ul class="toc-footer">
+            <li><a target="_blank" href="https://www.mandargogate.com/">Documentation by Mandar Gogate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <div name="hj-api-v0-6" data-unique="hj-api-v0-6"></div><h1 id="hj-api-v0-6">HJ API v0.6</h1>
+
+<div name="authentication" data-unique="authentication"></div><h1 id="authentication">Authentication</h1>
+
+<blockquote>
+<p>To authorize, use this code:</p>
+
+<p>Make sure to replace <code class="prettyprint">auth_code</code> with user Token key.</p>
+</blockquote>
+
+<p><code class="prettyprint">Authorization: JWT auth_code</code></p>
+
+<p>You must replace auth_code with user Token key returned by login method.</p>
+
+<div name="login" data-unique="login"></div><h2 id="login">Login</h2>
+
+<p><code class="prettyprint">POST /api/auth/login/</code></p>
+
+<p class="">Check the credentials and return the REST Token if the credentials are valid and
+authenticated. Calls login method to register User ID in session framework
+Accept the following POST parameters: username, password Return the REST
+Framework Token Object’s key.</p>
+<pre class="highlight shell tab-shell" style="display: block;"><code> curl -X POST -d <span class="s2">"username=admin&amp;password=password123"</span> &lt;login_url&gt;
+
+ &gt; Returns
+
+ <span class="o">{</span>
+    <span class="s2">"token"</span>: <span class="s2">"auth_code"</span>,
+    <span class="s2">"user"</span>: <span class="o">{</span>
+        <span class="s2">"pk"</span>: user_id,
+        <span class="s2">"username"</span>: <span class="s2">"username"</span>,
+        <span class="s2">"email"</span>: <span class="s2">"email@abc.com"</span>,
+        <span class="s2">"first_name"</span>: <span class="s2">"John"</span>,
+        <span class="s2">"last_name"</span>: <span class="s2">"Doe"</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<h3 id="request-parameters">Request Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">username</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code class="prettyprint">password</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code class="prettyprint">email</code></td>
+<td>false</td>
+</tr>
+</tbody></table>
+
+<div name="logout" data-unique="logout"></div><h2 id="logout">Logout</h2>
+
+<p><code class="prettyprint">POST /api/auth/logout</code></p>
+
+<p>Delete the Token object assigned to the current User object.</p>
+<pre class="highlight shell tab-shell" style="display: block;"><code> curl -X POST -d <span class="s2">""</span> &lt;logout_url&gt;
+
+ &gt; Returns
+
+<span class="o">{</span>
+    <span class="s2">"detail"</span>:<span class="s2">"Successfully logged out."</span>
+<span class="o">}</span>
+
+<span class="gp">&gt; </span>If an API is called made after <span class="nb">logout </span><span class="k">then </span>an error would be returned
+
+<span class="o">{</span>
+  <span class="s2">"detail"</span>:<span class="s2">"Signature has expired."</span>
+<span class="o">}</span>
+</code></pre>
+<div name="register" data-unique="register"></div><h2 id="register">Register</h2>
+
+<p><code class="prettyprint">POST /api/registration/</code></p>
+
+<p>User Registration</p>
+<pre class="highlight shell tab-shell" style="display: block;"><code> curl -X POST -d <span class="s2">"username=admin@gmail.com&amp;password1=password123&amp;password2=password123&amp;email=admin@gmail.com"</span> &lt;registration_url&gt;
+
+ &gt; Returns
+
+ <span class="o">{</span>
+    <span class="s2">"token"</span>: <span class="s2">"auth_code"</span>,
+    <span class="s2">"user"</span>: <span class="o">{</span>
+        <span class="s2">"pk"</span>: user_id,
+        <span class="s2">"username"</span>: <span class="s2">"username"</span>,
+        <span class="s2">"email"</span>: <span class="s2">"email@abc.com"</span>,
+        <span class="s2">"first_name"</span>: <span class="s2">"John"</span>,
+        <span class="s2">"last_name"</span>: <span class="s2">"Doe"</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<h3 id="request-parameters">Request Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">username</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code class="prettyprint">email</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code class="prettyprint">Password1</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td><code class="prettyprint">Password1</code></td>
+<td>true</td>
+</tr>
+</tbody></table>
+
+<div name="verify-email" data-unique="verify-email"></div><h2 id="verify-email">Verify Email</h2>
+
+<p><code class="prettyprint">POST /api/registration/verify-email/</code></p>
+
+<div name="forgot-password" data-unique="forgot-password"></div><h2 id="forgot-password">Forgot Password</h2>
+
+<p><code class="prettyprint">POST /api/auth/password/reset/</code></p>
+
+<div name="password-reset-confirm" data-unique="password-reset-confirm"></div><h2 id="password-reset-confirm">Password Reset Confirm</h2>
+
+<p><code class="prettyprint">POST /api/auth/password/reset/confirm/</code></p>
+
+<div name="change-password" data-unique="change-password"></div><h2 id="change-password">Change Password</h2>
+
+<p><code class="prettyprint">POST /api/auth/password/change/</code></p>
+
+<p>Check the credentials and return the REST Token if the credentials are valid and
+authenticated. Calls login method to register User ID in session framework
+Accept the following POST parameters: username, password Return the REST
+Framework Token Object’s key.</p>
+<pre class="highlight shell tab-shell" style="display: block;"><code> curl -X POST -d <span class="s2">"username=admin&amp;password=password123"</span> &lt;login_url&gt;
+
+ &gt; Returns
+
+ <span class="o">{</span>
+    <span class="s2">"token"</span>: <span class="s2">"auth_code"</span>,
+    <span class="s2">"user"</span>: <span class="o">{</span>
+        <span class="s2">"pk"</span>: user_id,
+        <span class="s2">"username"</span>: <span class="s2">"username"</span>,
+        <span class="s2">"email"</span>: <span class="s2">"email@abc.com"</span>,
+        <span class="s2">"first_name"</span>: <span class="s2">"John"</span>,
+        <span class="s2">"last_name"</span>: <span class="s2">"Doe"</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Optional/Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">new_password1</code></td>
+<td>required</td>
+</tr>
+<tr>
+<td><code class="prettyprint">new_password2</code></td>
+<td>required</td>
+</tr>
+<tr>
+<td><code class="prettyprint">old_password</code></td>
+<td>required</td>
+</tr>
+</tbody></table>
+
+<div name="profile" data-unique="profile"></div><h1 id="profile">Profile</h1>
+
+<p>API endpoint that allows logged in user’s profile to be viewed and modified</p>
+
+<div name="get-profile" data-unique="get-profile"></div><h2 id="get-profile">Get Profile</h2>
+
+<p><code class="prettyprint">GET /api/profile/</code></p>
+
+<blockquote>
+<p>Only the logged in user would be returned</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"birth_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2000-01-23"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"University Of Stirling"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stirling"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"United Kingdom"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FK9 4LA"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01732 213232"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"oauth2_provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"facebook_uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"twitter_uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"instagram_uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"gmail_uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">id</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">birth_date</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">address</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">city</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">country</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">user</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">zip_code</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">country_code</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">phone</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">oauth2_provider</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">facebook_uid</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">twitter_uid</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">instagram_uid</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">gmail_uid</code></td>
+</tr>
+</tbody></table>
+
+<div name="update-profile" data-unique="update-profile"></div><h2 id="update-profile">Update Profile</h2>
+
+<p><code class="prettyprint">PATCH /api/profile/&lt;profile_id&gt;/</code></p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">id</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">birth_date</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">address</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">city</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">country</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">user</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">zip_code</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">country_code</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">phone</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">oauth2_provider</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">facebook_uid</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">twitter_uid</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">instagram_uid</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">gmail_uid</code></td>
+</tr>
+</tbody></table>
+
+<div name="country" data-unique="country"></div><h1 id="country">Country</h1>
+
+<div name="get-all-countries" data-unique="get-all-countries"></div><h2 id="get-all-countries">Get All Countries</h2>
+<pre class="highlight shell tab-shell" style="display: block;"><code><span class="c"># Example Response</span>
+<span class="o">{</span>
+    <span class="s2">"count"</span>: 250,
+    <span class="s2">"next"</span>: <span class="s2">"http://139.153.253.148:8888/api/country/?page=2"</span>,
+    <span class="s2">"previous"</span>: null,
+    <span class="s2">"results"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"AF"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Afghanistan"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"AX"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Åland Islands"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"AL"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Albania"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"DZ"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Algeria"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"AS"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"American Samoa"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"AD"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Andorra"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"AO"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Angola"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"AI"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Anguilla"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"AQ"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Antarctica"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"AG"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Antigua and Barbuda"</span>
+        <span class="o">}</span>
+    <span class="o">]</span>
+<span class="o">}</span>
+</code></pre>
+<p>API endpoint that allows countries to be viewed, filtered and searched</p>
+
+<p><code class="prettyprint">GET​ /api/country/</code></p>
+
+<h3 id="return-values">Return Values</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">CountryCode</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">CountryName</code></td>
+</tr>
+</tbody></table>
+
+<div name="search-countries" data-unique="search-countries"></div><h2 id="search-countries">Search Countries</h2>
+
+<p><code class="prettyprint">GET /api/country/?search=&lt;search_value&gt;</code></p>
+<pre class="highlight shell tab-shell" style="display: block;"><code><span class="gp">&gt; </span>Example response <span class="k">for</span>
+
+<span class="o">{</span>
+    <span class="s2">"count"</span>: 4,
+    <span class="s2">"next"</span>: null,
+    <span class="s2">"previous"</span>: null,
+    <span class="s2">"results"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"BW"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Botswana"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"SZ"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Swaziland"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"SE"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Sweden"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CountryCode"</span>: <span class="s2">"CH"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Switzerland"</span>
+        <span class="o">}</span>
+    <span class="o">]</span>
+<span class="o">}</span>
+</code></pre>
+<h3 id="example">Example</h3>
+
+<p><code class="prettyprint">GET /api/country/?search=Sw</code></p>
+
+<h3 id="search-fields">Search Fields</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">CountryCode</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">CountryName</code></td>
+</tr>
+</tbody></table>
+
+<div name="city" data-unique="city"></div><h1 id="city">City</h1>
+
+<p>API endpoint that allows cities to be viewed, filtered and searched</p>
+
+<div name="get-all-cities" data-unique="get-all-cities"></div><h2 id="get-all-cities">Get All Cities</h2>
+<pre class="highlight shell tab-shell" style="display: block;"><code><span class="o">{</span>
+    <span class="s2">"count"</span>: 16079,
+    <span class="s2">"next"</span>: <span class="s2">"http://139.153.253.148:8888/api/city/?page=2"</span>,
+    <span class="s2">"previous"</span>: null,
+    <span class="s2">"results"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 100016,
+            <span class="s2">"CityName"</span>: <span class="s2">"Lac-Mégantic"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">"QC"</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CA"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 100032,
+            <span class="s2">"CityName"</span>: <span class="s2">"El Rocio"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"ES"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 100053,
+            <span class="s2">"CityName"</span>: <span class="s2">"Acalá Del Río"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"ES"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 100078,
+            <span class="s2">"CityName"</span>: <span class="s2">"St Egyden"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"AT"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 100128,
+            <span class="s2">"CityName"</span>: <span class="s2">"Muxia"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"ES"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 100185,
+            <span class="s2">"CityName"</span>: <span class="s2">"Corwen"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"GB"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 100309,
+            <span class="s2">"CityName"</span>: <span class="s2">"Tooleybuc"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">"VIC"</span>,
+            <span class="s2">"country"</span>: <span class="s2">"AU"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 100516,
+            <span class="s2">"CityName"</span>: <span class="s2">"Paimpol"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"FR"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 100563,
+            <span class="s2">"CityName"</span>: <span class="s2">"Setif"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"DZ"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 100567,
+            <span class="s2">"CityName"</span>: <span class="s2">"Etretat"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"FR"</span>
+        <span class="o">}</span>
+    <span class="o">]</span>
+<span class="o">}</span>
+
+</code></pre>
+<p><code class="prettyprint">GET​ /api/country/</code></p>
+
+<h3 id="return-values">Return Values</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">CityId</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">CityName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">StateCode</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Country</code></td>
+</tr>
+</tbody></table>
+
+<div name="filter-cities" data-unique="filter-cities"></div><h2 id="filter-cities">Filter Cities</h2>
+
+<p><code class="prettyprint">GET /api/city/?filter_field1=&lt;filter_field1_value&gt;&amp;filter_field2=&lt;filter_field2_value&gt;</code></p>
+<pre class="highlight shell tab-shell" style="display: block;"><code><span class="gp">&gt; </span>Example response <span class="k">for</span>
+<span class="o">{</span>
+    <span class="s2">"count"</span>: 437,
+    <span class="s2">"next"</span>: <span class="s2">"http://139.153.253.148:8888/api/city/?country__CountryName=Switzerland&amp;page=2"</span>,
+    <span class="s2">"previous"</span>: null,
+    <span class="s2">"results"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 104585,
+            <span class="s2">"CityName"</span>: <span class="s2">"Saint-Luc"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 108473,
+            <span class="s2">"CityName"</span>: <span class="s2">"Zug"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 109408,
+            <span class="s2">"CityName"</span>: <span class="s2">"Sils im Engadin/Segl"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 118757,
+            <span class="s2">"CityName"</span>: <span class="s2">"Merlischachen"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 119154,
+            <span class="s2">"CityName"</span>: <span class="s2">"Chardonne"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 121250,
+            <span class="s2">"CityName"</span>: <span class="s2">"Schonenwerd"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 121902,
+            <span class="s2">"CityName"</span>: <span class="s2">"Steinach"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 122549,
+            <span class="s2">"CityName"</span>: <span class="s2">"Langenthal"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 125507,
+            <span class="s2">"CityName"</span>: <span class="s2">"Vallee De Joux"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 126960,
+            <span class="s2">"CityName"</span>: <span class="s2">"Anzere"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>
+    <span class="o">]</span>
+<span class="o">}</span>
+
+</code></pre>
+<h3 id="example">Example</h3>
+
+<p><code class="prettyprint">/api/city/?country__CountryName=Switzerland</code></p>
+
+<h3 id="filter-fields">Filter Fields</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">country__CountryName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">CityId</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">CityName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">StateCode</code></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody></table>
+
+<div name="search-cities" data-unique="search-cities"></div><h2 id="search-cities">Search Cities</h2>
+
+<p><code class="prettyprint">GET /api/city/?search=&lt;search_value&gt;</code></p>
+<pre class="highlight shell tab-shell" style="display: block;"><code><span class="gp">&gt; </span>Example response <span class="k">for</span>
+<span class="o">{</span>
+    <span class="s2">"count"</span>: 16,
+    <span class="s2">"next"</span>: <span class="s2">"http://139.153.253.148:8888/api/city/?page=2&amp;search=Inter"</span>,
+    <span class="s2">"previous"</span>: null,
+    <span class="s2">"results"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 141729,
+            <span class="s2">"CityName"</span>: <span class="s2">"Winterbach"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"DE"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 163685,
+            <span class="s2">"CityName"</span>: <span class="s2">"Saalbach-Hinterglemm"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"AT"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 166446,
+            <span class="s2">"CityName"</span>: <span class="s2">"Hinterriss"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"AT"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 249568,
+            <span class="s2">"CityName"</span>: <span class="s2">"Hinterbruhl"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"AT"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 403923,
+            <span class="s2">"CityName"</span>: <span class="s2">"Quintero"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CL"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 485682,
+            <span class="s2">"CityName"</span>: <span class="s2">"Winterspelt"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"DE"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 522827,
+            <span class="s2">"CityName"</span>: <span class="s2">"Interlaken"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 523357,
+            <span class="s2">"CityName"</span>: <span class="s2">"Hinterglemm"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"AT"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 533517,
+            <span class="s2">"CityName"</span>: <span class="s2">"Winterberg"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"DE"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"CityId"</span>: 596352,
+            <span class="s2">"CityName"</span>: <span class="s2">"Hintertux"</span>,
+            <span class="s2">"StateCode"</span>: <span class="s2">""</span>,
+            <span class="s2">"country"</span>: <span class="s2">"AT"</span>
+        <span class="o">}</span>
+    <span class="o">]</span>
+<span class="o">}</span>
+
+</code></pre>
+<h3 id="example">Example</h3>
+
+<p><code class="prettyprint">GET /api/city/?search=Inter</code></p>
+
+<h3 id="search-fields">Search Fields</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">country__CountryName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">CityId</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">CityName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">StateCode</code></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody></table>
+
+<div name="example-of-search-and-filter" data-unique="example-of-search-and-filter"></div><h2 id="example-of-search-and-filter">Example of search and filter</h2>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"CityId"</span><span class="p">:</span><span class="w"> </span><span class="mi">104585</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saint-Luc"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"StateCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"CityId"</span><span class="p">:</span><span class="w"> </span><span class="mi">160776</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sainte-Croix"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"StateCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"CityId"</span><span class="p">:</span><span class="w"> </span><span class="mi">246291</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saint-Leonard"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"StateCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"CityId"</span><span class="p">:</span><span class="w"> </span><span class="mi">344544</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bourg-Saint-Pierre"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"StateCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"CityId"</span><span class="p">:</span><span class="w"> </span><span class="mi">356552</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saint-Sulpice"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"StateCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"CityId"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"StateCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"CityId"</span><span class="p">:</span><span class="w"> </span><span class="mi">590155</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saint-Livres"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"StateCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"CityId"</span><span class="p">:</span><span class="w"> </span><span class="mi">629041</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Winterthur"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"StateCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"CityId"</span><span class="p">:</span><span class="w"> </span><span class="mi">821802</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Intragna - Centovalli"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"StateCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"CityId"</span><span class="p">:</span><span class="w"> </span><span class="mi">882101</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saint-Légier-La Chiésaz"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"StateCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p><code class="prettyprint">GET /api/city/?country__CountryName=Switzerland&amp;search=Int</code></p>
+
+<div name="hotel" data-unique="hotel"></div><h1 id="hotel">Hotel</h1>
+
+<p>By default featured hotels will be returned first</p>
+
+<div name="get-all-hotels" data-unique="get-all-hotels"></div><h2 id="get-all-hotels">Get All Hotels</h2>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">6743</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/api/hotel/?page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Du Nord"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1002554</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zurich"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Park Inn by Radisson Zürich Airport Hotel"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">268544</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1002792</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zurich"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Otter"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">268544</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1004903</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zurich"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Glockenhof Zurich"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">268544</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1007254</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zurich"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Opera"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">268544</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1008209</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zermatt"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alpenhof"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">324830</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1009892</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Seiler au Lac"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1009933</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wengen"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sunstar Alpine Hotel Wengen"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">337054</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1011189</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Geneva"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NH Rex"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">255708</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1011303</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zurich"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Best Western Zürcherhof"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">268544</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code class="prettyprint">GET​ /api/hotel/</code></p>
+
+<h3 id="return-values">Return Values</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">HotelId</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">CityName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HotelName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">CountryName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">City</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Country</code></td>
+</tr>
+</tbody></table>
+
+<div name="filter-hotels" data-unique="filter-hotels"></div><h2 id="filter-hotels">Filter Hotels</h2>
+
+<p><code class="prettyprint">GET /api/hotel/?filter_field1=&lt;filter_field1_value&gt;&amp;filter_field2=&lt;filter_field2_value&gt;</code></p>
+<pre class="highlight shell tab-shell" style="display: block;"><code><span class="c">#   Example response</span>
+<span class="o">{</span>
+    <span class="s2">"count"</span>: 189,
+    <span class="s2">"next"</span>: <span class="s2">"http://139.153.253.148:8888/api/hotel/?City__CityName=Interlaken&amp;country__CountryName=Switzerland&amp;page=2"</span>,
+    <span class="s2">"previous"</span>: null,
+    <span class="s2">"results"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">"HotelId"</span>: 1001193,
+            <span class="s2">"CityName"</span>: <span class="s2">"Interlaken"</span>,
+            <span class="s2">"HotelName"</span>: <span class="s2">"Du Nord"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Switzerland"</span>,
+            <span class="s2">"City"</span>: 522827,
+            <span class="s2">"Country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"HotelId"</span>: 1009892,
+            <span class="s2">"CityName"</span>: <span class="s2">"Interlaken"</span>,
+            <span class="s2">"HotelName"</span>: <span class="s2">"Seiler au Lac"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Switzerland"</span>,
+            <span class="s2">"City"</span>: 522827,
+            <span class="s2">"Country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"HotelId"</span>: 1075932,
+            <span class="s2">"CityName"</span>: <span class="s2">"Interlaken"</span>,
+            <span class="s2">"HotelName"</span>: <span class="s2">"Toscana"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Switzerland"</span>,
+            <span class="s2">"City"</span>: 522827,
+            <span class="s2">"Country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"HotelId"</span>: 1083622,
+            <span class="s2">"CityName"</span>: <span class="s2">"Interlaken"</span>,
+            <span class="s2">"HotelName"</span>: <span class="s2">"Schützen Hotel"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Switzerland"</span>,
+            <span class="s2">"City"</span>: 522827,
+            <span class="s2">"Country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"HotelId"</span>: 1093037,
+            <span class="s2">"CityName"</span>: <span class="s2">"Interlaken"</span>,
+            <span class="s2">"HotelName"</span>: <span class="s2">"Rössli"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Switzerland"</span>,
+            <span class="s2">"City"</span>: 522827,
+            <span class="s2">"Country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"HotelId"</span>: 1121903,
+            <span class="s2">"CityName"</span>: <span class="s2">"Interlaken"</span>,
+            <span class="s2">"HotelName"</span>: <span class="s2">"Victoria"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Switzerland"</span>,
+            <span class="s2">"City"</span>: 522827,
+            <span class="s2">"Country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"HotelId"</span>: 1135743,
+            <span class="s2">"CityName"</span>: <span class="s2">"Interlaken"</span>,
+            <span class="s2">"HotelName"</span>: <span class="s2">"Lindner Grand Hotel Beau Rivage"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Switzerland"</span>,
+            <span class="s2">"City"</span>: 522827,
+            <span class="s2">"Country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"HotelId"</span>: 1193362,
+            <span class="s2">"CityName"</span>: <span class="s2">"Interlaken"</span>,
+            <span class="s2">"HotelName"</span>: <span class="s2">"City Hotel Oberland Swiss Quality"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Switzerland"</span>,
+            <span class="s2">"City"</span>: 522827,
+            <span class="s2">"Country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"HotelId"</span>: 1211028,
+            <span class="s2">"CityName"</span>: <span class="s2">"Interlaken"</span>,
+            <span class="s2">"HotelName"</span>: <span class="s2">"Panorama"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Switzerland"</span>,
+            <span class="s2">"City"</span>: 522827,
+            <span class="s2">"Country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"HotelId"</span>: 1229080,
+            <span class="s2">"CityName"</span>: <span class="s2">"Interlaken"</span>,
+            <span class="s2">"HotelName"</span>: <span class="s2">"Central Continental"</span>,
+            <span class="s2">"CountryName"</span>: <span class="s2">"Switzerland"</span>,
+            <span class="s2">"City"</span>: 522827,
+            <span class="s2">"Country"</span>: <span class="s2">"CH"</span>
+        <span class="o">}</span>
+    <span class="o">]</span>
+<span class="o">}</span>
+</code></pre>
+<h3 id="example">Example</h3>
+
+<p><code class="prettyprint">/api/hotel/?country__CountryName=Switzerland&amp;City__CityName=Interlaken</code></p>
+
+<h3 id="filter-fields">Filter Fields</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">Country__CountryName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">City__CityName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HotelName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HotelId</code></td>
+</tr>
+</tbody></table>
+
+<div name="search-hotels" data-unique="search-hotels"></div><h2 id="search-hotels">Search Hotels</h2>
+
+<p><code class="prettyprint">GET /api/hotel/?search=&lt;search_value&gt;</code></p>
+
+<blockquote>
+<p>Example response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">190</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/api/hotel/?page=2&amp;search=Interlaken"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Du Nord"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1009892</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Seiler au Lac"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1075932</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Toscana"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1083622</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Schützen Hotel"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1093037</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rössli"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1121903</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Victoria"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1135743</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lindner Grand Hotel Beau Rivage"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1193362</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"City Hotel Oberland Swiss Quality"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1211028</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Panorama"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1229080</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Central Continental"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<h3 id="example">Example</h3>
+
+<p><code class="prettyprint">GET /api/hotel/?search=Interlaken</code></p>
+
+<h3 id="search-fields">Search Fields</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">Country__CountryName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">City__CityName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HotelName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HotelId</code></td>
+</tr>
+</tbody></table>
+
+<div name="example-of-search-and-filter24" data-unique="example-of-search-and-filter24"></div><h2 id="example-of-search-and-filter">Example of search and filter</h2>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Du Nord"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">2273735</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parkhotel Du Sauvage"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">4130626</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Du Lac"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"CountryName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Switzerland"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="mi">522827</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CH"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p><code class="prettyprint">GET /api/hotel/?City__CityName=Interlaken&amp;search=Du</code></p>
+
+<div name="hotel-details" data-unique="hotel-details"></div><h1 id="hotel-details">Hotel Details</h1>
+
+<p>API endpoint that allows hotel details to be viewed, filtered and searched</p>
+
+<div name="get-all-hotel-details" data-unique="get-all-hotel-details"></div><h2 id="get-all-hotel-details">Get All Hotel Details</h2>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">6743</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/api/hoteldetails/?page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"HotelName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Du Nord"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"StarRating"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(u'4',)"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"46.688219"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7.862327"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HOHEWEG 70 3800 INTERLAKEN"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interlaken"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"PhoneNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"338275050"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This attractive hotel enjoys a stunning setting in Interlaken, lying close to the area's mountain path. Guests can revel in spectacular views over the high green meadows and the famous Jungfrau. The hotel is located just 500 metres away from links to the public transport network. This hotel offers guests a great setting from which to explore the scenic beauty, rich culture and long history of the region. This wonderful hotel is sure to impress, enjoying a stunning architectural design and elegant interior style. The beautifully-appointed guest rooms feature refreshing tones and a relaxing ambience. The hotel features a wide range of exemplary facilities, ensuring that each and every traveller enjoys a truly unforgettable experience."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"hotel_image"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CH%20Switzerland/CH%20Interlaken/1001193/01-b.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CH%20Switzerland/CH%20Interlaken/1001193/02-b.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CH%20Switzerland/CH%20Interlaken/1001193/03-b.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CH%20Switzerland/CH%20Interlaken/1001193/04-b.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CH%20Switzerland/CH%20Interlaken/1001193/01-b_VMNTTNX.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CH%20Switzerland/CH%20Interlaken/1001193/02-b_gkNZ1Xf.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CH%20Switzerland/CH%20Interlaken/1001193/03-b_W3eoA9s.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CH%20Switzerland/CH%20Interlaken/1001193/04-b_LXEqzCE.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CH%20Switzerland/CH%20Interlaken/1001193/01-b_XUWkYL7.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CH%20Switzerland/CH%20Interlaken/1001193/02-b_ZNwqOfh.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CH%20Switzerland/CH%20Interlaken/1001193/03-b_kl5qij6.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CH%20Switzerland/CH%20Interlaken/1001193/04-b_K80mduk.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">43</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/01-b.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/02-b.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/03-b.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">46</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/04-b.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/01-b_R9TbN36.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">58</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/02-b_PKTe2Jz.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">59</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/03-b_KupZe0W.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/04-b_pTaXPx8.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">71</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/01-b_XQ5zVgf.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/02-b_GIComkL.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/03-b_cHnOSu8.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">74</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/04-b_EZkU7e5.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">185</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/01-b_Bjyyqrn.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">186</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/02-b_jNp0yNf.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">187</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/03-b_3dBtZEn.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">188</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/04-b_lITI80A.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">299</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/01-b_Zhzt4Hm.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/02-b_um9ZxyA.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">301</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/03-b_tnUckas.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">302</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/04-b_8avmJdE.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">413</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/01-b_P8SEVtd.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">414</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/02-b_klVelIt.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">415</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/03-b_4uMDm7L.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">416</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/media/hotels/CHSwitzerland/CHInterlaken/1001193/04-b_XR47vlV.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"hotel_facility"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel safe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Currency exchange facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cloakroom"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lift access"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YES Large pets allowed (over 5 kg)"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YES Small pets allowed (under 5 kg)"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NO Garage"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NO Car park"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NO Wheelchair-accessible"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bathroom"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hairdryer"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Direct dial telephone"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Minibar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fridge"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Safe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NO Smoking rooms"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NO Disability-friendly bathroom"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Facilities"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NO Wheelchair-accessible"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Information"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Year of construction: 1814"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Information"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Year of most recent renovation: 2000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Information"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Number of floors (main building): 5"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Information"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total number of rooms: 68"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hotel Information"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FacilityName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Category: 4 STARS"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"hotel"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001193</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code class="prettyprint">GET​ /api/hoteldetails/</code></p>
+
+<h3 id="return-values">Return Values</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">HotelId</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HotelName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">StarRating</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">featured</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Latitude</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Longitude</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Address</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Location</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">PhoneNumber</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Description</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">hotel_image</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">hotel_facility</code></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody></table>
+
+<div name="filter-hotels27" data-unique="filter-hotels27"></div><h2 id="filter-hotels">Filter Hotels</h2>
+
+<p><code class="prettyprint">GET /api/hoteldetailshoteldetails/?filter_field1=&lt;filter_field1_value&gt;&amp;filter_field2=&lt;filter_field2_value&gt;</code></p>
+
+<h3 id="example">Example</h3>
+
+<p><code class="prettyprint">/api/hoteldetails/?country__CountryName=Switzerland&amp;City__CityName=Interlaken</code></p>
+
+<h3 id="filter-fields">Filter Fields</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">HotelId</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HotelName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">StarRating</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">featured</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Latitude</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Longitude</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Address</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Location</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">PhoneNumber</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Description</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">hotel_image</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">hotel_facility</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Country__CountryName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">City__CityName</code></td>
+</tr>
+</tbody></table>
+
+<div name="search-hotels28" data-unique="search-hotels28"></div><h2 id="search-hotels">Search Hotels</h2>
+
+<p><code class="prettyprint">GET /api/hoteldetails/?search=&lt;search_value&gt;</code></p>
+
+<h3 id="example">Example</h3>
+
+<p><code class="prettyprint">GET /api/hotel/?search=Interlaken</code></p>
+
+<h3 id="search-fields">Search Fields</h3>
+
+<h3 id="filter-fields">Filter Fields</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">HotelId</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HotelName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">StarRating</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">featured</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Latitude</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Longitude</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Address</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Location</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">PhoneNumber</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Description</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">hotel_image</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">hotel_facility</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Country__CountryName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">City__CityName</code></td>
+</tr>
+</tbody></table>
+
+<div name="example-of-search-and-filter29" data-unique="example-of-search-and-filter29"></div><h2 id="example-of-search-and-filter">Example of search and filter</h2>
+
+<p><code class="prettyprint">GET /api/hoteldetails/?City__CityName=Interlaken&amp;search=Du</code></p>
+
+<div name="hj-rating" data-unique="hj-rating"></div><h1 id="hj-rating">HJ Rating</h1>
+
+<div name="get-hj-rating" data-unique="get-hj-rating"></div><h2 id="get-hj-rating">Get HJ Rating</h2>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2388</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://139.153.253.148:8888/api/hjrating/?page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1002554</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FemaleOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HalalFood"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"NoAlcohol"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1002792</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FemaleOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HalalFood"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"NoAlcohol"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1004903</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FemaleOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HalalFood"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"NoAlcohol"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1007254</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FemaleOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HalalFood"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"NoAlcohol"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1011189</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FemaleOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HalalFood"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"NoAlcohol"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1011303</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FemaleOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HalalFood"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"NoAlcohol"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1012106</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FemaleOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HalalFood"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"NoAlcohol"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1012370</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FemaleOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HalalFood"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"NoAlcohol"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1012756</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FemaleOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HalalFood"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"NoAlcohol"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"HotelId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1015785</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"FemaleOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"HalalFood"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"NoAlcohol"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Rating"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code class="prettyprint">GET​ /api/hjrating/</code>
+<code class="prettyprint">GET​ /api/hjrating/&lt;hotel_id&gt;</code></p>
+
+<h3 id="return-values">Return Values</h3>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">HotelId</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">FemaleOnly</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Rating</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">NoAlcohol</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HalalFood</code></td>
+</tr>
+</tbody></table>
+
+<div name="filter" data-unique="filter"></div><h2 id="filter">Filter</h2>
+
+<p><code class="prettyprint">GET /api/hjrating/?Hotel__Country=CH</code></p>
+
+<table><thead>
+<tr>
+<th>Fields</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">Hotel__HotelName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Hotel__Country</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Hotel__City</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">FemaleOnly</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">NoAlcohol</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HalalFood</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Rating</code></td>
+</tr>
+</tbody></table>
+
+<div name="search" data-unique="search"></div><h2 id="search">Search</h2>
+
+<p><code class="prettyprint">GET /api/hjrating/?search=Inter</code></p>
+
+<table><thead>
+<tr>
+<th>Fields</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">Hotel__HotelName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Hotel__Country</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Hotel_City</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">FemaleOnly</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">NoAlcohol</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HalalFood</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Rating</code></td>
+</tr>
+</tbody></table>
+
+<div name="filter-and-search" data-unique="filter-and-search"></div><h2 id="filter-and-search">Filter and Search</h2>
+
+<table><thead>
+<tr>
+<th>Fields</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">Hotel__HotelName</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Hotel__Country</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Hotel_City</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">FemaleOnly</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">NoAlcohol</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HalalFood</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Rating</code></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody></table>
+
+<div name="update-hj-rating" data-unique="update-hj-rating"></div><h2 id="update-hj-rating">Update HJ Rating</h2>
+
+<p><code class="prettyprint">PATCH /api/hjrating/&lt;hotel_id&gt;/</code></p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code class="prettyprint">HotelId</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">FemaleOnly</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">Rating</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">NoAlcohol</code></td>
+</tr>
+<tr>
+<td><code class="prettyprint">HalalFood</code></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody></table>
+
+<div name="hotel-reservation" data-unique="hotel-reservation"></div><h1 id="hotel-reservation">Hotel Reservation</h1>
+
+<div name="hotel-search" data-unique="hotel-search"></div><h2 id="hotel-search">Hotel Search</h2>
+
+<div name="hotel-policies" data-unique="hotel-policies"></div><h2 id="hotel-policies">Hotel Policies</h2>
+
+<div name="hotel-booking" data-unique="hotel-booking"></div><h2 id="hotel-booking">Hotel Booking</h2>
+
+<div name="get-hotel-booking-details" data-unique="get-hotel-booking-details"></div><h2 id="get-hotel-booking-details">Get Hotel Booking Details</h2>
+
+<div name="cancel-hotel-booking" data-unique="cancel-hotel-booking"></div><h2 id="cancel-hotel-booking">Cancel Hotel Booking</h2>
+
+<div name="subscription-list" data-unique="subscription-list"></div><h1 id="subscription-list">Subscription List</h1>
+
+<div name="handling-errors" data-unique="handling-errors"></div><h1 id="handling-errors">Handling Errors</h1>
+
+          <div name="errors" data-unique="errors"></div><h1 id="errors">Errors</h1>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request – Your request sucks</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized – Your API key is wrong</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden – The kitten requested is hidden for administrators only</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found – The specified kitten could not be found</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed – You tried to access a kitten with an invalid method</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable – You requested a format that isn’t json</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone – The kitten requested has been removed from our servers</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I’m a teapot</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests – You’re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error – We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable – We’re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="https://mandargogate.github.io/HJ-API/#" data-language-name="shell" class="active">shell</a>
+          </div>
+      </div>
+    </div>
+  
+
+</body></html>
