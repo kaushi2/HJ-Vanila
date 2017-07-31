@@ -1,4 +1,9 @@
 export interface Hotel {
-    Name?: string;
-	Type?: string;
+    City?: string;
+    Type?: string;
+    CheckIn: string;
+    CheckOut: string;
+    Adults: number;
+    Children: number;
+
 }

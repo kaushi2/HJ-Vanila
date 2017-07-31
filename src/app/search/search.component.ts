@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Hotel } from "app/classes/hotel";
+import { SearchServiceService } from "../search-service.service";
+import { Hotel } from "../classes/hotel";
 
 @Component({
   selector: 'app-search',
@@ -8,13 +9,17 @@ import { Hotel } from "app/classes/hotel";
 })
 export class SearchComponent implements OnInit {
 
-  public hotelCollection : Array<Hotel> = [];
+  public hotelCollection: Array<Hotel> = [];
+  public searchFilter: Hotel = { City: '', CheckIn: '', CheckOut: '', Adults: 0, Children: 0, Type: '' };
 
-  constructor() { }
+  constructor(private _searchService: SearchServiceService) { }
 
   ngOnInit() {
-	  var hotel = { Name:"1", Type:"Hotel" };
-	  this.hotelCollection.push(hotel);
+    this.hotelCollection = this._searchService
+      .getSearchResult(City, CheckIn, CheckOut, Adults, Children, Type);
+
   }
+
+  public Search()
 
 }
