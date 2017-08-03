@@ -1,0 +1,75 @@
+{
+	"variables": [],
+	"info": {
+		"name": "HJ",
+		"_postman_id": "6f9842b6-daa7-b343-913a-78019214c88e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCountries",
+			"request": {
+				"url": "http://xmldemo.travellanda.com/xmlv1",
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestType",
+						"value": "GetCountries",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic MWQzMGFiNTE3ZGQ3MGNkZDIxYzA2NDlhMGM0MjU1ZmQ6bVQ3QzBVeFJQZVZu",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "xml",
+							"value": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Request><Head><Username>1d30ab517dd70cdd21c0649a0c4255fd</Username><Password>mT7C0UxRPeVn</Password><RequestType>GetCountries</RequestType></Head><Body/></Request>",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "HotelSearch",
+			"request": {
+				"url": "http://xmldemo.travellanda.com/xmlv1",
+				"method": "POST",
+				"header": [
+					{
+						"key": "RequestType",
+						"value": "HotelSearch",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic MWQzMGFiNTE3ZGQ3MGNkZDIxYzA2NDlhMGM0MjU1ZmQ6bVQ3QzBVeFJQZVZu",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "xml",
+							"value": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Request>\n\t<Head>\n\t\t<Username>1d30ab517dd70cdd21c0649a0c4255fd</Username>\n\t\t<Password>mT7C0UxRPeVn</Password>\n\t\t<RequestType>HotelSearch</RequestType>\n\t</Head>\n\t<Body>\n\t\t<CityIds>\n\t\t\t<CityId>117976</CityId>\n\t\t</CityIds>\n\t\t<CheckInDate>2017-12-12</CheckInDate>\n\t\t<CheckOutDate>2017-12-20</CheckOutDate>\n\t\t<Rooms>\n\t\t\t<Room>\n\t\t\t\t<NumAdults>2</NumAdults>\n\t\t\t</Room>\n\t\t\t<Room>\n\t\t\t\t<NumAdults>1</NumAdults>\n\t\t\t\t<Children>\n\t\t\t\t\t<ChildAge>4</ChildAge>\n\t\t\t\t\t<ChildAge>6</ChildAge>\n\t\t\t\t</Children>\n\t\t\t</Room>\n\t\t</Rooms>\n\t\t<Nationality>FR</Nationality>\n\t\t<Currency>GBP</Currency>\n\t\t<AvailableOnly>0</AvailableOnly>\n\t</Body>\n</Request>",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
