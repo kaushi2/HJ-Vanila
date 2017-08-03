@@ -1,0 +1,139 @@
+Country Code	Country Name
+City Id	City Name	State Code	Country Code
+Hotel Id	City Id	Hotel Name	Star Rating	Latitude	Longitude	Address	Location	Phone Number
+Hotel Id	Description
+Hotel Id	Image
+Hotel Id	Facility Type	Facility Name
+
+CREATE TABLE `hjdatabase`.`hotels` (
+  `HotelId` INT NOT NULL,
+  `CityId` INT NOT NULL,
+  `HotelName` VARCHAR(45) NULL,
+  `StarRating` INT NULL,
+  `Latitude` DECIMAL NULL,
+  `Longitude` DECIMAL NULL,
+  `Address` VARCHAR(45) NULL,
+  `Location` VARCHAR(45) NULL,
+  `PhoneNumber` INT NULL,
+  PRIMARY KEY (`HotelId`),
+  UNIQUE INDEX `CityId_UNIQUE` (`CityId` ASC),
+  UNIQUE INDEX `StarRating_UNIQUE` (`StarRating` ASC),
+  UNIQUE INDEX `Latitude_UNIQUE` (`Latitude` ASC),
+  UNIQUE INDEX `Longitude_UNIQUE` (`Longitude` ASC),
+  UNIQUE INDEX `Address_UNIQUE` (`Address` ASC),
+  UNIQUE INDEX `Location_UNIQUE` (`Location` ASC));
+
+CREATE TABLE `hjdatabase`.`descriptions` (
+  `HotelId` INT NOT NULL,
+  `Description` LONGTEXT NULL,
+  PRIMARY KEY (`HotelId`));
+
+CREATE TABLE `hjdatabase`.`images` (
+  `HotelId` INT NOT NULL,
+  `Image` VARCHAR(100) NULL,
+  PRIMARY KEY (`HotelId`));
+
+CREATE TABLE `hjdatabase`.`facilities` (
+  `HotelId` INT NOT NULL,
+  `FacilityType` VARCHAR(45) NULL,
+  `FacilityName` VARCHAR(45) NULL,
+  PRIMARY KEY (`HotelId`)),
+  UNIQUE INDEX `FacilityName_UNIQUE` (`FacilityName` ASC),
+  UNIQUE INDEX `FacilityType_UNIQUE` (`FacilityType` ASC);
+
+CREATE TABLE `hjdatabase`.`cities` (
+  `CityId` INT NOT NULL,
+  `CityName` VARCHAR(45) NULL,
+  `StateCode` VARCHAR(45) NULL,
+  `CountryCode` VARCHAR(2) NULL,
+  PRIMARY KEY (`CityId`),
+  UNIQUE INDEX `CityName_UNIQUE` (`CityName` ASC));
+
+CREATE TABLE `hjdatabase`.`countires` (
+  `CountryCode` VARCHAR(2) NOT NULL,
+  `CountryName` VARCHAR(45) NULL,
+  PRIMARY KEY (`CountryCode`),
+  UNIQUE INDEX `CountryName_UNIQUE` (`CountryName` ASC));
+
+  
+-- MySQL Workbench Synchronization
+-- Generated: 2017-07-31 22:14
+-- Model: New Model
+-- Version: 1.0
+-- Project: Name of the project
+-- Author: kagajjar
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+ALTER TABLE `hjdatabase`.`cities` 
+ADD COLUMN `countires_CountryCode` VARCHAR(2) NOT NULL AFTER `CountryCode`,
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`CityId`, `countires_CountryCode`),
+ADD INDEX `fk_cities_countires_idx` (`countires_CountryCode` ASC);
+
+ALTER TABLE `hjdatabase`.`descriptions` 
+ADD COLUMN `hotels_HotelId` INT(11) NOT NULL AFTER `Description`,
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`HotelId`, `hotels_HotelId`),
+ADD INDEX `fk_descriptions_hotels1_idx` (`hotels_HotelId` ASC);
+
+ALTER TABLE `hjdatabase`.`facilities` 
+ADD COLUMN `hotels_HotelId` INT(11) NOT NULL AFTER `FacilityName`,
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`HotelId`, `hotels_HotelId`),
+ADD INDEX `fk_facilities_hotels1_idx` (`hotels_HotelId` ASC);
+
+ALTER TABLE `hjdatabase`.`hotels` 
+ADD COLUMN `cities_CityId` INT(11) NOT NULL AFTER `PhoneNumber`,
+ADD COLUMN `cities_countires_CountryCode` VARCHAR(2) NOT NULL AFTER `cities_CityId`,
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`HotelId`, `cities_CityId`, `cities_countires_CountryCode`),
+ADD INDEX `fk_hotels_cities1_idx` (`cities_CityId` ASC, `cities_countires_CountryCode` ASC);
+
+ALTER TABLE `hjdatabase`.`images` 
+ADD COLUMN `hotels_HotelId` INT(11) NOT NULL AFTER `Image`,
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`HotelId`, `hotels_HotelId`),
+ADD INDEX `fk_images_hotels1_idx` (`hotels_HotelId` ASC);
+
+ALTER TABLE `hjdatabase`.`cities` 
+ADD CONSTRAINT `fk_cities_countires`
+  FOREIGN KEY (`countires_CountryCode`)
+  REFERENCES `hjdatabase`.`countires` (`CountryCode`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `hjdatabase`.`descriptions` 
+ADD CONSTRAINT `fk_descriptions_hotels1`
+  FOREIGN KEY (`hotels_HotelId`)
+  REFERENCES `hjdatabase`.`hotels` (`HotelId`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `hjdatabase`.`facilities` 
+ADD CONSTRAINT `fk_facilities_hotels1`
+  FOREIGN KEY (`hotels_HotelId`)
+  REFERENCES `hjdatabase`.`hotels` (`HotelId`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `hjdatabase`.`hotels` 
+ADD CONSTRAINT `fk_hotels_cities1`
+  FOREIGN KEY (`cities_CityId` , `cities_countires_CountryCode`)
+  REFERENCES `hjdatabase`.`cities` (`CityId` , `countires_CountryCode`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `hjdatabase`.`images` 
+ADD CONSTRAINT `fk_images_hotels1`
+  FOREIGN KEY (`hotels_HotelId`)
+  REFERENCES `hjdatabase`.`hotels` (`HotelId`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
