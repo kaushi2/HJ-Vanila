@@ -1,0 +1,5 @@
+Please find your XML test details as below;-
+ 
+Username: 1d30ab517dd70cdd21c0649a0c4255fd
+Password: mT7C0UxRPeVn
+URL: http://xmldemo.travellanda.com/xmlv1
