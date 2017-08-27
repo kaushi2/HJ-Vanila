@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { SearchServiceService } from "../search-service.service";
-import { Hotel } from "../classes/hotel";
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
+import { Hotel } from "../model/hotel";
+import { SearchService } from "../services/search-service.service";
+// import { EmitterService } from '../services/emitter.service';
 
 @Component({
   selector: 'app-search',
@@ -9,17 +12,28 @@ import { Hotel } from "../classes/hotel";
 })
 export class SearchComponent implements OnInit {
 
-  public hotelCollection: Array<Hotel> = [];
-  public searchFilter: Hotel = { City: '', CheckIn: '', CheckOut: '', Adults: 0, Children: 0, Type: '' };
+  constructor(private _searchService: SearchService) { }
 
-  constructor(private _searchService: SearchServiceService) { }
+  hotels: Hotel[];
+  @Input() hotelId: number;
 
   ngOnInit() {
-    this.hotelCollection = this._searchService
-      .getSearchResult(City, CheckIn, CheckOut, Adults, Children, Type);
-
+    this.Search_Click();
   }
 
-  public Search()
+  public Search_Click() {
+    this._searchService.getHotels()
+    .subscribe(
+      hotels => this.hotels = hotels,
+        err => {
+          console.log(err);
+        });
+  }
+
+//   ngOnChanges(changes:any) {
+//     // Listen to the 'hotel' emitted event so as populate the model
+//     // with the event payload
+//     EmitterService.get(this.hotelId).subscribe((hotels: Hotel[]) => { this.Search_Click() });
+// }
 
 }

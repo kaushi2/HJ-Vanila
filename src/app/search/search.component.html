@@ -1,4 +1,6 @@
-<div class="product-column product-column-list" *ngFor="let result of hotelCollection">
-  <span>{{result.Name}}</span>
-  <span>{{result.Type}}</span>
+SEARCH COMPONENT
+<div class="product-column product-column-list" *ngFor="let hotel of hotels">
+  <span>{{hotel.HotelId}}</span>
+  <span>{{hotel.HotelName}}</span>
+  <span>{{hotel.StarRating}}</span>
 </div>
