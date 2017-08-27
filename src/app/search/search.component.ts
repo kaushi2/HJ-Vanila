@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Router, ActivatedRoute, Params} from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 import { Hotel } from "../model/hotel";
@@ -12,17 +13,24 @@ import { SearchService } from "../services/search-service.service";
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private _searchService: SearchService) { }
+  constructor(private _searchService: SearchService, 
+              private activatedRoute: ActivatedRoute) { }
 
   hotels: Hotel[];
   @Input() hotelId: number;
 
   ngOnInit() {
-    this.Search_Click();
+    // subscribe to router event
+    this.activatedRoute.params.subscribe((params: Params) => {
+      console.log(params);
+      let City = params['City'];
+      console.log(City);
+      this.Search_Click(City);
+    });
   }
 
-  public Search_Click() {
-    this._searchService.getHotels()
+  public Search_Click(City: string) {
+    this._searchService.getHotels(City)
     .subscribe(
       hotels => this.hotels = hotels,
         err => {

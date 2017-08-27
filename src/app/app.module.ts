@@ -8,11 +8,13 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { AboutComponent } from './about/about.component';
 import { SearchModule } from "./search/search.module";
 import { SearchService } from "./services/search-service.service";
+import { HotelDetailComponent } from './hotel-detail/hotel-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    HotelDetailComponent
   ],
   imports: [
     BrowserModule,

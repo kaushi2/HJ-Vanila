@@ -8,11 +8,11 @@ export class SearchService {
   // Resolve HTTP using the constructor
   constructor(private http: Http) { }
   // private instance variable to hold base url
-  private HotelsAPIUrl = 'http://localhost:3000/Hotels/Sydney';
+  private HotelsAPIUrl = 'http://localhost:3000/Hotels/';
 
-  getHotels() : Observable<Hotel[]> {
+  getHotels(City: string) : Observable<Hotel[]> {
     // ....using get Request
-    return this.http.get(this.HotelsAPIUrl)
+    return this.http.get(this.HotelsAPIUrl + City)
       // ...and calling .json() on the response to return data
       .map((res:Response) => res.json())
       // ...errors if any
