@@ -3,4 +3,7 @@ SEARCH COMPONENT
   <span>{{hotel.HotelId}}</span>
   <span>{{hotel.HotelName}}</span>
   <span>{{hotel.StarRating}}</span>
+  <div *ngFor="let facility of hotel.facilities"><span>{{facility.FacilityName}}</span></div>
 </div>
+
+<div><a href="/Search/{{City}}/{{PageNo}}">NEXT</a></div>

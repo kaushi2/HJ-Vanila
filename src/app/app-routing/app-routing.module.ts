@@ -7,11 +7,11 @@ import { HotelDetailComponent } from "../hotel-detail/hotel-detail.component";
 
 const routes: Routes = [
   {
-    path: 'search/:City',
+    path: 'Search/:City',
     component: SearchComponent
   },
   {
-    path: 'search/:City/:Page',
+    path: 'Search/:City/:Page',
     component: SearchComponent
   },
   {
