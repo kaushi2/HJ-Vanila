@@ -1,0 +1,1681 @@
+*{
+	margin:0px; 
+	padding:0px;
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+}
+html , body{
+	overflow-x:hidden; 
+	width:100%; 
+	position:relative; 
+	display:table;
+	font:normal 16px 'Source Sans Pro', sans-serif;
+}
+a{text-decoration:none; color:#000;}
+ul, li{list-style:none;}
+button{background:none; border:none; cursor:pointer;}
+button:focus{outline:inherit;}
+img{border:0px; max-width:100%;}
+input, select, textarea{font-family:'Source Sans Pro', sans-serif; border:none;}
+.clear{clear:both;}
+
+@font-face {
+	font-family:'BrandonText-Bold';
+	src: url('fonts/BrandonText-Bold.eot')/*tpa=http://www.halaljourney.com/css/fonts/BrandonText-Bold.eot*/;
+	src: local('☺'), url('fonts/BrandonText-Bold.woff')/*tpa=http://www.halaljourney.com/css/fonts/BrandonText-Bold.woff*/ format('woff'), url('fonts/BrandonText-Bold.ttf')/*tpa=http://www.halaljourney.com/css/fonts/BrandonText-Bold.ttf*/ format('truetype'), url('fonts/BrandonText-Bold.svg')/*tpa=http://www.halaljourney.com/css/fonts/BrandonText-Bold.svg*/ format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family:'JennaSue';
+	src: url('fonts/JennaSue.eot')/*tpa=http://www.halaljourney.com/css/fonts/JennaSue.eot*/;
+	src: local('☺'), url('fonts/JennaSue.woff')/*tpa=http://www.halaljourney.com/css/fonts/JennaSue.woff*/ 
+    format('woff'), url('fonts/JennaSue.ttf')/*tpa=http://www.halaljourney.com/css/fonts/JennaSue.ttf*/ 
+    format('truetype'), url('fonts/JennaSue.svg')/*tpa=http://www.halaljourney.com/css/fonts/JennaSue.svg*/ 
+    format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.space60{display:table; width:100%; padding:60px 0px 0px 0px;}
+.space40{display:table; width:100%; padding:40px 0px 0px 0px;}
+.space10{display:table; width:100%; padding:24px 0px 0px 0px;}
+
+.wrapper{max-width:1170px; margin:auto;}
+
+/* top header starts here */
+.top-header{background:#8db74a;}
+.top-nav{color:#d1e2b7; float:right; padding:0px 70px 0px 0px;}
+.top-nav ul{padding:10px 0px; display:table;}
+.top-nav ul li{float:left;}
+.top-nav ul li a{color:#d1e2b7; text-transform: uppercase; display:block; padding:0px 0px 0px 20px; font-weight:600;}
+.top-nav ul li a:hover{color:#fff;}
+
+.top-drop{position:relative; width:120px; float:right;}
+.top-drop-btn{cursor:pointer; width:120px; padding:11px 0px; display:table;}
+.top-drop-btn img{float:left; padding:0px 10px 0px 0px;}
+.top-drop-btn p{font-weight:600; color:#fff; font-size:14px; float:left; padding:0px 5px 0px 0px; line-height:17px;}
+.top-drop-btn i{float:left; color:#fff;}
+
+.top-drop-dropdown{width:180px; display:none; top:40px; position:absolute; right:0px; background:#e8f0da; border-bottom-right-radius:20px; padding:0px 0px 10px 0px; overflow:hidden;}
+.top-drop-dropdown ul{}
+.top-drop-dropdown ul li{padding:8px 0px; cursor:pointer;}
+.top-drop-dropdown ul li img{float:left; margin:0px 10px 0px 25px;}
+.top-drop-dropdown ul li p{line-height:17px; font-weight:600; font-size:14px;}
+.top-drop-dropdown ul li:hover{background:#f6f9f0; color:#8db74a;}
+
+.top-currency{margin:0px 40px 0px 0px; display:table;}
+.top-currency .top-drop-btn{width:170px;}
+.top-currency p b{padding:0px 10px 0px 0px;}
+
+.top-currency .top-drop-dropdown li p b{text-align:right; width:60px; display:block; float:left;}
+
+.top-drop-language:hover .top-drop-dropdown{display:block; z-index:10;}
+.top-currency:hover .top-drop-dropdown{display:block; z-index:10;}
+/* top header ends here */
+
+
+/* scroll header starts here */
+.scroll-header{width:100%; display:none; background:rgba(255,255,255, 0.9); position:fixed; top:0px; z-index:10;}
+.fixed-scroll{display:table;}
+.scroll-header .ph-number{font-size:25px; line-height:57px; font-weight:700; color:#0eb2b3; padding:15px 35px 0px 0px; float:left;}
+
+.special-offer-form{padding:20px 50px 0px 0px; float:left;}
+.special-offer-form input{
+    border:1px solid #c2c2c2;
+    border-radius:5px;
+    float:left;
+    height:50px;
+    padding:0px 20px;
+    background:none;
+    width:270px;
+}
+.special-offer-form input[type="submit"]{
+    width:auto;
+    border:none;
+    background:#0eb2b3;
+    font-size:16px;
+    color:#fff;
+    margin:0px 0px 0px 10px;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.share-btn{width:128px; height:33px; float:left; margin:28px 9px 0px 0px;}
+.share-fb-btn{background:url(../images/share-fb-btn.png)/*tpa=http://www.halaljourney.com/images/share-fb-btn.png*/ no-repeat; display:block;}
+.share-instagram-btn{background:url(../images/share-instagram-btn.png)/*tpa=http://www.halaljourney.com/images/share-instagram-btn.png*/ no-repeat; display:block;}
+/* scroll header ends here */
+
+/* header starts here */
+header{width:100%; display:table; background:#fff;}
+.logo{margin:15px 50px 10px 0px; display:block; float:left;}
+
+nav{float:left; margin:45px 0px 0px 0px; position:relative;}
+nav ul{}
+nav ul li{
+    font-weight:700; 
+    font-size:20px; 
+    color:#555; 
+    text-transform:uppercase; 
+    cursor:pointer;
+    float:left;
+    margin:0px 30px 0px 0px;
+    padding:5px 10px;
+    border-radius:5px;
+}
+nav ul li a{
+    font-weight:700; 
+    font-size:20px; 
+    color:#555; 
+    text-transform:uppercase; 
+    cursor:pointer;
+    float:left;
+    margin:0px 30px 0px 0px;
+    padding:5px 10px;
+    border-radius:5px;
+}
+nav ul li a.discover-btn{padding:0px; margin:0px;}
+nav ul li:hover, nav ul li a:hover{
+    background:#0eb2b3;
+    color:#fff;
+}
+
+nav .landing-pop-up{position:absolute; margin-top:5px; width:870px; left:-50px; padding-top:25px; z-index:10; display:none;}
+nav .landing-pop-col ul li{float:none; margin:0px; padding:0px;}
+nav .landing-pop-col ul li a{font-weight:400; text-transform:none; float:none; border-radius:0px; margin:0px; padding:0px;}
+nav .landing-pop-col ul li:hover, nav .landing-pop-col ul li a:hover{background:none; color:#000;}
+nav .landing-pop-col{border-bottom:0px; margin-bottom:20px;}
+
+nav ul li.menu-dropdown:hover .landing-pop-up{display:block;}
+
+.user-sec{float:right; margin:45px 0px 0px 0px;}
+.user-sec button{color:#8db74a; font-size:16px; font-weight:400; height:22px; line-height:22px; margin:0px 0px 0px 25px; float:left; cursor:pointer;}
+.user-sec button.login-btn{background:url(../images/login-icon.png)/*tpa=http://www.halaljourney.com/images/login-icon.png*/ left no-repeat; padding:0px 0px 0px 25px;}
+.user-sec button.cart-btn{background:url(../images/cart-icon.png)/*tpa=http://www.halaljourney.com/images/cart-icon.png*/ left no-repeat; padding:0px 0px 0px 25px;}
+.user-sec button.search-btn{background:url(../images/search-icon.png)/*tpa=http://www.halaljourney.com/images/search-icon.png*/ left no-repeat; padding:0px 0px 0px 0px; width:22px;}
+/* header ends here */
+
+/* search bar starts here */
+.search-bar{width:100%; background:url(../images/search-pattern.png)/*tpa=http://www.halaljourney.com/images/search-pattern.png*/ center no-repeat; display:table; padding:20px 0px; background-size:cover;}
+
+.search-bar-cell{float:left; margin:0px 30px 0px 0px;}
+.search-bar label{font-size:16px; padding:0px 0px 10px 0px; display:block; font-weight:600; color:#fff;}
+.search-bar input, select{
+    background:none;
+    height:60px;
+    border:1px solid rgba(255,255,255, 0.6);
+    border-radius:5px;
+    color:#fff;
+    font-size:14px;
+}
+.search-bar input.search{background:url(../images/search-bar-icon/pin.png)/*tpa=http://www.halaljourney.com/images/search-bar-icon/pin.png*/ left 20px center no-repeat; padding:0px 40px; width:270px;}
+.search-bar input.calendar{background:url(../images/search-bar-icon/calendar.png)/*tpa=http://www.halaljourney.com/images/search-bar-icon/calendar.png*/ left 20px center no-repeat; padding:0px 45px; width:170px;}
+.search-bar input::-webkit-input-placeholder{color:rgba(255,255,255, 0.5);}
+
+.search-bar input[type="submit"]{
+    font-weight:700;
+    color:#222222;
+    text-transform: uppercase;
+    background:#fff url(../images/search-bar-icon/search-icon.png)/*tpa=http://www.halaljourney.com/images/search-bar-icon/search-icon.png*/ left 15px center no-repeat;
+    padding:0px 25px 0px 45px;
+    cursor:pointer;
+    margin:30px 0px 0px 0px;
+}
+.search-bar select{width:70px; padding:15px;}
+/* search bar ends here */
+
+/* banner section starts here */
+.banner-sec{width:100%; display:table;}
+
+.slider-content{width:100%; height:770px; overflow:hidden;}
+.slider-content .wrapper{position:absolute; width:100%; text-align:center; max-width:inherit; padding:15% 0px 0px 0px;}
+.slider-content img.banner-slide{width:100%; position:absolute;}
+.slider-content h3{font:normal 58px 'JennaSue'; color:#fff; padding:0px 0px 20px 0px; text-shadow:0px 0px 3px #000;}
+.button-discover{
+    background:#0eb2b3 url(../images/map-icon.png)/*tpa=http://www.halaljourney.com/images/map-icon.png*/ left 40px center no-repeat;
+    text-transform:uppercase;
+    border-radius:10px;
+    color:#fff;
+    height:60px;
+    display:table;
+    line-height:60px;
+    font-weight:700;
+    margin:50px auto;
+    padding:0px 40px 0px 70px;
+}
+
+/* what is HJ starts here */
+.what-hj{background:#dde9c8; padding:60px 0px; display: table; width:100%;}
+.tagline{
+    font:normal 32px 'BrandonText-Bold';
+    color:#8db74a;
+    text-transform:uppercase;
+    letter-spacing:6px;
+    text-align:center;
+    margin:0px 0px 45px 0px;
+}
+.tagline i{
+    font:700 16px 'Source Sans Pro';
+    color:#222;
+    display:block;
+}
+.what-hj-col{float:left; width:25%; text-align:center;}
+.what-hj-col h5{color:#222; font-size:18px; font-weight:700; text-transform:uppercase; margin:20px 0px 0px 0px;}
+.what-hj-col p{color:#585d50; line-height:22px; margin:20px 0px 30px 0px;}
+.what-hj-col a{display:table; border:1px solid #8db74a; margin:auto; color:#222; font-size:12px; padding:0px 15px; border-radius:10px; height:40px; font-weight:700; text-transform:uppercase; line-height:40px;}
+/* what is HJ ends here */
+
+/* product showcase */
+.product-showcase{padding:70px 0px 60px 0px; display:table; width:100%;}
+.top-info{text-align:center; padding:0px 0px 60px 0px;}
+.top-info h5{font:normal 32px 'BrandonText-Bold'; color:#8db74a; text-transform:uppercase; letter-spacing:6px; margin:0px 0px 20px 0px;} 
+.top-info p{line-height:26px;}
+
+.left-product-showcase{float:left; width:49%;}
+.right-product-showcase{float:right; width:49%; min-height:200px;}
+.product-col{width:100%; height:250px; background:#f5f5f5; border-radius:5px; overflow:hidden; position:relative; margin:0px 0px 30px 0px;}
+.product-img{width:100%; overflow:hidden; height:250px;}
+.product-img img{width:100%;}
+.product-content{background:url(../images/gradient.png)/*tpa=http://www.halaljourney.com/images/gradient.png*/ bottom repeat-x; bottom:0px; position:absolute; width:100%; padding:20px;}
+.product-content .ratings-star{padding:0px;}
+.product-content .ratings-star img{float:left; margin:0px 10px 10px 0px;}
+.product-content p{font-size:22px; font-weight:700; text-transform:uppercase; letter-spacing:6px; color:#fff; float:left;}
+.product-content label{float:left; color:#fff; text-transform:uppercase; padding: 5px 0px 0px 20px;}
+.product-content label i{font-style:normal; font-weight:700;}
+
+.col-bottom-info{display:table; width:100%; padding:20px 0px 0px 0px;}
+.left-sd{float:left;}
+.product-col span{font-size:14px; color:#fff; text-transform:uppercase; padding:0px 0px 0px 25px; display:block;}
+.product-col span.people-list{background: url(../images/people-icon.png)/*tpa=http://www.halaljourney.com/images/people-icon.png*/ left no-repeat; margin:0px 0px 10px 0px;}
+.product-col span.date-list{background: url(../images/date-icon.png)/*tpa=http://www.halaljourney.com/images/date-icon.png*/ left no-repeat;}
+.col-bottom-info a{
+    display:table;
+    background:#0eb2b3;
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+    border-radius:10px;
+    height:50px;
+    line-height:50px;
+    padding:0px 25px;
+    float:right;
+}
+
+.product-col-small{width:48%; float:left;}
+.product-col-small:nth-child(2){float:right;}
+.product-col-large{height:530px;}
+.product-col-large .product-img{height:530px;}
+.product-col-large .product-content{background:url(../images/gradient-big.png)/*tpa=http://www.halaljourney.com/images/gradient-big.png*/ bottom repeat-x;}
+/* product showcase */
+
+/* romance sections starts here */
+.romance-sec{background:#6ed1d1; padding:70px 0px 60px 0px; display:table; width:100%;}
+.romance-sec .top-info h5{color:#fff;}
+.romance-col{border-radius:5px; background:#fff; overflow:hidden; display:table; text-align:center; position:relative; width:200px; float:left; margin:0px 30px 0px 0px;}
+.romance-col a{
+    background:#8db74a;
+    font-size:14px;
+    font-weight:700;
+    color:#fff;
+    height:40px;
+    line-height:40px;
+    text-transform:uppercase;
+    padding:0px 10px;
+    border-radius:10px;
+    position:absolute;
+    top:75px;
+    left:55px;
+    display:none;
+}
+.romance-col:hover a{display:table;}
+.romance-col-img{width:100%; height:190px; overflow:hidden;}
+.romance-col-img img{width:100%;}
+.romance-col-content{padding:25px 0px;}
+.romance-col-content p{font-size:18px; padding:0px 0px 10px 0px; font-weight:700; text-transform:uppercase; color:#8db74a;}
+.romance-col-content label.type-prop{color:#bebebe; display:block; padding:0px 0px 10px 0px;}
+.romance-col-content label.from-price{text-transform:uppercase;}
+.romance-col-content label.from-price b{color:#8db74a;}
+
+.romance-rating-stars{display:table; margin:auto; display:none; min-height:30px;}
+.romance-rating-stars img{margin:2px 10px 10px 0px;}
+.romance-col:hover .romance-col-content label.type-prop{display:none;}
+.romance-col:hover .romance-rating-stars{display:table;}
+/* romance sections ends here */
+
+/* Rejuvenating sections starts here */
+.rejuvenating-sec{background:#8db74a; padding:70px 0px 60px 0px; display:table; width:100%;}
+.rejuvenating-sec .top-info h5{color:#fff;}
+
+.rejuvenating-sec-col{
+    width:22.3%; 
+    border-radius:5px; 
+    overflow:hidden; 
+    background:#fff; 
+    float:left;
+    margin-right:30px;
+}
+.rejuvenating-sec-col .last-col-rej{margin-right:0px;}
+.rejuvenating-sec-col-img{width:100%; height:220px; overflow:hidden;}
+.rejuvenating-sec-col-img img{width:100%;}
+.rejuvenating-sec-col-content{padding:30px 20px;}
+.rejuvenating-sec-col-content h6{
+    font-size:18px;
+    font-weight:700;
+    color:#222;
+    text-transform:uppercase;
+}
+.from-price-rej{font-size:16px; text-transform:uppercase; padding:10px 0px; display:block;}
+.rating-rej{display:table; width:100%; padding:5px 0px 15px 0px;}
+.rating-rej img{float:left; margin:0px 7px 0px 0px;}
+.rating-rej label{color:#bebebe; font-size:14px; float:left;}
+.rating-rej p{font-size:13px;}
+.rejuvenating-sec-col-content a{
+    display:table;
+    background:#0eb2b3;
+    font-size:15px;
+    color:#fff;
+    text-transform:uppercase;
+    border-radius:10px;
+    height:50px;
+    line-height:50px;
+    font-weight:700;
+    padding:0px 10px;
+    margin:40px 0px 0px 0px;
+}
+/* Rejuvenating sections starts here */
+
+/* inner content starts here */
+.top-sec{width:100%; display:table; padding:100px 0px 70px 0px; background-size:cover; color:#fff;}
+.top-sec div{display:table; margin:auto; text-transform:uppercase; color:#fff;}
+.page-location{font-size:22px;}
+.page-heading{font:normal 52px 'BrandonText-Bold'; letter-spacing:6px; padding:10px 0px 0px 0px;}
+.result-found{font-size:16px;}
+.result-found b{font-size:22px;}
+
+.hotel-list{background:url(../images/hotel-list-bg.png)/*tpa=http://www.halaljourney.com/images/hotel-list-bg.png*/ no-repeat; background-size:cover;}
+.thanks-sec{background:url(../images/thanks-bg.png)/*tpa=http://www.halaljourney.com/images/thanks-bg.png*/ no-repeat; background-size:cover;}
+.account-sec{background:url(../images/account/account-bg.png)/*tpa=http://www.halaljourney.com/images/account/account-bg.png*/ no-repeat; background-size:cover; padding:70px 0px 50px 0px;}
+.contact-sec{background:url(../images/contact-us-bg.png)/*tpa=http://www.halaljourney.com/images/contact-us-bg.png*/ no-repeat; background-size:cover;}
+.affiliates-sec{background:url(../images/affiliates/affiliates-bg.png)/*tpa=http://www.halaljourney.com/images/affiliates/affiliates-bg.png*/ no-repeat; background-size:cover;}
+.about-sec{background:url(../images/about/about-bg.png)/*tpa=http://www.halaljourney.com/images/about/about-bg.png*/ no-repeat; background-size:cover;}
+.hotel-booking-sec{background:url(../images/hotel-booking.png)/*tpa=http://www.halaljourney.com/images/hotel-booking.png*/ no-repeat; background-size:cover;}
+
+.page-content{width:100%; background:#f2f2f2; display:table;}
+.breadcrumb{padding:30px 0px; display:table; width:100%;}
+.breadcrumb ul{}
+.breadcrumb ul li{float:left;}
+.breadcrumb ul li a{font-size:12px; color:#b9b9b9; text-transform:uppercase;}
+.breadcrumb ul li a.active{color:#000;}
+
+.left-side{width:270px; float:left; margin:0px 30px 0px 0px;}
+.left-side h6{font:normal 22px 'BrandonText-Bold'; color:#8db74a; margin:0px 0px 30px 0px; text-transform:uppercase;}
+
+.search-form{}
+.search-form input{
+    width:90%; 
+    height:50px; 
+    background:#fff; 
+    border-radius:5px; 
+    font-size:14px; 
+    margin:0px 0px 10px 0px;
+    padding:0px 0px 0px 50px;
+}
+.search-form input.pin{background:#fff url(../images/search-form/pin.png)/*tpa=http://www.halaljourney.com/images/search-form/pin.png*/ left 20px center no-repeat;}
+.search-form input.calendar{background:#fff url(../images/search-form/calendar.png)/*tpa=http://www.halaljourney.com/images/search-form/calendar.png*/ left 20px center no-repeat;}
+.search-form input[type=submit]{
+    background:#0eb2b3;
+    display:table;
+    font-weight:700;
+    color:#fff;
+    height:40px;
+    text-transform:uppercase;
+    width:auto;
+    padding:0px 20px;
+    border-radius:10px;
+    margin:20px 0px 0px 0px;
+}
+
+.types{}
+.accordion-menu{text-transform:uppercase;}
+.menu-row{
+    padding:13px 20px; 
+    display:block; 
+    font-size:14px; 
+    font-weight:700;
+    background:#fff;
+    border-bottom:1px solid #f2f2f2;
+}
+.menu-row i{float:right; font-style:normal;}
+.active-menu-row{background:#0eb2b3; color:#fff;}
+.accordion-menu ul{}
+.accordion-menu ul li{
+    font-size:14px;
+    padding:13px 35px; 
+    display:block; 
+    font-size:14px;
+    background:#fff;
+    border-bottom:1px solid #f2f2f2;
+    color:#b9b9b9;
+    cursor:pointer;
+}
+.accordion-menu ul li:hover{color:#0eb2b3;}
+
+.star-rating-left{}
+.rating-row{margin:0px 0px 10px 0px; width:100%; display:table;}
+
+.facality{}
+.facality label{font-size:15px; color:#707070;}
+
+.others{}
+.others label{font-size:15px; color:#707070;}
+
+.review-score-col{float:left; margin:0px 10px 0px 0px;}
+.review-score-col p{float:left; font-size:14px; font-weight:700; color:#222;}
+.review-score-col img{float:left; margin:2px 0px 10px 3px;}
+.review-score-col .custom-checkbox{margin:0px 0px 0px 1px;}
+
+/* custom checkbox css */
+.custom-checkbox{float:left;}
+.custom-checkbox input[type=checkbox].css-checkbox{
+    position:absolute; 
+    overflow:hidden; 
+    clip:rect(0 0 0 0); 
+    height:1px; 
+    width:1px; 
+    margin:0px; 
+    padding:0; 
+    border:0;
+}
+.custom-checkbox input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:30px;	
+    margin-right:10px;	
+    height:19px!important; 
+    display:inline-block; 
+    line-height:19px; 
+    background-repeat:no-repeat; 
+    background-position:0 0;
+    cursor:pointer;	
+    text-align:left;
+}
+.custom-checkbox input[type=checkbox].css-checkbox:checked + label.css-label {background-position:0 -19px!important;}
+.css-label{background:url(../images/checkbox.png)/*tpa=http://www.halaljourney.com/images/checkbox.png*/ top left no-repeat!important; height:19px;}
+
+.custom-checkbox label{font-size:14px; color:#707070;}
+
+/* right side starts here */
+.right-side{width:calc(100% - 300px); float:right; padding:0px 0px 80px 0px;}
+
+.product-container{}
+.product-container .product-column{
+    width:31%; 
+    float:left; 
+    margin:0px 30px 30px 0px; 
+    border-radius:5px; 
+    overflow:hidden; 
+    background:#fff;
+}
+.product-container .product-column:nth-child(3n){margin:0px 0px 30px 0px;}
+.product-column-img{width:100%; overflow:hidden; height:220px; background:grey; position:relative;}
+.most-popular-btn{position:absolute; top:0px; left:0px; font-size:12px; font-weight:700; background:#8db74b; padding:10px 15px; color:#fff; text-transform:uppercase;}
+.product-column-content{color:#222; padding:30px 20px;}
+.product-column-content p{font-size:16px; text-transform:uppercase;}
+.col-reviews{display:table; width:100%; margin:10px 0px;}
+.col-reviews img{margin:4px 7px 0px 0px; float:left;}
+.col-reviews label{color:#bebebe; font-size:14px; padding:0px 0px 0px 10px}
+.col-heading-text{font-size:16px; font-weight:700; text-transform:uppercase;}
+.col-description-text{color:#bebebe; font-size:14px; margin:14px 0px;}
+
+.product-container .product-column-list{margin:0px 0px 30px 0px; width:100%;}
+.product-column-list .product-column-img{width:31%; float:left; margin:0px 0px 0px 0px;}
+.product-column-list .product-column-content{float:left; width:69%; padding-bottom:0px;}
+.product-column-content .col-schedule{color:#707070; font-size:14px; text-transform:uppercase; font-weight:500; padding:0px 0px 10px 0px;}
+.product-column-list .col-heading-text{font-size:18px;}
+.product-column-list .col-description-text{font-size:16px; line-height:24px;}
+.price-text{font-size:14px; color:#222; text-transform:uppercase; text-align:center; padding:20px 0px 0px 0px;}
+.price-text b{font-size:26px; font-weight:700; color:#0eb2b3;}
+
+.list-left-side{float:left; width:75%;}
+.list-right-side{float:left; width:25%;}
+.list-right-side .book-now-btn{margin:auto; margin-top:20px;}
+
+.book-now-btn{
+    background:#0eb2b3;
+    display:table;
+    font-weight:700;
+    color:#fff;
+    height:40px;
+    text-transform:uppercase;
+    width:auto;
+    padding:0px 20px;
+    border-radius:10px;
+    margin:20px 0px 0px 0px;
+}
+
+.sorting-row{margin:0px 0px 30px 0px;}
+.sorting-row-btn{
+    height:50px;
+    color:#707070;
+    font-size:16px;
+    border-radius:5px;
+    padding:0px 0px 0px 20px;
+    text-align:left;
+    width:170px;
+    cursor:pointer;
+    float:left;
+    margin:0px 20px 0px 0px;
+    background:#fff url(../images/sorting-grey.png)/*tpa=http://www.halaljourney.com/images/sorting-grey.png*/ right 20px center no-repeat;
+}
+.sorting-row-btn:hover{
+    background:#0eb2b3 url(../images/sorting-white.png)/*tpa=http://www.halaljourney.com/images/sorting-white.png*/ right 20px center no-repeat;
+    color:#fff;
+}
+
+.view-list-grid{float:right; margin:10px 0px 0px 0px;}
+.view-list-grid p{color:#707070; line-height:35px; font-size:16px; float:left;}
+.view-list-grid ul{float:left;}
+.view-list-grid ul li{float:left; width:35px; height:35px; background:#fff; margin:0px 0px 0px 20px; cursor:pointer;}
+.view-list-grid ul li.list-icon{background:#fff url(../images/list-icon.png)/*tpa=http://www.halaljourney.com/images/list-icon.png*/ center no-repeat;}
+.view-list-grid ul li.grid-icon{background:#fff url(../images/grid-icon.png)/*tpa=http://www.halaljourney.com/images/grid-icon.png*/ center no-repeat;}
+.view-list-grid ul li.list-icon-selected,
+.view-list-grid ul li.list-icon:hover
+{background:#0eb2b3 url(../images/list-icon-selected.png)/*tpa=http://www.halaljourney.com/images/list-icon-selected.png*/ center no-repeat;}
+.view-list-grid ul li.grid-icon-selected,
+.view-list-grid ul li.grid-icon:hover
+{background:#0eb2b3 url(../images/grid-icon-selected.png)/*tpa=http://www.halaljourney.com/images/grid-icon-selected.png*/ center no-repeat;}
+
+.pagination{width:100%; display:table; padding:10px 0px 0px 0px;}
+.pagination-col-1{float:left; width:12%;}
+.pagination-col-2{float:left; width:76%;}
+.pagination-col-2 ul{display:table; margin:auto;}
+.pagination-col-2 ul li{
+    color:#707070;
+    float:left;
+    font-size:14px;
+    font-weight:700;
+    padding:0px 15px;
+    line-height:40px;
+    cursor:pointer;
+}
+.pagination-col-3{float:right; width:12%;}
+.pg-button{
+    height:40px;
+    line-height:40px;
+    font-size:14px;
+    font-weight:700;
+    padding:0px 10px;
+    text-transform:uppercase;
+    color:#707070;
+    border:1px solid #0eb2b3;
+    border-radius:10px;
+    cursor:pointer;
+}
+.pg-button:hover{background:#0eb2b3; color:#fff;}
+/* inner content ends here */
+
+/* hotel detail content starts here */
+.hotel-detail-content{width:100%; display:table; padding:50px 0px;}
+
+.hotel-detail-content-left{width:67%; float:left;}
+.hotel-detail-breadcrumb{margin:0px 0px 50px 0px; width:100%; display:table;}
+.hotel-detail-breadcrumb ul{}
+.hotel-detail-breadcrumb ul li{float:left;}
+.hotel-detail-breadcrumb ul li a{display:table; font-size:12px; color:#b9b9b9; text-transform:uppercase;}
+.hotel-detail-breadcrumb ul li a.active{color:#2d3e50;}
+
+.hotel-detail-information{width:100%; display:table;}
+.hotel-detail-information label{font-size:16px; color:#707070;}
+.hotel-detail-information h6{color:#222; font:bold 32px 'BrandonText-Bold'; text-transform:uppercase; letter-spacing:6px; padding:10px 0px 0px 0px;}
+
+.hotel-detail-slider{height:560px; background:#f9f9f9; margin:40px 0px 0px 0px;}
+
+.hotel-detail-tabs{width:100%; display:table}
+.nav-tabs{position:relative; z-index:10; display:table; width:100%;}
+.nav-tabs ul{border:1px solid #eaeaea; border-bottom:none; width:90%; margin:auto;}
+.nav-tabs ul li{
+    width:20%;
+    font-size:14px;
+    float:left;
+    font-weight:700;
+    color:#b7b7b7;
+    text-align:center;
+    background:#fff;
+    border-left:1px solid #eaeaea;
+    border-bottom:1px solid #eaeaea;
+    height:50px;
+    line-height:50px;
+    text-transform:uppercase;
+    cursor:pointer;
+} 
+.nav-tabs ul li.active, .nav-tabs ul li:hover{background:#f8f8f8; color:#000; border-bottom:none;}
+.nav-tabs ul li:last-child{line-height:inherit; padding:5px 0px 0px 0px; border-right:1px solid #eaeaea;}
+
+.tab-content{
+    width:100%; 
+    display:table; 
+    padding:30px; 
+    background:#f8f8f8; 
+    border:1px solid #eaeaea;
+    position:relative;
+    margin-top:-1px;
+}
+.tab-content h6{color:#8db74a; font:normal 22px 'BrandonText-Bold'; text-transform:uppercase; letter-spacing:6px; padding:0px 0px 25px 0px;}
+.tab-content p{font-size:16px; color:#707070; line-height:22px;}
+
+.detail-img-content{padding:30px 0px 40px 0px; display:table;}
+.detail-img-content-left{float:left; width:50%;}
+.detail-img-content-left p b{color:#000; display:block; text-transform:uppercase;} 
+.detail-img-content-left ul{margin:10px 0px 0px;}
+.detail-img-content-left ul li{font-size:16px; color:#707070; line-height:32px;}
+
+.detail-img-content-right{float:right; border-radius:5px; width:330px; height:235px; overflow:hidden; background: grey;}
+
+.hotel-detail-content-right{width:31%; float:right;}
+.book-now-top-cont{padding:77px 0px 0px 0px;}
+.book-now-top-cont p{color:#222; font-size:14px; text-transform:uppercase; text-align:right; letter-spacing:2px;}
+.book-now-top-cont p b{font-size:28px; font-weight:700; color:#0eb2b3; padding:0px 2px;}
+.book-now-top-btn{
+    background:#0eb2b3;
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    text-transform:uppercase;
+    width:100%;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    border-radius:10px;
+    margin:20px 0px 25px 0px;
+}
+.detail-green-box{background:#8db74a; display:table; width:100%; border-radius:10px; padding:30px; color:#fff; text-transform:uppercase;}
+.detail-green-box h6{font:normal 22px 'BrandonText-Bold'; padding:0px 0px 20px 0px;}
+.detail-green-box p{font-size:14px; padding:6px 0px;}
+
+.view-on-map-btn{
+    float:left; 
+    display:table;
+    padding:0px 15px;
+    font-size:14px;
+    text-transform:uppercase;
+    font-weight:700;
+    color:#fff;
+    border:1px solid rgba(255,255,255, 0.2);
+    border-radius:10px;
+    height:40px;
+    line-height:40px;
+    margin:10px 10px 0px 0px;
+}
+.bok-btn{background:#fff; color:#000;}
+
+.map-contttt{width:100%; display:table; height:390px; background:grey; border-radius:10px; margin:30px 0px 0px 0px;}
+
+.useful-information-btn{
+    background:#0eb2b3;
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+    width:100%;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    border-radius:10px;
+    margin:30px 0px;
+}
+
+.may-interest-you-sec{width:100%; display:table; padding:50px 0px;}
+.may-interest-you-sec h5{color:#8db74a; font:normal 22px 'BrandonText-Bold'; text-transform:uppercase; letter-spacing:6px; padding:0px 0px 25px 0px;}
+
+.may-interest-col{width:23%; background:#f8f8f8; margin:0px 1.5% 0px 0px; float:left; border-radius:10px; overflow:hidden;}
+.may-interest-col-img{height:220px; background:grey;}
+.may-interest-col-content{width:100%; display:table; padding:30px;}
+.may-interest-col-content h6{font-size:16px; color:#222; text-transform:uppercase; padding:12px 0px 0px 0px;}
+.may-interest-date{color:#707070; font-size:14px;}
+
+/* thanks section starts here */
+.thanks-page-content{background:#fff;}
+.thanks-content-left{width:67%; float:left;}
+.thanks-content-left h6{
+    font:normal 22px 'BrandonText-Bold';
+    color:#8db74a;
+    text-transform:uppercase;
+    padding:0px 0px 40px 0px;
+    letter-spacing:6px;
+}
+.thanks-confirm-msg{background:#0eb2b3; border-radius:5px; width:100%; display:table;}
+.thanks-confirm-msg img{margin:20px 30px; float:left;}
+.thanks-confirm-msg-text{display:block; float:left; font-size:16px; color:#fff; font-weight:700; text-transform:uppercase; letter-spacing:2px; padding:22px 0px 0px 0px;}
+.thanks-confirm-msg-text p{text-transform:none; color:rgba(255,255,255, 0.6); font-weight:400; padding:10px 0px 0px 0px; letter-spacing:0px;}
+.thanks-confirm-msg button{
+    background:#fff;
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+    line-height:40px;
+    height:40px;
+    border-radius:10px;
+    padding:0px 10px;
+    cursor:pointer;
+    margin:25px 0px 0px 15px;
+}
+
+.information-table{}
+.information-table table{border:1px solid #f2f2f2; width:100%; border-bottom:none;}
+.information-table table tr{margin:0px; padding:0px;}
+.information-table table tr td{
+    border-bottom:1px solid #f2f2f2;
+    border-right:1px solid #f2f2f2;
+    color:#707070;
+    font-size:14px;
+    width:50%;
+    text-transform:uppercase;
+    margin:0px;
+    padding:13px 0px 13px 20px;
+    text-align:left;
+}
+.information-table table tr td:nth-child(2n){border-right:none; font-weight:700; color:#222;}
+.information-table table tr:nth-child(2n) td{background:#f8f8f8;}
+
+.payment-info{}
+.payment-info p{font-size:16px; color:#707070; line-height:22px;}
+.payment-info label{
+    background:#e8f1db;
+    font-size:14px;
+    font-weight:700;
+    color:#8db74a;
+    padding:20px;
+    width:100%;
+    border-radius:5px;
+    margin:25px 0px 0px 0px;
+    display:block;
+}
+.visa-info{}
+.visa-info p{font-size:16px; color:#707070; line-height:22px;}
+.visa-info a{
+    background:#cff0f0;
+    font-size:14px;
+    font-weight:700;
+    color:#0eb2b3;
+    padding:20px;
+    width:100%;
+    border-radius:5px;
+    margin:25px 0px 0px 0px;
+    display:block;
+}
+
+.thanks-content-right{width:31%; float:right; padding:130px 0px 0px 0px;}
+.popular-tours{background:#f8f8f8; border-radius:5px; padding:30px;}
+.popular-tours h6{
+    font:normal 22px 'BrandonText-Bold';
+    color:#8db74a;
+    text-transform:uppercase;
+    padding:0px 0px 30px 0px;
+    letter-spacing:6px;
+}
+
+.popular-tour-row{width:100%; display:table; margin:0px 0px 30px 0px;}
+.popular-tour-row-img{width:120px; height:100px; overflow:hidden; background:#b2b2b2; margin:0px 30px 0px 0px; float:left;}
+.popular-tour-row-img img{width:100%;}
+.popular-tour-row-content{float:left; text-transform:uppercase;}
+.popular-tour-row-content p{font-size:14px; color:#222; padding:15px 0px 10px 0px;}
+.popular-tour-row-content label{font-size:16px; font-weight:700; color:#222;}
+
+.useful-information{
+    background:#0eb2b3;
+    border-radius:10px;
+    padding:20px 0px;
+    font-size:14px;
+    font-weight:700;
+    text-align:center;
+    color:#fff;
+    text-transform:uppercase;
+    margin:40px 0px;
+}
+
+.need-help{background:#f8f8f8; border-radius:5px; padding:30px;}
+.need-help h6{
+    font:normal 22px 'BrandonText-Bold';
+    color:#8db74a;
+    text-transform:uppercase;
+    padding:0px 0px 30px 0px;
+    letter-spacing:6px;
+}
+.need-help p{font-size:16px; color:#000;}
+.need-help ul{margin:30px 0px 0px 0px;}
+.need-help ul li{color:#0eb2b3; font-size:16px; text-transform:uppercase; padding:0px 0px 0px 45px; height:33px; line-height:33px; margin:0px 0px 20px 0px;}
+.need-help ul li.thanks-call-icon{background:url(../images/thanks-call-icon.png)/*tpa=http://www.halaljourney.com/images/thanks-call-icon.png*/ left no-repeat;}
+.need-help ul li.thanks-mail-icon{background:url(../images/thanks-mail-icon.png)/*tpa=http://www.halaljourney.com/images/thanks-mail-icon.png*/ left no-repeat; margin:0px 0px 0px 0px;}
+/* thanks section ends here */
+
+/* contact us starts here */
+.contact-us-sec{background:#fff; padding:80px 0px 0px 0px;}
+
+.contact-left{width:67%; float:left;}
+.contact-form{}
+.contact-form-row{}
+.contact-form-row span{display:block; width:48%; position:relative; float:left;}
+.contact-form-row span.full-width-span{width:100%;}
+.contact-form-row span label.error{position:absolute; bottom:10px; left:0px;}
+.contact-form-row input, .contact-form-row select, .contact-form-row textarea{
+    width:100%;
+    float:left;
+    height:60px;
+    border:1px solid #dedede;
+    font-size:14px;
+    padding:0px 20px;
+    border-radius:5px;
+    margin:0px 0px 30px 0px;
+    color:#222;
+}
+.contact-form-row span:nth-child(2n){float:right;}
+.contact-form-row textarea{width:100%; padding-top:20px; min-height:230px;}
+.contact-form input[type="submit"]{
+    background:#0eb2b3;
+    height:40px;
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+    color:#fff;
+    border-radius:10px;
+    padding:0px 10px;
+    height:50px;
+}
+
+.contact-form-row input.full-input{width:100%; margin-right:0px;}
+.contact-form-row select.affiliate-select{float:left;}
+
+.contact-right{width:31%; float:right;}
+.contact-right h6{
+    font:normal 22px 'BrandonText-Bold';
+    color:#8db74a;
+    text-transform:uppercase;
+    padding:0px 0px 25px 0px;
+    letter-spacing:6px;
+}
+.contact-right p{color:#707070; font-size:16px; line-height:26px; padding:0px 0px 40px 0px;}
+
+.contact-details{}
+.contact-details ul{}
+.contact-details li{
+    font-size:18px;
+    color:#707070;
+    text-transform:none;
+    height:26px;
+    line-height:26px;
+    margin:0px 0px 20px 0px;
+    padding:0px 0px 0px 40px;
+}
+.contact-details li b{text-transform:none;}
+.contact-details li.contact-phone{background:url(../images/contact/call-icon.png)/*tpa=http://www.halaljourney.com/images/contact/call-icon.png*/ left center no-repeat;}
+.contact-details li.contact-email{background:url(../images/contact/mail-icon.png)/*tpa=http://www.halaljourney.com/images/contact/mail-icon.png*/ left center no-repeat;}
+.contact-details li.contact-address{background:url(../images/contact/pin-icon.png)/*tpa=http://www.halaljourney.com/images/contact/pin-icon.png*/ left center no-repeat;}
+
+.contact-social-links{margin:40px 0px 0px 0px;}
+.contact-social-links ul{}
+.contact-social-links ul li{float:left; width:17px; height:17px; margin:0px 20px 0px 0px; padding:0px;}
+.contact-social-links ul li a{width:17px; height:17px; display:table; float:left;}
+.contact-social-links ul li a.contact-socail-fb{background:url(../images/contact/fb.png)/*tpa=http://www.halaljourney.com/images/contact/fb.png*/ no-repeat;}
+.contact-social-links ul li a.contact-socail-fb:hover{background:url(../images/contact/fb-color.png)/*tpa=http://www.halaljourney.com/images/contact/fb-color.png*/ no-repeat;}
+.contact-social-links ul li a.contact-socail-tw{background:url(../images/contact/tw.png)/*tpa=http://www.halaljourney.com/images/contact/tw.png*/ no-repeat;}
+.contact-social-links ul li a.contact-socail-tw:hover{background:url(../images/contact/tw-color.png)/*tpa=http://www.halaljourney.com/images/contact/tw-color.png*/ no-repeat;}
+.contact-social-links ul li a.contact-socail-pt{background:url(../images/contact/pinterest.png)/*tpa=http://www.halaljourney.com/images/contact/pinterest.png*/ no-repeat;}
+.contact-social-links ul li a.contact-socail-pt:hover{background:url(../images/contact/pinterest-color.png)/*tpa=http://www.halaljourney.com/images/contact/pinterest-color.png*/ no-repeat;}
+.contact-social-links ul li a.contact-socail-ins{background:url(../images/contact/instagram.png)/*tpa=http://www.halaljourney.com/images/contact/instagram.png*/ no-repeat;}
+.contact-social-links ul li a.contact-socail-ins:hover{background:url(../images/contact/instagram-color.png)/*tpa=http://www.halaljourney.com/images/contact/instagram-color.png*/ no-repeat;}
+
+.contact-map{height:550px; background:#707070; margin:50px 0px 0px 0px;}
+/* contact us ends here */
+/* account section starts here */
+.account-page-content{background:#fff; padding:70px 0px;}
+.account-content-left{width:67%; float:left; position:relative;}
+.account-page-content .thanks-content-right{padding-top:0px;}
+
+.account-tab-container{
+    width:100%; 
+    display:table; 
+    padding:30px; 
+    background:#f8f8f8; 
+    border:1px solid #eaeaea;
+    position:relative;
+    margin-top:-1px;
+}
+.hello-text-acct{background:#8db74a; padding:20px 20px; border-radius:10px; display:table; width:100%;}
+.hello-text-acct img{float:left; margin:0px 30px 0px 0px;}
+.hello-text-acct p{float:left; color:#fff; font-size:20px; text-transform:uppercase;}
+
+.usr-acct-heading{
+    font:normal 22px 'BrandonText-Bold';
+    color:#8db74a;
+    text-transform:uppercase;
+    padding:40px 0px;
+    letter-spacing:6px;
+}
+
+.account-form-container{display:table; width:100%;}
+.account-row{width:47.9%; float:left; margin:0px 30px 35px 0px;}
+.account-row:nth-child(2n){float:right; margin-right:0px;}
+.account-row label{margin:0px 0px 15px 0px; font-size:16px; color:#222; display:block;}
+.account-row input, .account-row select{
+    width:100%;
+    background:none;
+    border:1px solid #b7b7b7;
+    height:50px;
+    padding:0px 20px;
+    font-size:14px;
+    color:#222;
+    border-radius:5px;
+}
+.full-account-row{width:100%;}
+.save-changes-btn{
+    background:#0eb2b3;
+    font-size:14px;
+    color:#fff;
+    text-transform:uppercase;
+    border-radius:10px;
+    display:table;
+    padding:0px 60px;
+    text-transform:uppercase;
+    height:50px;
+    font-weight:700;
+    margin:40px 0px 0px 0px;
+}
+
+.tabs{position:relative; z-index:10; display:table; width:100%;}
+.tabs ul{border:1px solid #eaeaea; border-bottom:none; width:90%; margin:auto;}
+.tabs ul li{
+    width:20%;
+    font-size:14px;
+    float:left;
+    font-weight:700;
+    color:#b7b7b7;
+    text-align:center;
+    background:#fff;
+    border-left:1px solid #eaeaea;
+    border-bottom:1px solid #eaeaea;
+    height:50px;
+    line-height:50px;
+    text-transform:uppercase;
+    cursor:pointer;
+} 
+.tabs ul li i{float:left; margin:3px 5px 0px 25px;}
+.tabs ul li i.tab-icon-2{margin:3px 5px 0px 45px;}
+.tabs ul li i.tab-icon-3{margin:3px 5px 0px 30px;}
+.tabs ul li i.tab-icon-4{margin:3px 5px 0px 30px;}
+.tabs ul li i.tab-icon-5{margin:8px 5px 0px 22px;}
+.tabs ul li p{float:left;}
+
+.tabs ul li.active, .tabs ul li:hover{background:#f8f8f8; color:#000; border-bottom:none;}
+.tabs ul li:last-child{line-height:inherit; padding:5px 0px 0px 0px; border-right:1px solid #eaeaea;}
+/* account section ends here */
+/* 404 container starts here */
+.no-page-container{width:100%; display:table; background:url(../images/404/404-bg.png)/*tpa=http://www.halaljourney.com/images/404/404-bg.png*/ no-repeat; background-size:cover; padding:170px 0px;}
+.no-page-inner-frame{width:800px; border:10px solid #fff; border-radius:5px;
+    margin:auto; text-align:center; text-transform:uppercase;}
+.no-page-inner-frame h6{color:#fff; font-size:142px; font-family:'BrandonText-Bold'; text-align:center; letter-spacing:10px; padding:60px 0px 0px 0px;}
+.no-page-inner-frame p{font-size:18px; font-weight:700; color:#fff; padding:30px 0px;}
+.no-page-inner-frame a{
+    background:#8db74a;
+    font-size:16px;
+    text-align:center;
+    display:table;
+    margin:auto auto 50px auto;
+    height:60px;
+    line-height:60px;
+    color:#fff;
+    border-radius:10px;
+    font-weight:700;
+    padding: 0px 20px;
+}
+/* 404 container ends here */
+
+/* affiliate starts here */
+.affiliates-container{padding:80px 0px 140px 0px;}
+.affiliates-container h5{
+    font:normal 32px 'BrandonText-Bold';
+    color:#8db74a;
+    text-transform:uppercase;
+    padding:0px 0px 75px 0px;
+    letter-spacing:6px;
+    text-align:center;
+}
+.about-affiliate{background:#8db74a; width:100%; display:table; padding:60px 0px 90px 0px;}
+.top-intr{text-align:center; color:#fff;}
+.top-intr h4{font:normal 32px 'BrandonText-Bold'; color:#fff; letter-spacing:6px; text-transform:uppercase; padding:25px 0px 50px 0px;}
+
+.about-affiliate-col{width:50%; float:left; color:#fff;}
+.about-affiliate-col img{float:left;}
+.about-affiliate-col h6{font-size:22px; padding:15px 0px 0px 15px; float:left; font-weight:700; text-transform:uppercase;}
+.about-affiliate-col h6.second-hdng{padding-top:2px;}
+.about-affiliate-col p{line-height:22px; font-size:16px; padding:30px 0px 20px 0px;}
+.about-affiliate-col a{
+    border:1px solid #fff;
+    border-radius:5px;
+    display:table;
+    font-size:14px;
+    font-weight:700;
+    color:#fff;
+    height:50px;
+    line-height:50px;
+    padding:0px 15px;
+    text-transform:uppercase;
+}
+.about-affiliate-col a.scndlink{margin-top:20px;}
+/* affiliate ends here */
+
+/* about hj starts here */
+.about-content{background:#fff;}
+.about-hj{width:100%; display:table; clear:both; padding:0px 0px 0px 0px;}
+.top-intro-about{text-align:center; padding:60px 0px 80px 0px;}
+.top-intro-about label{font-size:16px; text-transform:uppercase; font-weight:700; color:#000; display:block; margin:0px 0px 20px 0px;}
+.top-intro-about h3{
+    font:normal 32px 'BrandonText-Bold';
+    color:#0eb2b3;
+    text-transform:uppercase;
+    padding:20px 0px 5px 0px;
+    letter-spacing:6px;
+    text-align:center;
+}
+.about-content h6{
+    font-size:22px;
+    text-transform:uppercase;
+    font-weight:700;
+    color:#8db74a;
+    padding:0px 0px 20px 0px;
+}
+
+.about-hj-col-one{width:55%; float:left;}
+.about-hj-col-one p{color:#707070; font-size:16px; line-height:22px;}
+.about-hj-col-one{float:left; width:17%; margin-left:2%;}
+.about-hj-col-one ul{margin:-5px 0px 0px 0px;}
+.about-hj-col-one ul li{float:left; font-size:16px; line-height:32px; color:#707070; width:100%; padding:0px 0px 0px 15px; background:url(../images/about/dot.png)/*tpa=http://www.halaljourney.com/images/about/dot.png*/ left center
+no-repeat;}
+.about-hj-col-two{float:left; width:17%; margin-left:2%;}
+.about-hj-col-two ul{margin:-5px 0px 0px 0px;}
+.about-hj-col-two ul li{float:left; font-size:16px; line-height:32px; color:#707070; width:100%; padding:0px 0px 0px 15px; background:url(../images/about/dot.png)/*tpa=http://www.halaljourney.com/images/about/dot.png*/ left center no-repeat;}
+
+.about-hj-col-three{width:270px; float:right; height:200px; overflow:hidden; background:#b7b7b7; border-radius:5px;}
+
+.latest-news{background:#86d8d9; display:table; width:100%; padding:0px 0px 80px 0px;}
+.latest-news-col{}
+.latest-news h5{text-transform:uppercase; padding:70px 0px; letter-spacing:6px; font:normal 32px 'BrandonText-Bold'; color:#fff; text-align:center;}
+
+.latest-news-col{width:31.5%; float:left; margin:0px 30px 0px 0px;}
+.latest-news-col-img{width:100%; overflow:hidden; border-radius:5px; height:265px; background:#fff;}
+.latest-news-col-content label{font-size:18px; font-weight:700; text-transform:uppercase; color:#222; padding:20px 0px; display:block;}
+.latest-news-col-content p{font-size:16px; line-height:24px; color:#707070;}
+.latest-news-col:nth-child(3n){margin:0px; float:right;}
+
+.client-gallery{margin:0px 0px 60px 0px;}
+.client-gallery ul li{
+    border-right:1px solid #eaeaea;
+    border-bottom:1px solid #eaeaea;
+    height:150px;
+    width:16.66%;
+    text-align:center;
+    float:left;
+}
+.client-gallery ul li.gal-nob{border-bottom:none;}
+.client-gallery ul li:nth-child(6n){border-right:none;}
+.client-gallery ul li img{-webkit-filter: grayscale(100%); filter: grayscale(100%); margin:30px 0px 0px 0px;}
+.client-gallery ul li img:hover{-webkit-filter: grayscale(0%); filter: grayscale(0%);}
+
+.about-services{width:100%; display:table; background:#8db74a; padding:80px 0px;}
+.about-services h5{
+    font:normal 32px 'BrandonText-Bold';
+    color:#fff;
+    text-transform:uppercase;
+    padding:00px 0px 60px 0px;
+    letter-spacing:6px;
+    text-align:center;
+}
+.about-services-col{width:22%; margin:0px 30px 0px 0px; text-align:center; float:left; background:#fff; padding:0px 25px 25px 25px;}
+.about-services-col:nth-child{margin-right: 0px; float:right;}
+.about-services-col-img{
+    width:90px; 
+    height:90px; 
+    margin:auto;  
+    position:relative; 
+    background:#0eb2b3; 
+    border-radius:100%; 
+    border:5px solid #fff;
+    margin-top:-40px;
+    margin-bottom:30px;
+}
+.about-services-col-img img{margin:5px 0px 0px 0px;}
+.about-services-col label{font-size:17px; font-weight:700; text-transform:uppercase;}
+.about-services-col p{color:#707070; font-size:16px; line-height:22px; padding:20px 0px 30px 0px;}
+.about-services-col a{
+    height:40px;
+    margin:auto;
+    display:table;
+    color:#0eb2b3;
+    background:#0eb2b3;
+    color:#fff;
+    line-height:40px;
+    border-radius:10px;
+    padding:0px 10px;
+    text-transform:uppercase;
+    font-weight:700;
+}
+/* about hj ends here */
+
+/* booking starts hee */
+.booking-content{padding:70px 0px 0px 0px;}
+.booking-content .thanks-content-right{padding:0px;}
+.booking-content .thanks-content-right .useful-information{margin-top:0px;}
+
+.booking-content-left{width:67%; float:left;}
+.booking-content-left h6{
+    font:normal 22px 'BrandonText-Bold';
+    color:#8db74a;
+    text-transform:uppercase;
+    padding:0px 0px 40px 0px;
+    letter-spacing:6px;
+}
+
+.booking-form-container{display:table; width:100%;}
+.booking-row{width:48%; float:left; margin:0px 30px 35px 0px;}
+.booking-row:nth-child(2n){float:right; margin-right:0px;}
+.booking-row label{margin:0px 0px 15px 0px; font-size:16px; color:#222; display:block;}
+.booking-row input, .booking-row select{
+    width:100%;
+    background:#f8f8f8;
+    height:50px;
+    padding:0px 20px;
+    font-size:14px;
+    color:#222;
+    border-radius:5px;
+}
+.booking-row select.month-input{width:48%; float:left;}
+.booking-row select.month-input-two{width:48%; float:right;}
+
+.cofrm-booking{
+    background:#0eb2b3;
+    font-size:14px;
+    color:#fff;
+    text-transform:uppercase;
+    border-radius:10px;
+    display:table;
+    padding:0px 10px;
+    text-transform:uppercase;
+    height:50px;
+    font-weight:700;
+    margin:40px 0px 0px 0px;
+}
+/* booking ends here */
+
+/* pop up starts here */
+.pop-up{background:rgba(0,0,0, 0.9); position:fixed; top:0px; left:0px; width:100%; height:100%; display:none;}
+.pop-up-container{width:430px; position:relative; padding:30px; background:#fff; margin:50px auto; border-bottom-right-radius:40px;}
+.pop-up-container h6{
+    font:normal 32px 'BrandonText-Bold';
+    color:#0eb2b3;
+    letter-spacing:6px;
+    text-transform:uppercase;
+    text-align:center;
+    padding:30px 0px 0px 0px;
+}
+.pop-up-container h6 i{font:normal 14px 'Source Sans Pro'; color:#b9b9b9; display:block; letter-spacing:0px; text-transform:none;}
+.pop-up-container input{
+    border:1px solid #dfdfdf;
+    height:50px;
+    border-radius:5px;
+    font-size:14px;
+    padding:0px 20px;
+    width:100%;
+    margin:0px 0px 10px 0px;
+}
+.pop-up-container input[type=submit]{background:#0eb2b3; color:#fff; text-transform:uppercase; height:44px; font-weight:700; border:none; margin-top:16px;}
+.pop-up-container .custom-checkbox{width:100%; margin-bottom:10px;}
+
+.social-login{margin:20px 0px 30px 0px; width:100%; display:table;}
+.social-login button{
+    height:42px;
+    border-radius:5px;
+    width:49%;
+    text-align:center;
+    float:left;
+    font-size:11px;
+    color:#fff;
+    text-transform:uppercase;
+    font-weight:700;
+    text-align:left;
+    padding:0px 0px 0px 30px;
+}
+.social-login .fb-btn{background:#1e4389 url(../images/login/fb-icon.png)/*tpa=http://www.halaljourney.com/images/login/fb-icon.png*/ left 15px center no-repeat;}
+.social-login .tw-btn{background:#28a9e2 url(../images/login/tw-icon.png)/*tpa=http://www.halaljourney.com/images/login/tw-icon.png*/ left 15px center no-repeat; float:right; padding-left:40px;}
+.close-btn{background:#0eb2b3 url(../images/login/close-icon.png)/*tpa=http://www.halaljourney.com/images/login/close-icon.png*/ center no-repeat; width:30px; height:30px; position:absolute; top:0px; right:0px;}
+
+.accept-terms-checkbox label{padding-left:30px;}
+.accept-terms-checkbox{position:relative;}
+.accept-terms-checkbox label.error{position:absolute; top:20px;}
+
+.register-pop-container input{
+			border:1px solid #dfdfdf;
+			height:38px;
+			border-radius:5px;
+			font-size:14px;
+			padding:0px 20px;
+			width:100%;
+			margin:0px 0px 10px 0px;
+}
+.register-pop-container h6{font:normal 18px 'BrandonText-Bold'; line-height:22px;}
+
+.search-container{width:85%; display:table; margin:auto;}
+.search-contr{position:relative; margin:170px 0px 0px 0px;}
+.search-container input[type="text"]{
+    width:100%;
+    border-bottom:1px solid #fff;
+    background:none;  
+    font:normal 32px 'BrandonText-Bold';
+    text-transform:uppercase;
+    height:80px;
+    color:#fff;
+}
+.search-container input[type="text"]:focus{outline:inherit;}
+.search-container input[type="submit"]{
+    width:30px;
+    position:absolute;
+    right:0px;
+    top:0px;
+    height:80px;
+    background:url(../images/pop-search-icon.png)/*tpa=http://www.halaljourney.com/images/pop-search-icon.png*/ center no-repeat;
+}
+.search-container .close-btn{top:50px; right:50px; background:#fff url(../images/search-close-icon.png)/*tpa=http://www.halaljourney.com/images/search-close-icon.png*/ center no-repeat}
+
+.main-landing-pop{display:table; z-index:11;}
+.landing-pop-up{position:relative; margin:auto; display:table; background:#fff; width:74%; border-bottom-right-radius:40px; padding:0px 30px; margin-top:50px;}
+.landing-pop-up h6{
+    text-transform:uppercase;
+    color:#8db74a;
+    font:normal 40px 'BrandonText-Bold';
+    padding:40px 0px;
+    text-align:center;
+}
+
+.landing-pop-col{float:left; min-height:250px; border-right:1px solid #f1f1f1; width:22%; border-bottom:1px solid #f1f1f1;}
+.second-col-lnd{width:56%; padding-left:30px;}
+.last-col-lnd{border-right:none; padding-left:20px;}
+.landing-pop-col label{color:#8db74a; font-size:18px; font-weight:700; padding:0px 0px 20px 0px; text-transform:uppercase; display:block;}
+.landing-pop-col ul{margin:0px 40px 0px 0px; display:table; float:left;}
+.landing-pop-col ul li{line-height:25px;}
+.landing-pop-col ul li a{color:#b9b9b9; font-size:16px;}
+.landing-pop-col ul li a:hover{color:#000;}
+
+.not-sure{display:table; margin:auto; padding:40px 0px;}
+.not-sure p{float:left; font-size:18px; font-weight:700; text-transform:uppercase; padding:0px 30px 0px 0px; color:#8db74a; line-height:60px;}
+.not-sure a{
+    background:#0eb2b3 url(../images/go-homepage-pin.png)/*tpa=http://www.halaljourney.com/images/go-homepage-pin.png*/ left 15px center no-repeat;
+    border-radius:10px;
+    height:60px;
+    line-height:60px;
+    font-size:15px;
+    font-weight:700;
+    display:table;
+    float:left;
+    text-transform:uppercase;
+    color:#fff;
+    padding:0px 15px 0px 45px;
+}
+/* pop up ends here */
+
+/* footer starts here */
+footer{background:#1b1b1b; width:100%; display:table; padding:30px 0px;}
+
+.social-widget{width:42%; float:left;}
+.get-social{
+    height:50px; 
+    background:#0eb1b3; 
+    float:left;
+    width:100%;
+    overflow:hidden;
+    border-bottom-right-radius:20px;
+}
+.get-social p{text-transform:uppercase; font:normal 16px 'Montserrat', sans-serif; text-align:right; color:#fff; line-height:50px; padding:0px 10px 0px 10px; float:left;}
+.get-social ul{float:right; padding:0px 20px 0px 0px;}
+.get-social ul li{border-left:1px solid rgba(255,255,255, 0.6); height:50px; float:left; cursor:pointer;}
+.get-social ul li:last-child{border-right:1px solid rgba(255,255,255, 0.6);}
+.get-social ul li:hover, .get-social ul li.active{background:#7fd7d9;}
+.get-social ul li i{width:36px; height:36px; display:block; border:1px solid #fff; border-radius:100%; background:none; margin:6px 10px 0px 10px; cursor:pointer;}
+.get-social ul li i.fb-icon{background:url(../images/footer/facebook-icon.png)/*tpa=http://www.halaljourney.com/images/footer/facebook-icon.png*/ center no-repeat;}
+.get-social ul li i.fb-icon:hover{background:#dde9c8 url(../images/footer/facebook-icon.png)/*tpa=http://www.halaljourney.com/images/footer/facebook-icon.png*/ center no-repeat;}
+.get-social ul li i.tw-icon{background:url(../images/footer/twitter-icon.png)/*tpa=http://www.halaljourney.com/images/footer/twitter-icon.png*/ center no-repeat;}
+.get-social ul li i.tw-icon:hover{background:#dde9c8 url(../images/footer/twitter-icon.png)/*tpa=http://www.halaljourney.com/images/footer/twitter-icon.png*/ center no-repeat;}
+.get-social ul li i.yt-icon{background:url(../images/footer/youtube-icon.png)/*tpa=http://www.halaljourney.com/images/footer/youtube-icon.png*/ center no-repeat;}
+.get-social ul li i.yt-icon:hover{background:#dde9c8 url(../images/footer/youtube-icon.png)/*tpa=http://www.halaljourney.com/images/footer/youtube-icon.png*/ center no-repeat;}
+.get-social ul li i.inst-icon{background:url(../images/footer/instagram-icon.png)/*tpa=http://www.halaljourney.com/images/footer/instagram-icon.png*/ center no-repeat;}
+.get-social ul li i.inst-icon:hover{background:#dde9c8 url(../images/footer/instagram-icon.png)/*tpa=http://www.halaljourney.com/images/footer/instagram-icon.png*/ center no-repeat;}
+
+.share-pop{
+    background:#fff; 
+    width:100%;
+    padding:15px; 
+    color:#fff; 
+    display:none;
+}
+.share-pop .clear{display:table !important;}
+.share-pop .pop-heading{border-bottom:1px solid #fff; display:table; width:100%; padding:0px 0px 5px 0px;}
+.share-pop a{font-size:20px; font-weight:700; text-transform:uppercase; float:left; color:#0eb2b3;}
+.close-icon{display:block; width:15px; height:15px; background:url(../images/close.png)/*tpa=http://www.halaljourney.com/images/close.png*/ no-repeat; cursor:pointer; margin:6px 0px 0px 0px; float:right;}
+.share-pop img{margin:10px 10px 10px 0px; float:left;}
+.share-pop p{font-size:16px; color:#464646; padding:10px 0px 10px 0px;}
+
+.plugin-style{overflow:hidden; height:20px; width:90px; border:none;}
+.share-pop a.plugin-style-inst{background-color:#fafafa; border:1px solid #2d6ea5; color:#2d6ea5; height:20px; padding:2px; border-radius:4px; font-size:12px; width:auto;}
+
+.footer-right{width:55%; float:left; margin:0px 0px 0px 30px;}
+.footer-right-col{float:left; border-right:1px solid #383838; padding:0px 35px 0px 35px; min-height:200px;}
+.footer-right-col-one{padding-left:0px;}
+.footer-right-col-three{border-right:0px;}
+.footer-right-col h6{font-size:16px; font-weight:700; text-transform:uppercase; color:#8db74a; padding:21px 0px 0px 0px;}
+.footer-right-col-three h6{padding:0px 0px 0px 0px;}
+.footer-right-col ul{margin:30px 0px 0px 0px;}
+.footer-right-col ul li{}
+.footer-right-col ul li a{
+    color:#777777;
+    font-size:16px;
+    line-height:30px;
+    display:block;
+}
+.footer-right-col ul li a:hover{color:#fff;}
+
+.subscribe-newsletter{margin:30px 0px 0px 0px; position:relative;}
+.subscribe-newsletter label.error, 
+.subscribe-newsletter span.success,
+.subscribe-newsletter span.error
+{position:absolute; left:100px; bottom:-22px;}
+
+.subscribe-newsletter h6{font-size:16px; font-weight:700; text-transform:uppercase; color:#8db74a; float:left; padding:0px 20px 0px 0px;}
+.subscribe-newsletter input[type="text"]{
+    font-size:14px;
+    border:1px solid #565656;
+    border-radius:5px;
+    background:#1b1b1b url(../images/footer/mail-icon.png)/*tpa=http://www.halaljourney.com/images/footer/mail-icon.png*/ right 10px center no-repeat;
+    height:50px;
+    color:#fff;
+    width:50%;
+    padding:0px 20px;
+    float:left;
+}
+.subscribe-newsletter input[type="submit"]{
+    height:50px;
+    background:#0eb2b3;
+    font-size:16px;
+    font-weight:700;
+    text-transform:uppercase;
+    border-radius:5px;
+    color:#fff;
+    width:25%;
+    margin:0px 0px 0px 15px;
+}
+
+.footer-bottom{background:#000; display:table; width:100%; padding:30px 0px;}
+.footer-bottom ul{float:left;}
+.footer-bottom ul li{float:left;}
+.footer-bottom ul li a{
+    color:#fff;
+    font-size:13px;
+    text-transform:uppercase;
+    padding:0px 40px 0px 0px;
+}
+.footer-bottom p{float:right; font-size:13px; color:#fff;}
+.footer-bottom p i{text-transform:uppercase; font-style:normal;}
+/* footer ends here */
+
+/* Media Query starts here */
+@media (max-width:1024px){}
+
+
+.registerNow{
+cursor: pointer;
+
+}
+
+label.error {
+    font-size:13px;
+	color: #ff0000;
+   /* border: solid 2px #fff;*/
+	vertical-align:top;
+}
+
+input.error {
+    border: solid 1px #ff0000;
+}
+
+span.error {
+    font-size:13px;
+	color: #ff0000;
+    /*border: solid 2px #fff;*/
+	vertical-align:top;
+}
+
+.user-sec a.login-btn {
+  background: rgba(0, 0, 0, 0) url("../images/login-icon.png")/*tpa=http://www.halaljourney.com/images/login-icon.png*/ no-repeat scroll left center;
+  padding: 0 0 0 25px;
+}
+
+.user-sec a {
+  color: #8db74a;
+  cursor: pointer;
+  float: left;
+  font-size: 16px;
+  font-weight: 400;
+  height: 22px;
+  line-height: 22px;
+  margin: 0 0 0 25px;
+}
+
+.user-sec a.logout-btn {
+  background: rgba(0, 0, 0, 0) url("../images/logout-icon.png")/*tpa=http://www.halaljourney.com/images/logout-icon.png*/ no-repeat scroll left center;
+  padding: 0 0 0 19px;
+}
+.NewCheck_box {
+ width:50% !important;
+}
+.forgetPsd {
+color: #0eb2b3;
+font-size: 14px;
+text-align: right;
+}
+
+.forgot-pop-container input {
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 38px;
+  margin: 22px 0 10px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+span.success {
+  color: #0EB2B3;
+  font-size: 13px;
+  vertical-align: top;
+}
+textarea.error {
+    border: solid 1px #ff0000;
+}
+select.error {
+    border: solid 1px #ff0000;
+}
+
+
+.page-content{width:100%; background:#f2f2f2; display:table;}
+.breadcrumb{padding:30px 0px; display:table; width:100%;}
+.breadcrumb ul{}
+.breadcrumb ul li{float:left;}
+.breadcrumb ul li a{font-size:12px; color:#b9b9b9; text-transform:uppercase;}
+.breadcrumb ul li a.active{color:#000;}
+
+.left-side{width:270px; float:left; margin:0px 30px 0px 0px;}
+.left-side h6{font:normal 22px 'BrandonText-Bold'; color:#8db74a; margin:0px 0px 30px 0px; text-transform:uppercase;}
+
+.search-form{}
+.search-form input{
+    width:90%; 
+    height:50px; 
+    background:#fff; 
+    border-radius:5px; 
+    font-size:14px; 
+    margin:0px 0px 10px 0px;
+    padding:0px 0px 0px 50px;
+}
+.search-form input.pin{background:#fff url(../images/search-form/pin.png)/*tpa=http://www.halaljourney.com/images/search-form/pin.png*/ left 20px center no-repeat;}
+.search-form input.calendar{background:#fff url(../images/search-form/calendar.png)/*tpa=http://www.halaljourney.com/images/search-form/calendar.png*/ left 20px center no-repeat;}
+.search-form input[type=submit]{
+    background:#0eb2b3;
+    display:table;
+    font-weight:700;
+    color:#fff;
+    height:40px;
+    text-transform:uppercase;
+    width:auto;
+    padding:0px 20px;
+    border-radius:10px;
+    margin:20px 0px 0px 0px;
+}
+
+.types{}
+.accordion-menu{text-transform:uppercase;}
+.menu-row{
+    padding:13px 20px; 
+    display:block; 
+    font-size:14px; 
+    font-weight:700;
+    background:#fff;
+    border-bottom:1px solid #f2f2f2;
+}
+.menu-row i{float:right; font-style:normal;}
+.active-menu-row{background:#0eb2b3; color:#fff;}
+.accordion-menu ul{}
+.accordion-menu ul li{
+    font-size:14px;
+    padding:13px 35px; 
+    display:block; 
+    font-size:14px;
+    background:#fff;
+    border-bottom:1px solid #f2f2f2;
+    color:#b9b9b9;
+    cursor:pointer;
+}
+.accordion-menu ul li:hover{color:#0eb2b3;}
+
+.star-rating-left{}
+.rating-row{margin:0px 0px 10px 0px; width:100%; display:table;}
+
+.facality{}
+.facality label{font-size:15px; color:#707070;}
+
+.others{}
+.others label{font-size:15px; color:#707070;}
+
+.review-score-col{float:left; margin:0px 10px 0px 0px;}
+.review-score-col p{float:left; font-size:14px; font-weight:700; color:#222;}
+.review-score-col img{float:left; margin:2px 0px 10px 3px;}
+.review-score-col .custom-checkbox{margin:0px 0px 0px 1px;}
+
+/* custom checkbox css */
+.custom-checkbox{float:left;}
+.custom-checkbox input[type=checkbox].css-checkbox{
+    position:absolute; 
+    overflow:hidden; 
+    clip:rect(0 0 0 0); 
+    height:1px; 
+    width:1px; 
+    margin:0px; 
+    padding:0; 
+    border:0;
+}
+.custom-checkbox input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:30px;	
+    margin-right:10px;	
+    height:19px!important; 
+    display:inline-block; 
+    line-height:19px; 
+    background-repeat:no-repeat; 
+    background-position:0 0;
+    cursor:pointer;	
+    text-align:left;
+}
+.custom-checkbox input[type=checkbox].css-checkbox:checked + label.css-label {background-position:0 -19px!important;}
+.css-label{background:url(../images/checkbox.png)/*tpa=http://www.halaljourney.com/images/checkbox.png*/ top left no-repeat!important; height:19px;}
+
+.custom-checkbox label{font-size:14px; color:#707070;}
+
+/* right side starts here */
+.right-side{width:calc(100% - 300px); float:right; padding:0px 0px 80px 0px;}
+
+.product-container{}
+.product-container .product-column{
+    width:31%; 
+    float:left; 
+    margin:0px 30px 30px 0px; 
+    border-radius:5px; 
+    overflow:hidden; 
+    background:#fff;
+}
+.product-container .product-column:nth-child(3n){margin:0px 0px 30px 0px;}
+.product-column-img{width:100%; overflow:hidden; height:220px; background:grey; position:relative;}
+.most-popular-btn{position:absolute; top:0px; left:0px; font-size:12px; font-weight:700; background:#8db74b; padding:10px 15px; color:#fff; text-transform:uppercase;}
+.product-column-content{color:#222; padding:30px 20px;}
+.product-column-content p{font-size:16px; text-transform:uppercase;}
+.col-reviews{display:table; width:100%; margin:10px 0px;}
+.col-reviews img{margin:4px 7px 0px 0px; float:left;}
+.col-reviews label{color:#bebebe; font-size:14px; padding:0px 0px 0px 10px}
+.col-heading-text{font-size:16px; font-weight:700; text-transform:uppercase;}
+.col-description-text{color:#bebebe; font-size:14px; margin:14px 0px;}
+
+.product-container .product-column-list{margin:0px 0px 30px 0px; width:100%;}
+.product-column-list .product-column-img{width:31%; float:left; margin:0px 0px 0px 0px;}
+.product-column-list .product-column-content{float:left; width:69%; padding-bottom:0px;}
+.product-column-content .col-schedule{color:#707070; font-size:14px; text-transform:uppercase; font-weight:500; padding:0px 0px 10px 0px;}
+.product-column-list .col-heading-text{font-size:18px;}
+.product-column-list .col-description-text{font-size:16px; line-height:24px;}
+.price-text{font-size:14px; color:#222; text-transform:uppercase; text-align:center; padding:20px 0px 0px 0px;}
+.price-text b{font-size:26px; font-weight:700; color:#0eb2b3;}
+
+.list-left-side{float:left; width:75%;}
+.list-right-side{float:left; width:25%;}
+.list-right-side .book-now-btn{margin:auto; margin-top:20px;}
+
+.book-now-btn{
+    background:#0eb2b3;
+    display:table;
+    font-weight:700;
+    color:#fff;
+    height:40px;
+    text-transform:uppercase;
+    width:auto;
+    padding:0px 20px;
+    border-radius:10px;
+    margin:20px 0px 0px 0px;
+}
+
+.sorting-row{margin:0px 0px 30px 0px;}
+.sorting-row-btn{
+    height:50px;
+    color:#707070;
+    font-size:16px;
+    border-radius:5px;
+    padding:0px 0px 0px 20px;
+    text-align:left;
+    width:170px;
+    cursor:pointer;
+    float:left;
+    margin:0px 20px 0px 0px;
+    background:#fff url(../images/sorting-grey.png)/*tpa=http://www.halaljourney.com/images/sorting-grey.png*/ right 20px center no-repeat;
+}
+.sorting-row-btn:hover{
+    background:#0eb2b3 url(../images/sorting-white.png)/*tpa=http://www.halaljourney.com/images/sorting-white.png*/ right 20px center no-repeat;
+    color:#fff;
+}
+
+.view-list-grid{float:right; margin:10px 0px 0px 0px;}
+.view-list-grid p{color:#707070; line-height:35px; font-size:16px; float:left;}
+.view-list-grid ul{float:left;}
+.view-list-grid ul li{float:left; width:35px; height:35px; background:#fff; margin:0px 0px 0px 20px; cursor:pointer;}
+.view-list-grid ul li.list-icon{background:#fff url(../images/list-icon.png)/*tpa=http://www.halaljourney.com/images/list-icon.png*/ center no-repeat;}
+.view-list-grid ul li.grid-icon{background:#fff url(../images/grid-icon.png)/*tpa=http://www.halaljourney.com/images/grid-icon.png*/ center no-repeat;}
+.view-list-grid ul li.list-icon-selected,
+.view-list-grid ul li.list-icon:hover
+{background:#0eb2b3 url(../images/list-icon-selected.png)/*tpa=http://www.halaljourney.com/images/list-icon-selected.png*/ center no-repeat;}
+.view-list-grid ul li.grid-icon-selected,
+.view-list-grid ul li.grid-icon:hover
+{background:#0eb2b3 url(../images/grid-icon-selected.png)/*tpa=http://www.halaljourney.com/images/grid-icon-selected.png*/ center no-repeat;}
+
+.pagination{width:100%; display:table; padding:10px 0px 0px 0px;}
+.pagination-col-1{float:left; width:12%;}
+.pagination-col-2{float:left; width:76%;}
+.pagination-col-2 ul{display:table; margin:auto;}
+.pagination-col-2 ul li{
+    color:#707070;
+    float:left;
+    font-size:14px;
+    font-weight:700;
+    padding:0px 15px;
+    line-height:40px;
+    cursor:pointer;
+}
+.pagination-col-3{float:right; width:12%;}
+.pg-button{
+    height:40px;
+    line-height:40px;
+    font-size:14px;
+    font-weight:700;
+    padding:0px 10px;
+    text-transform:uppercase;
+    color:#707070;
+    border:1px solid #0eb2b3;
+    border-radius:10px;
+    cursor:pointer;
+}
+.pg-button:hover{background:#0eb2b3; color:#fff;}
+
+
+/* hotel detail content starts here */
+
+

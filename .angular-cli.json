@@ -19,6 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "assets/css/layouts.css",
+        "assets/css/jquery-ui.css",
+        "assets/js/custom.js",
         "styles.css"
       ],
       "scripts": [],

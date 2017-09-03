@@ -1,0 +1,101 @@
+*{
+	margin:0px; 
+	padding:0px;
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+}
+html , body{
+	overflow-x:hidden; 
+	width:100%; 
+    height:100%;
+	position:relative; 
+	display:table;
+	font:normal 16px 'Source Sans Pro', sans-serif;
+}
+a{text-decoration:none; color:#000;}
+ul, li{list-style:none;}
+button{background:none; border:none; cursor:pointer; font:normal 16px 'Source Sans Pro', sans-serif;}
+button:focus{outline:inherit;}
+img{border:0px; max-width:100%;}
+input, select, textarea{font-family:'Source Sans Pro', sans-serif; border:none;}
+
+.clear{clear:both;}
+
+.wrapper{max-width:800px; margin:auto;}
+
+/* coming soon starts here */
+.coming-soon-sec{
+    width:100%;
+    height:100%;
+    display:table;
+    background:#8db74a;
+    text-align:center;
+    position:relative;
+}
+.heading{
+    font:700 55px 'Montserrat', sans-serif;
+    line-height:80px;
+    letter-spacing:3px;
+    color:#fff;
+    margin:50px 0px;
+}
+.coming-soon-sec p{
+    font-size:18px; 
+    line-height:30px; 
+    color:#fff; 
+    padding:40px 0px 40px 0px;
+}
+
+.form-sec{display:table; width:90%; margin:auto;}
+.form-sec label{
+    font-size:16px; 
+    font-weight:700;
+    color:#fff; 
+    text-transform:uppercase; 
+    display:table; 
+    float:left;
+    line-height:50px;
+}
+.form-sec input[type=text]{
+    border:1px solid rgba(255,255,255, 0.5);
+    height:50px;
+    float:left;
+    width:55%;
+    border-radius:10px;
+    padding:0px 50px 0px 20px;
+    margin:0px 20px;
+    font-size:14px;
+    color:#fff;
+    background:url(../images/coming-soon/email-icon.png)/*tpa=http://www.halaljourney.com/images/coming-soon/email-icon.png*/ right 20px center no-repeat;
+}
+.form-sec input::-webkit-input-placeholder{color:rgba(255,255,255, 0.5);}
+.form-sec input[type=submit]{
+    background:#0eb2b3;
+    height:50px;
+    text-align:center;
+    padding:0px 75px;
+    text-transform:uppercase;
+    color:#fff;
+    font-size:16px;
+    border-radius:10px;
+    float:left;
+}
+
+.social-links{display:table; margin:auto; margin-top:30px;}
+.social-links ul{}
+.social-links ul li{float:left; padding:0px 15px;}
+.social-links ul li a{display:table;}
+.social-links ul li a i{font-size:20px; color:#fff;}
+.social-links ul li a i:hover{color:#0eb2b3;}
+
+.bottom-text{
+    position:absolute; 
+    width:100%; 
+    text-align:center; 
+    bottom:30px; 
+    font-size:13px;
+    left:0px;
+    color:#fff;
+}
+/* coming soon ends here */

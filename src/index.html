@@ -2,13 +2,855 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>HJ</title>
+  <title>Halal Journey</title>
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" tppabs="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+  <!-- scroll header starts here -->
+  <!-- scroll header ends here -->
+  <!-- top header starts here -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" tppabs="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" tppabs="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">    
+  <link rel="stylesheet" type="text/css" href="css/layout.css" tppabs="./assets/css/layout.css">
+  <link rel="stylesheet" href="css/jquery-ui.css" tppabs="./assets/css/jquery-ui.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" tppabs="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https:/code.jquery.com/jquery-1.12.4.js" tppabs="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https:/code.jquery.com/ui/1.12.0/jquery-ui.js" tppabs="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
 </head>
 <body>
   <app-root></app-root>
+  <div class="scroll-header">
+    <div class="wrapper">
+      <a href="#" class="logo">
+        <img src="images/logo.png" tppabs="./assets/images/logo.png" alt="">
+      </a>
+      <p class="ph-number">+41 435 66138</p>
+      <div class="special-offer-form">
+        <form id="subsformtop" method="post">
+          <input type="text" name="subsmail" value="" placeholder="Enter your email for special offers">
+          <input type="submit" name="subsubmit" class="registerNow" value="Submit">
+        </form>
+      </div>
+      <script type="text/javascript" src="js/custom.js" tppabs="./assets/js/custom.js"></script>
+      <script type="text/javascript" src="js/plugins/jquery-validation/dist/jquery.validate.js" tppabs="./assets/js/plugins/jquery-validation/dist/jquery.validate.js"></script>
+      <button type="button" name="" value="" class="share-btn share-fb-btn"></button>
+      <button type="button" name="" value="" class="share-btn share-instagram-btn"></button>
+    </div>
+  </div>
+  <header>
+    <app-top-header></app-top-header>
+    <app-top-nav></app-top-nav>
+    <app-search></app-search>
+  </header>
+  <!-- header ends here -->
+  <div class="banner-sec">
+    <div class="slider-content">
+      <img src="images/banner-img.png" tppabs="./assets/images/banner-img.png" alt="" class="banner-slide">
+      <div class="wrapper">
+        <h3>Crystal clear waters of the sea,
+          <br>through soft white sand I wander free...
+        </h3>
+        <img src="images/banner-smile.png" tppabs="./assets/images/banner-smile.png" alt="">
+        <a href="#" class="button-discover">Discover</a>
+      </div>
+    </div>
+  </div>
+  <!-- banner ends here -->
+  <div class="clear"></div>
+  <!-- what is HJ starts here -->
+  <div class="what-hj">
+    <div class="wrapper">
+      <h3 class="tagline">
+        <i>What Is</i>Halal-Friendly Travel?
+      </h3>
+      <div class="what-hj-col">
+        <img src="images/what-hj-icon/food.png" tppabs="./assets/images/what-hj-icon/food.png" alt="">
+        <h5>Food</h5>
+        <p>Our hotels & Resorts provide Halal-food options for our guests, Our resorts don't serve alcohol & many provide separate
+          leasure areas and facilites for familes, men..</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="what-hj-col">
+        <img src="images/what-hj-icon/facalities.png" tppabs="./assets/images/what-hj-icon/facalities.png" alt="">
+        <h5>Facilities</h5>
+        <p>Our resorts don't serve alcohol & many provide seperate leasure areas and facilites for familes, men & women. Our
+          new travel platform provides the oppertunity for you..</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="what-hj-col">
+        <img src="images/what-hj-icon/activity.png" tppabs="./assets/images/what-hj-icon/activity.png" alt="">
+        <h5>Activities</h5>
+        <p>Many of our resorts provide the oppertuity to visit local visitor attactions and participant in halal- friendly leisure
+          activties.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="what-hj-col">
+        <img src="images/what-hj-icon/flight.png" tppabs="./assets/images/what-hj-icon/flight.png" alt="">
+        <h5>Flights</h5>
+        <p>Our team of halal-travel specialitis will help to facilitate and recommend airlines that best match the your travel
+          needs for luxury, business and family travel.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <!-- what is HJ ends here -->
+  <!-- luxury starts here -->
+  <div class="product-showcase">
+    <div class="wrapper">
+      <div class="top-info">
+        <h5>Luxury</h5>
+        <p>Choose from a selection of the world's finesh hotels, resorts & private villas. We provide you with access to the
+          very best in luxury halal travel accomodation.
+        </p>
+      </div>
+      <div class="left-product-showcase">
+        <a href="javascript:if(confirm(%27http://www.halaljourney.com/search.php?countryName=Curaçao&countryCode=CW&cityCode=10673&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=3&kids=2&Rooms=1  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.halaljourney.com/search.php?countryName=Curaçao&countryCode=CW&cityCode=10673&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=3&kids=2&Rooms=1%27"
+          tppabs="http://www.halaljourney.com/search.php?countryName=Curaçao&countryCode=CW&cityCode=10673&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=3&kids=2&Rooms=1">
+          <div class="product-col ">
+            <div class="product-img">
+              <img src="admin/images/logo1703231209301374856178.jpg" tppabs="./assets/admin/images/logo1703231209301374856178.jpg">
+            </div>
+            <div class="product-content">
+              <span class="ratings-star">
+																																						<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																							<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																								<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																								</span>
+              <div class="clear"></div>
+              <p></p>
+              <label>From 
+																																									<i>$0.00</i>
+																																								</label>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </a>
+        <a href="javascript:if(confirm(%27http://www.halaljourney.com/search.php?countryName=Curaçao&countryCode=CW&cityCode=10673&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=3&kids=2&Rooms=1  \n\nThis file was not retrieved by Teleport Pro, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.halaljourney.com/search.php?countryName=Curaçao&countryCode=CW&cityCode=10673&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=3&kids=2&Rooms=1%27"
+          tppabs="http://www.halaljourney.com/search.php?countryName=Curaçao&countryCode=CW&cityCode=10673&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=3&kids=2&Rooms=1">
+          <div class="product-col product-col-small">
+            <div class="product-img">
+              <img src="admin/images/logo1703231209201374856178.jpg" tppabs="./assets/admin/images/logo1703231209201374856178.jpg">
+            </div>
+            <div class="product-content">
+              <span class="ratings-star">
+																																										<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																											<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																												<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																												</span>
+              <div class="clear"></div>
+              <p></p>
+              <label>From 
+																																													<i>$0.00</i>
+																																												</label>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </a>
+        <a href="search.php-countryName=Bahamas&countryCode=BS&cityCode=10673&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=3&kids=2&Rooms=1.htm"
+          tppabs="http://www.halaljourney.com/search.php?countryName=Bahamas&countryCode=BS&cityCode=10673&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=3&kids=2&Rooms=1">
+          <div class="product-col product-col-small">
+            <div class="product-img">
+              <img src="admin/images/noimg.png" tppabs="./assets/admin/images/noimg.png">
+            </div>
+            <div class="product-content">
+              <span class="ratings-star">
+																																														<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																															<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																																<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																																</span>
+              <div class="clear"></div>
+              <p></p>
+              <label>From 
+																																																	<i>$0.00</i>
+																																																</label>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- left ends here -->
+      <div class="right-product-showcase ">
+        <a href="search.php-countryName=Aruba&countryCode=AW&cityCode=10673&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=3&kids=2&Rooms=1.htm"
+          tppabs="http://www.halaljourney.com/search.php?countryName=Aruba&countryCode=AW&cityCode=10673&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=3&kids=2&Rooms=1">
+          <div class="product-col product-col-large">
+            <div class="product-img">
+              <img src="admin/images/noimg.png" tppabs="./assets/admin/images/noimg.png">
+            </div>
+            <div class="product-content">
+              <span class="ratings-star">
+																																																		<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																																			<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																																				<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																																					<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																																						<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png">
+																																																						</span>
+              <div class="clear"></div>
+              <p></p>
+              <label>From 
+																																																							<i>$0.00</i>
+																																																						</label>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- right ends here -->
+    </div>
+  </div>
+  <!-- luxury ends here -->
+  <!-- romance starts here -->
+  <div class="romance-sec">
+    <div class="wrapper">
+      <div class="top-info">
+        <h5>Romance</h5>
+        <p>These properties offer secluded options to allow you to experience a perfect honeymoon or romantic getaway. All of
+          our romance destinations provide the very best Halal facilities and are planned carefully with the option of including
+          a personalised service.</p>
+      </div>
+      <div class="romance-col">
+        <div class="romance-col-img">
+          <img src="images/sample-images/romance-sec.png" tppabs="./assets/images/sample-images/romance-sec.png"
+            alt="">
+          <a href="#">View More</a>
+        </div>
+        <div class="romance-col-content">
+          <p>Switzerland</p>
+          <div class="romance-rating-stars">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+          </div>
+          <label class="type-prop">Luxury Villa</label>
+          <label class="from-price">from 
+																																																											<b>$860</b>
+																																																										</label>
+        </div>
+      </div>
+      <div class="romance-col">
+        <div class="romance-col-img">
+          <img src="images/sample-images/romance-sec.png" tppabs="./assets/images/sample-images/romance-sec.png"
+            alt="">
+          <a href="#">View More</a>
+        </div>
+        <div class="romance-col-content">
+          <p>Switzerland</p>
+          <div class="romance-rating-stars">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+          </div>
+          <label class="type-prop">Luxury Villa</label>
+          <label class="from-price">from 
+																																																																	<b>$860</b>
+																																																																</label>
+        </div>
+      </div>
+      <div class="romance-col">
+        <div class="romance-col-img">
+          <img src="images/sample-images/romance-sec.png" tppabs="./assets/images/sample-images/romance-sec.png"
+            alt="">
+          <a href="#">View More</a>
+        </div>
+        <div class="romance-col-content">
+          <p>Switzerland</p>
+          <div class="romance-rating-stars">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+          </div>
+          <label class="type-prop">Luxury Villa</label>
+          <label class="from-price">from 
+																																																																							<b>$860</b>
+																																																																						</label>
+        </div>
+      </div>
+      <div class="romance-col">
+        <div class="romance-col-img">
+          <img src="images/sample-images/romance-sec.png" tppabs="./assets/images/sample-images/romance-sec.png"
+            alt="">
+          <a href="#">View More</a>
+        </div>
+        <div class="romance-col-content">
+          <p>Switzerland</p>
+          <div class="romance-rating-stars">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+          </div>
+          <label class="type-prop">Luxury Villa</label>
+          <label class="from-price">from 
+																																																																													<b>$860</b>
+																																																																												</label>
+        </div>
+      </div>
+      <div class="romance-col">
+        <div class="romance-col-img">
+          <img src="images/sample-images/romance-sec.png" tppabs="./assets/images/sample-images/romance-sec.png"
+            alt="">
+          <a href="#">View More</a>
+        </div>
+        <div class="romance-col-content">
+          <p>Switzerland</p>
+          <div class="romance-rating-stars">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+          </div>
+          <label class="type-prop">Luxury Villa</label>
+          <label class="from-price">from 
+																																																																																			<b>$860</b>
+																																																																																		</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- romance ends here -->
+  <!-- family starts here -->
+  <div class="product-showcase">
+    <div class="wrapper">
+      <div class="top-info">
+        <h5>Family</h5>
+        <p>Many of our resorts are purposely built for the Halal family tourism. They are very popular with families. Our HJ
+          rating system can help you to choose the most suitable option.
+        </p>
+      </div>
+      <div class="left-product-showcase">
+        <div class="product-col product-col-large">
+          <div class="product-img">
+            <img src="images/sample-images/indonesia.png" tppabs="./assets/images/sample-images/indonesia.png" alt="">
+          </div>
+          <div class="product-content">
+            <span class="ratings-star">
+																																																																																					<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																						<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																							<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																								<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																									<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																									</span>
+            <div class="clear"></div>
+            <p>Hungary</p>
+            <label>From 
+																																																																																										<i>$860</i>
+																																																																																									</label>
+            <div class="col-bottom-info">
+              <div class="left-sd">
+                <span class="people-list">
+																																																																																												<b>2</b> adults, 
+																																																																																												<b>1</b> kids
+																																																																																											</span>
+                <span class="date-list">July 
+																																																																																												<b>19th</b> to July 
+																																																																																												<b>26th</b>
+																																																																																											</span>
+              </div>
+              <a href="#">view more</a>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <!-- left ends here -->
+      <div class="right-product-showcase">
+        <div class="product-col">
+          <div class="product-img">
+            <img src="images/sample-images/hungary.png" tppabs="./assets/images/sample-images/hungary.png" alt="">
+          </div>
+          <div class="product-content">
+            <span class="ratings-star">
+																																																																																											<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																												<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																													<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																														<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																															<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																															</span>
+            <div class="clear"></div>
+            <p>Hungary</p>
+            <label>From 
+																																																																																																<i>$860</i>
+																																																																																															</label>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="product-col">
+          <div class="product-img">
+            <img src="images/sample-images/turkey.png" tppabs="./assets/images/sample-images/turkey.png" alt="">
+          </div>
+          <div class="product-content">
+            <span class="ratings-star">
+																																																																																																	<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																																		<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																																			<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">
+																																																																																																				<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined</span>undefined
+            <div class="clear"></div>undefined
+            <p>Hungary</p>undefined<label>From undefined<i>$860</i>undefined</label>undefined
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <!-- right ends here -->
+    </div>
+  </div>
+  <!-- family ends here -->
+  <!-- rejuvenating starts here -->
+  <div class="rejuvenating-sec">
+    <div class="wrapper">
+      <div class="top-info">
+        <h5>Rejuvenating</h5>
+        <p>Relax and unwind at one of our rejuvanating spa & health resorts. </p>
+      </div>
+      <div class="rejuvenating-sec-col">
+        <div class="rejuvenating-sec-col-img">
+          <img src="images/rejuvenating/img.png" tppabs="./assets/images/rejuvenating/img.png" alt="" alt="">
+        </div>
+        <div class="rejuvenating-sec-col-content">undefined
+          <h6>Malaysia</h6>undefined<label class="from-price-rej">from undefined<b>$860</b>undefined</label>undefined
+          <div class="rating-rej">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+            <img
+              src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+              <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+              <img
+                src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<label>485 rewies</label>undefined</div>undefined
+          <p>2 Place de la Sans Défense, Puteaux</p>undefined<a href="#">Book Now</a>undefined</div>undefined</div>undefined
+      <div class="rejuvenating-sec-col">undefined
+        <div class="rejuvenating-sec-col-img">undefined<img src="images/rejuvenating/img.png" tppabs="./assets/images/rejuvenating/img.png"
+            alt="" alt="">undefined</div>undefined
+        <div class="rejuvenating-sec-col-content">undefined
+          <h6>Malaysia</h6>undefined<label class="from-price-rej">from undefined<b>$860</b>undefined</label>undefined
+          <div class="rating-rej">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+            <img
+              src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+              <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+              <img
+                src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<label>485 rewies</label>undefined</div>undefined
+          <p>2 Place de la Sans Défense, Puteaux</p>undefined<a href="#">Book Now</a>undefined</div>undefined</div>undefined
+      <div class="rejuvenating-sec-col">undefined
+        <div class="rejuvenating-sec-col-img">undefined<img src="images/rejuvenating/img.png" tppabs="./assets/images/rejuvenating/img.png"
+            alt="" alt="">undefined</div>undefined
+        <div class="rejuvenating-sec-col-content">undefined
+          <h6>Malaysia</h6>undefined<label class="from-price-rej">from undefined<b>$860</b>undefined</label>undefined
+          <div class="rating-rej">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+            <img
+              src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+              <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+              <img
+                src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<label>485 rewies</label>undefined</div>undefined
+          <p>2 Place de la Sans Défense, Puteaux</p>undefined<a href="#">Book Now</a>undefined</div>undefined</div>undefined
+      <div class="rejuvenating-sec-col last-col-rej">undefined
+        <div class="rejuvenating-sec-col-img">undefined<img src="images/rejuvenating/img.png" tppabs="./assets/images/rejuvenating/img.png"
+            alt="" alt="">undefined</div>undefined
+        <div class="rejuvenating-sec-col-content">undefined
+          <h6>Malaysia</h6>undefined<label class="from-price-rej">from undefined<b>$860</b>undefined</label>undefined
+          <div class="rating-rej">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+            <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+            <img
+              src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+              <img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined
+              <img
+                src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<label>485 rewies</label>undefined</div>undefined
+          <p>2 Place de la Sans Défense, Puteaux</p>undefined<a href="#">Book Now</a>undefined</div>undefined</div>undefined</div>undefined</div>undefined
+  <!-- rejuvenating ends here -->undefined
+  <!-- Business starts here -->undefined
+  <div class="product-showcase">undefined
+    <div class="wrapper">undefined
+      <div class="top-info">undefined
+        <h5>Business</h5>undefined
+        <p>Our business hotels have been specifically rated for their convience and halal travel ethos. Our dedicated staff
+          and state of the art booking systems can provide you with all of the support services you need to book affordable
+          corporate travel. </p>undefined</div>undefined
+      <div class="left-product-showcase">undefined
+        <div class="product-col">undefined
+          <div class="product-img">undefined<img src="images/sample-images/morocco.png" tppabs="./assets/images/sample-images/morocco.png"
+              alt="">undefined</div>undefined
+          <div class="product-content">undefined<span class="ratings-star">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined</span>undefined
+            <div class="clear"></div>undefined
+            <p>Morocco</p>undefined<label>From undefined<i>$860</i>undefined</label>undefined
+            <div class="clear"></div>undefined</div>undefined</div>undefined
+        <div class="product-col product-col-small">undefined
+          <div class="product-img">undefined<img src="images/sample-images/dubai.png" tppabs="./assets/images/sample-images/dubai.png"
+              alt="">undefined</div>undefined
+          <div class="product-content">undefined<span class="ratings-star">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined</span>undefined
+            <div class="clear"></div>undefined
+            <p>Dubai</p>undefined<label>From undefined<i>$860</i>undefined</label>undefined
+            <div class="clear"></div>undefined</div>undefined</div>undefined
+        <div class="product-col product-col-small">undefined
+          <div class="product-img">undefined<img src="images/sample-images/turkey-new.png" tppabs="./assets/images/sample-images/turkey-new.png"
+              alt="">undefined</div>undefined
+          <div class="product-content">undefined<span class="ratings-star">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined</span>undefined
+            <div class="clear"></div>undefined
+            <p>Turkey</p>undefined<label>From undefined<i>$860</i>undefined</label>undefined
+            <div class="clear"></div>undefined</div>undefined</div>undefined</div>undefined
+      <!-- left ends here -->undefined
+      <div class="right-product-showcase">undefined
+        <div class="product-col product-col-large">undefined
+          <div class="product-img">undefined<img src="images/sample-images/malaysia-new.png" tppabs="./assets/images/sample-images/malaysia-new.png"
+              alt="">undefined</div>undefined
+          <div class="product-content">undefined<span class="ratings-star">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined<img src="images/star-yellow.png" tppabs="./assets/images/star-yellow.png" alt="">undefined</span>undefined
+            <div class="clear"></div>undefined
+            <p>Malaysia</p>undefined<label>From undefined<i>$860</i>undefined</label>undefined
+            <div class="col-bottom-info">undefined
+              <div class="left-sd">undefined<span class="people-list">undefined<b>2</b> adults, undefined<b>1</b> kidsundefined</span>undefined
+                <span class="date-list">July undefined<b>19th</b> to July undefined<b>26th</b>undefined</span>undefined</div>undefined
+              <a
+                href="#">view more</a>undefined</div>undefined
+            <div class="clear"></div>undefined</div>undefined</div>undefined</div>undefined
+      <!-- right ends here -->undefined</div>undefined</div>undefined
+  <!-- luxury ends here -->undefined
+  <!-- footer starts here -->undefined
+  <footer>undefined
+    <div class="wrapper">undefined
+      <div class="social-widget">undefined
+        <div id="share-pop-cont">undefined
+          <div class="share-pop fb-pop" id='div1'>undefined<span class="pop-heading">undefined<a href="javascript:if(confirm(%27https://www.facebook.com/HalalJourneys/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://www.facebook.com/HalalJourneys/%27" tppabs="https://www.facebook.com/HalalJourneys/" target="_blank">View All</a>undefined<button type="button" name="" value="" class="close-icon"></button>undefined</span>undefined
+            <img src="images/footer/fb-pop-img.png" tppabs="./assets/images/footer/fb-pop-img.png" alt="">undefined
+            <p>Its all about your journey, your escape, your relaxation, your time, your deen.</p>undefined
+            <iframe src="../www.facebook.com/plugins/like.php-href=https---www.facebook.com-HalalJourneys-&layout=button_count&show_faces=true&action=like&colorscheme=light&"
+              tppabs="http://www.facebook.com/plugins/like.php?href=https://www.facebook.com/HalalJourneys/&layout=button_count&show_faces=true&action=like&colorscheme=light&"
+              class="plugin-style"></iframe>undefined
+            <div class="clear"></div>undefined</div>undefined
+          <div class="share-pop tw-pop" id='div2'>undefined<span class="pop-heading">undefined<a href="javascript:if(confirm(%27https://twitter.com/Halaljourney  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/Halaljourney%27" tppabs="https://twitter.com/Halaljourney" target="_blank">View All</a>undefined<button type="button" name="" value="" class="close-icon"></button>undefined</span>undefined
+            <img src="images/footer/tw-pop-img.png" tppabs="./assets/images/footer/tw-pop-img.png" alt="">undefined
+            <p>Crystal clear waters of the sea, through soft white sand I wander free...</p>undefined<a href="javascript:if(confirm(%27https://twitter.com/Halaljourney  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/Halaljourney%27"
+              tppabs="https://twitter.com/Halaljourney" class="twitter-follow-button plugin-style" data-show-count="false"
+              data-show-screen-name="false">Follow @Halaljourney</a>undefined
+            <script>
+              ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                  p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = p + '://platform.twitter.com/widgets.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'twitter-wjs');
+
+            </script>undefined
+            <div class="clear"></div>undefined</div>undefined
+          <div class="share-pop yt-pop" id='div3'>undefined<span class="pop-heading">undefined<a href="javascript:if(confirm(%27https://www.youtube.com/channel/UC5hRY-tZf3Dma5jym5OrO0A  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://www.youtube.com/channel/UC5hRY-tZf3Dma5jym5OrO0A%27" tppabs="https://www.youtube.com/channel/UC5hRY-tZf3Dma5jym5OrO0A" target="_blank">View All</a>undefined<button type="button" name="" value="" class="close-icon"></button>undefined</span>undefined
+            <!-- <iframe width="200" height="140" src="https://www.youtube.com/embed/7A1q7v4btbk" frameborder="0" allowfullscreen></iframe> -->undefined<img src="images/footer/yt-pop-img.png" tppabs="./assets/images/footer/yt-pop-img.png"
+              alt="">undefined
+            <p>Istanbul -Flow through the City of Tails. From the top of the Galata Tower, Where Hezargen flew across the Bosphorus...
+            </p>undefined
+            <script src="../apis.google.com/js/platform.js" tppabs="https://apis.google.com/js/platform.js"></script>undefined
+            <div class="g-ytsubscribe" data-channelid="UC5hRY-tZf3Dma5jym5OrO0A" data-layout="default" data-count="default"></div>undefined
+            <div class="clear"></div>undefined</div>undefined
+          <div class="share-pop inst-pop" id='div4'>undefined<span class="pop-heading">undefined<a href="javascript:if(confirm(%27https://www.instagram.com/Halaljourneys/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://www.instagram.com/Halaljourneys/%27" tppabs="https://www.instagram.com/Halaljourneys/" target="_blank">View All</a>undefined<button type="button" name="" value="" class="close-icon"></button>undefined</span>undefined
+            <img src="images/footer/inst-pop-img.png" tppabs="./assets/images/footer/inst-pop-img.png" alt="">undefined
+            <p>Only let this one tear-drop, this Taj mahal, glisten spotlessly bright on the..</p>undefined<a href="javascript:if(confirm(%27https://www.instagram.com/Halaljourneys/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://www.instagram.com/Halaljourneys/%27"
+              tppabs="https://www.instagram.com/Halaljourneys/" target="_blank" class="plugin-style plugin-style-inst" style="">Follow Us</a>undefined
+            <div class="clear"></div>undefined</div>undefined</div>undefined
+        <div class="get-social shape">undefined
+          <p>Get Social</p>undefined
+          <ul>undefined
+            <li class="fb-pop-btn">undefined<i class="fb-icon"></i>undefined</li>undefined
+            <li class="tw-pop-btn">undefined<i class="tw-icon"></i>undefined</li>undefined
+            <li class="yt-pop-btn">undefined<i class="yt-icon"></i>undefined</li>undefined
+            <li class="inst-pop-btn">undefined<i class="inst-icon"></i>undefined</li>undefined</ul>undefined</div>undefined</div>undefined
+      <div class="footer-right">undefined
+        <div class="footer-right-col footer-right-col-one">undefined
+          <h6>Company</h6>undefined
+          <ul>undefined
+            <li>undefined<a href="about.php.htm" tppabs="http://www.halaljourney.com/about.php">About HJ</a>undefined</li>undefined
+            <li>undefined<a href="business-zakat.php.htm" tppabs="http://www.halaljourney.com/business-zakat.php">Business Zakat</a>undefined</li>undefined
+            <li>undefined<a href="media.php.htm" tppabs="http://www.halaljourney.com/media.php">In the Media</a>undefined</li>undefined
+            <li>undefined<a href="contact-us.php.htm" tppabs="http://www.halaljourney.com/contact-us.php">Contact Us</a>undefined</li>undefined</ul>undefined</div>undefined
+        <div class="footer-right-col">undefined
+          <h6>For Travellers</h6>undefined
+          <ul>undefined
+            <li>undefined<a href="halal-friendly-travel.php.htm" tppabs="http://www.halaljourney.com/halal-friendly-travel.php">Halal-Friendly Travel?</a>undefined</li>undefined
+            <li>undefined<a href="coming-soon.html" tppabs="http://www.halaljourney.com/coming-soon.html">Virtual/Concierge Service</a>undefined</li>undefined</ul>undefined</div>undefined
+        <div class="footer-right-col footer-right-col-three">undefined
+          <h6> FOR TRAVEL OPERATORSundefined<br>& HOTELSundefined</h6>undefined
+          <ul>undefined
+            <li>undefined<a href="affiliates.php.htm" tppabs="http://www.halaljourney.com/affiliates.php">Advertise with Us</a>undefined</li>undefined
+            <li>undefined<a href="affiliates.php.htm" tppabs="http://www.halaljourney.com/affiliates.php">Accelerator Program</a>undefined</li>undefined</ul>undefined</div>undefined
+        <div class="clear"></div>undefined
+        <div class="subscribe-newsletter">undefined
+          <h6>Subscribe</h6>undefined<span id="othererror" class="success" style="display:none;">Unable to Subscribe, Please Try Some other Time!</span>undefined
+          <span id="subsuccessmsg" class="success" style="display:none;">Your Subscription is Active Now!</span>undefined
+          <span
+            id="subemailvalidError" class="error" style="display:none;">Email Already Exits!</span>undefined
+            <form id="subsform" method="post">undefined<input type="text" name="subsmail" value="" placeholder="Enter your email for  special offers">undefined
+              <input type="submit" class="registerNow" name="subsubmit" value="Submit">undefined</form>undefined</div>undefined</div>undefined</div>undefined</footer>undefined
+  <div class="footer-bottom">undefined
+    <div class="wrapper">undefined
+      <ul>undefined
+        <li>undefined<a href="privacy-policy.php.htm" tppabs="http://www.halaljourney.com/privacy-policy.php">Privacy Policy</a>undefined</li>undefined
+        <li>undefined<a href="terms-and-conditions.php.htm" tppabs="http://www.halaljourney.com/terms-and-conditions.php">Terms of Service</a>undefined</li>undefined</ul>undefined
+      <p>© 2016 All rights reserved. undefined<i>HalalJourney.com</i>undefined</p>undefined</div>undefined
+    <script type="text/javascript" src="js/jquery.cookie.js" tppabs="./assets/js/jquery.cookie.js"></script>undefined
+    <script type="text/javascript" src="js/custom.js" tppabs="./assets/js/custom.js"></script>undefined
+    <script type="text/javascript" src="js/plugins/jquery-validation/dist/jquery.validate.js" tppabs="./assets/js/plugins/jquery-validation/dist/jquery.validate.js"></script>undefined</div>undefined
+  <!-- Start of Async Drift Code -->undefined
+  <script>
+    ! function () {
+      var t;
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void(window.console &&
+        console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+        t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+        t.factory = function (e) {
+          return function () {
+            var n;
+            return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+          };
+        }, t.methods.forEach(function (e) {
+          t[e] = t.factory(e);
+        }), t.load = function (t) {
+          var e, n, o, i;
+          e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src =
+            "https://js.driftt.com/include/" + i + "/" + t + ".js",
+            n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+        });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('fhcs8vgkgs44');
+
+  </script>undefined
+  <!-- End of Async Drift Code -->undefined
+  <!-- footer ends here -->undefined
+  <!--pop up starts here-->undefined
+  <!-- login pop up ends here -->undefined
+  <div class="pop-up" id="loginPopup" data-popup="popup-2">undefined
+    <div class="pop-up-container">undefined<button type="button" name="" value="" data-popup-close="popup-2" class="close-btn"></button>undefined
+      <h6>Welcome back!undefined<i>Please login to your account</i>undefined</h6>undefined
+      <div class="social-login">undefined<a href="javascript:if(confirm(%27https://www.facebook.com/dialog/oauth?client_id=198866660553058&redirect_uri=http%3A%2F%2Fwww.halaljourney.com%2F&state=0ec4d53782ea9fa40aa782c2df8f773f&scope=email  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://www.facebook.com/dialog/oauth?client_id=198866660553058&redirect_uri=http%3A%2F%2Fwww.halaljourney.com%2F&state=0ec4d53782ea9fa40aa782c2df8f773f&scope=email%27"
+          tppabs="https://www.facebook.com/dialog/oauth?client_id=198866660553058&redirect_uri=http%3A%2F%2Fwww.halaljourney.com%2F&state=0ec4d53782ea9fa40aa782c2df8f773f&scope=email">undefined<button type="button" name="" value="" class="fb-btn">login via facebook</button>undefined</a>undefined
+        <a href="javascript:if(confirm(%27https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fhalaljourney.com&client_id=70195212347-4thdd4pdic8tuh0tsii30beb4q5a9149.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&access_type=offline&approval_prompt=force  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fhalaljourney.com&client_id=70195212347-4thdd4pdic8tuh0tsii30beb4q5a9149.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&access_type=offline&approval_prompt=force%27"
+          tppabs="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fhalaljourney.com&client_id=70195212347-4thdd4pdic8tuh0tsii30beb4q5a9149.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&access_type=offline&approval_prompt=force">undefined<button type="button" name="" value="" class="tw-btn">login via Google</button>undefined</a>undefined</div>undefined
+      <div class="form">undefined
+        <form method="post" id="loginForm">undefined<span id="validationError" class="error" style="display:none;">Email or Password Not matched!</span>undefined
+          <span id="unknownError" class="error" style="display:none;">Unknown Error Try After Sometime!</span>undefined
+          <input
+            type="text" name="userEmail" id="userEmail" value="" class="" placeholder="Enter your email">undefined<input type="password" name="userPass" id="userPass" value="" placeholder="Enter your password">undefined
+            <div class="clear"></div>undefined
+            <div class="custom-checkbox NewCheck_box">undefined<input id="Two" class="css-checkbox" type="checkbox">undefined<label for="Two" name="demo_lbl_1" class="css-label">Remember Me</label>undefined</div>undefined
+            <div class="custom-checkbox NewCheck_box" style="text-align:right;">undefined<label name="demo_lbl_1" style="color:#0EB2B3" class="registerNow" onclick="hidelogin();" data-popup-open="popup-3">Register Now</label>undefined</div>undefined
+            <input type="submit" name="submit" class="registerNow" value="LOGIN TO YOUR ACCOUNT">undefined
+            <div class="forgetPsd">undefined<label name="forgot_pass" style="color:#0EB2B3" class="registerNow" onclick="hidelogin();" data-popup-open="popup-4">Forgot Password?</label>undefined</div>undefined</form>undefined</div>undefined</div>undefined</div>undefined
+  <!-- login pop up starts here -->undefined
+  <!-- Registration pop up ends here -->undefined
+  <div class="pop-up" id="regPopup" data-popup="popup-3">undefined
+    <div class="pop-up-container register-pop-container">undefined<button type="button" name="" value="" data-popup-close="popup-3" class="close-btn"></button>undefined
+      <h6>Don’t have an Account?undefined<br>Register Nowundefined</h6>undefined
+      <div class="social-login">undefined<button type="button" name="" value="" class="fb-btn">login via facebook</button>undefined<button type="button"
+          name="" value="" class="tw-btn">login via Twitter</button>undefined</div>undefined
+      <div class="form">undefined
+        <form method="post" id="regForm">undefined<input type="text" name="userName" id="userName" value="" placeholder="Enter your Username">undefined
+          <span id="uservalidError" class="error" style="display:none;">Username Already Exits!</span>undefined<input type="text"
+            name="name" id="name" value="" placeholder="Enter your Name">undefined
+          <input type="text" name="email" id="email" value="" placeholder="Enter your email">undefined<span id="emailvalidError"
+            class="error" style="display:none;">Email Already Exits!</span>undefined
+          <input type="password" name="password" id="password" value="" placeholder="Enter your password">undefined
+          <input
+            type="password" name="confirmpassword" id="confirmpassword" value="" placeholder="Re-enter password">undefined
+            <div class="custom-checkbox accept-terms-checkbox">undefined<input id="three" class="css-checkbox" name="termCondition" type="checkbox" value="1">undefined
+              <label class="css-label" for="three" name="demo_lbl_1" id="labelthree"> I agree with terms and conditions </label>undefined</div>undefined
+            <div class="custom-checkbox">undefined<input id="four" class="css-checkbox" name="offers" type="checkbox" value="1">undefined<label for="four"
+                name="demo_lbl_1" class="css-label">I want to receive offers and news</label>undefined</div>undefined
+            <input
+              type="submit" name="" id="subUser" class="registerNow" value="register now">undefined</form>undefined</div>undefined</div>undefined</div>undefined
+  <!-- Registration pop up starts here -->undefined
+  <!-- search starts here -->undefined
+  <div class="pop-up" data-popup="popup-1">undefined
+    <div class="wrapper">undefined
+      <div class="search-container">undefined
+        <div class="search-contr">undefined<input type="text" name="" value="" placeholder="search">undefined<input type="submit" name="" value="">undefined</div>undefined
+        <button value="" name="" type="button" data-popup-close="popup-1" class="close-btn"></button>undefined</div>undefined</div>undefined</div>undefined
+  <!-- search ends here -->undefined
+  <!-- Forgot Password pop up ends here -->undefined
+  <div class="pop-up" id="regPopup" data-popup="popup-4">undefined
+    <div class="pop-up-container register-pop-container forgot-pop-container">undefined<button type="button" name="" value="" data-popup-close="popup-4" class="close-btn"></button>undefined
+      <h6>Forgot Your Password?</h6>undefined
+      <!--<div class="social-login"><button type="button" name="" value="" class="fb-btn">login via facebook</button><button type="button" name="" value="" class="tw-btn">login via Twitter</button></div>-->undefined
+      <div class="form">undefined
+        <form method="post" id="forgotpassForm">undefined<input type="text" name="passEmail" id="passEmail" value="" placeholder="Enter your Email">undefined
+          <input type="submit" name="" id="" class="registerNow" value="Forgot Password">undefined</form>undefined</div>undefined</div>undefined</div>undefined
+  <!-- Forgot Password pop up starts here -->undefined
+  <!-- ends here -->undefined
+  <!-- landing pop up starts here -->undefined
+  <div class="pop-up main-landing-pop">undefined
+    <div class="wrapper">undefined
+      <div class="landing-pop-up">undefined
+        <h6>Start Your Journey Here:</h6>undefined
+        <div class="landing-pop-col">undefined<label>HJ Collections</label>undefined
+          <ul>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Luxury</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Romance</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Family</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Rejuvenating</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Business</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Hotel Only</a>undefined</li>undefined</ul>undefined</div>undefined
+        <div class="landing-pop-col second-col-lnd">undefined<label>Journey Types</label>undefined
+          <ul>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Luxury Hotels & Resorts</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Beach Hotels</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Honeymoon </a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Private Villas</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Thermal & Health Spa</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Family-Friendy</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Snow & Ski</a>undefined</li>undefined</ul>undefined
+          <ul>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">City Hotels</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Activities & Experience</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Business Hotels</a>undefined</li>undefined
+            <li>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Business Retreats</a>undefined</li>undefined</ul>undefined</div>undefined
+        <div class="landing-pop-col last-col-lnd">undefined<label>Destinations</label>undefined
+          <ul>undefined
+            <li>undefined<a href="search.php-countryName=Bahrain&countryCode=BH&cityCode=329708&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=1&kids=0&Rooms=1.htm"
+                tppabs="http://www.halaljourney.com/search.php?countryName=Bahrain&countryCode=BH&cityCode=329708&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=1&kids=0&Rooms=1">Bahrain</a>undefined</li>undefined
+            <li>undefined<a href="search.php-countryName=China&countryCode=CN&cityCode=101642&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=1&kids=0&Rooms=1.htm"
+                tppabs="http://www.halaljourney.com/search.php?countryName=China&countryCode=CN&cityCode=101642&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=1&kids=0&Rooms=1">China</a>undefined</li>undefined
+            <li>undefined<a href="search.php-countryName=India&countryCode=IN&cityCode=113226&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=1&kids=0&Rooms=1.htm"
+                tppabs="http://www.halaljourney.com/search.php?countryName=India&countryCode=IN&cityCode=113226&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=1&kids=0&Rooms=1">India</a>undefined</li>undefined
+            <li>undefined<a href="search.php-countryName=Turkey&countryCode=TR&cityCode=131870&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=1&kids=0&Rooms=1.htm"
+                tppabs="http://www.halaljourney.com/search.php?countryName=Turkey&countryCode=TR&cityCode=131870&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=1&kids=0&Rooms=1">Turkey</a>undefined</li>undefined
+            <li>undefined<a href="search.php-countryName=Malaysia&countryCode=MY&cityCode=138599&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=1&kids=0&Rooms=1.htm"
+                tppabs="http://www.halaljourney.com/search.php?countryName=Malaysia&countryCode=MY&cityCode=138599&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=1&kids=0&Rooms=1">Malaysia</a>undefined</li>undefined
+            <li>undefined<a href="search.php-countryName=Indonesia&countryCode=ID&cityCode=144026&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=1&kids=0&Rooms=1.htm"
+                tppabs="http://www.halaljourney.com/search.php?countryName=Indonesia&countryCode=ID&cityCode=144026&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=1&kids=0&Rooms=1">Indonesia</a>undefined</li>undefined
+            <li>undefined<a href="search.php-countryName=UK&countryCode=GB&cityCode=117976&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=1&kids=0&Rooms=1.htm"
+                tppabs="http://www.halaljourney.com/search.php?countryName=UK&countryCode=GB&cityCode=117976&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=1&kids=0&Rooms=1">UK</a>undefined</li>undefined
+            <li>undefined<a href="search.php-countryName=Saudi Arabia&countryCode=SA&cityCode=273635&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=1&kids=0&Rooms=1.htm"
+                tppabs="http://www.halaljourney.com/search.php?countryName=Saudi Arabia&countryCode=SA&cityCode=273635&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=1&kids=0&Rooms=1">Saudi Arabia</a>undefined</li>undefined
+            <li>undefined<a href="search.php-countryName=Spain&countryCode=ES&cityCode=100781&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=1&kids=0&Rooms=1.htm"
+                tppabs="http://www.halaljourney.com/search.php?countryName=Spain&countryCode=ES&cityCode=100781&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=1&kids=0&Rooms=1">Spain</a>undefined</li>undefined
+            <li>undefined<a href="search.php-countryName=Switzerland&countryCode=CH&cityCode=166166&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=1&kids=0&Rooms=1.htm"
+                tppabs="http://www.halaljourney.com/search.php?countryName=Switzerland&countryCode=CH&cityCode=166166&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=1&kids=0&Rooms=1">Switzerland</a>undefined</li>undefined
+            <li>undefined<a href="search.php-countryName=Qatar&countryCode=QA&cityCode=296929&checkInDt=31-05-2017&checkOutDt=02-06-2017&adults=1&kids=0&Rooms=1.htm"
+                tppabs="http://www.halaljourney.com/search.php?countryName=Qatar&countryCode=QA&cityCode=296929&checkInDt=31/05/2017&checkOutDt=02/06/2017&adults=1&kids=0&Rooms=1">Qatar</a>undefined</li>undefined</ul>undefined</div>undefined
+        <div class="clear"></div>undefined
+        <div class="not-sure">undefined
+          <p>I am not sure, take me to explore</p>undefined<a href="home.php.htm" tppabs="http://www.halaljourney.com/home.php">Go to Homepage</a>undefined</button>undefined</div>undefined
+        <button type="button" name="" value="" class="close-btn"></button>undefined</div>undefined</div>undefined</div>undefined
+  <!-- landing pop up ends here -->undefined
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.fb-pop-btn').click(function () {
+        $(this).addClass('active');
+        $('.tw-pop-btn').removeClass('active');
+        $('.inst-pop-btn').removeClass('active');
+        $('.yt-pop-btn').removeClass('active');
+        $('.fb-pop').show();
+        $('.tw-pop').hide();
+        $('.inst-pop').hide();
+        $('.yt-pop').hide();
+      });
+      $('.tw-pop-btn').click(function () {
+        $(this).addClass('active');
+        $('.fb-pop-btn').removeClass('active');
+        $('.inst-pop-btn').removeClass('active');
+        $('.yt-pop-btn').removeClass('active');
+        $('.tw-pop').show();
+        $('.fb-pop').hide();
+        $('.inst-pop').hide();
+        $('.yt-pop').hide();
+      });
+      $('.inst-pop-btn').click(function () {
+        $(this).addClass('active');
+        $('.fb-pop-btn').removeClass('active');
+        $('.tw-pop-btn').removeClass('active');
+        $('.yt-pop-btn').removeClass('active');
+        $('.inst-pop').show();
+        $('.tw-pop').hide();
+        $('.fb-pop').hide();
+        $('.yt-pop').hide();
+      });
+      $('.yt-pop-btn').click(function () {
+        $(this).addClass('active');
+        $('.fb-pop-btn').removeClass('active');
+        $('.tw-pop-btn').removeClass('active');
+        $('.inst-pop-btn').removeClass('active');
+        $('.yt-pop').show();
+        $('.fb-pop').hide();
+        $('.tw-pop').hide();
+        $('.inst-pop').hide();
+      });
+
+      $('.close-icon').click(function () {
+        $('.share-pop').hide();
+        $('.fb-pop-btn').removeClass('active');
+        $('.tw-pop-btn').removeClass('active');
+        $('.inst-pop-btn').removeClass('active');
+      });
+
+      $('.close-btn').click(function () {
+        $('.main-landing-pop').hide();
+      });
+    });
+
+    $(function () {
+
+      var timer = setInterval(showDiv, 5000);
+
+      var counter = 0;
+
+      function showDiv() {
+        if (counter == 0) {
+          counter++;
+          return;
+        }
+
+        $('div', '#share-pop-cont')
+          .stop()
+          .hide()
+          .filter(function () {
+            return this.id.match('div' + counter);
+          })
+          .fadeIn('slow');
+        counter == 4 ? counter = 0 : counter++;
+      }
+    });
+
+    $(function () {
+      //----- OPEN
+      $('[data-popup-open]').on('click', function (e) {
+        var targeted_popup_class = jQuery(this).attr('data-popup-open');
+        $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+
+        e.preventDefault();
+      });
+
+      //----- CLOSE
+      $('[data-popup-close]').on('click', function (e) {
+        var targeted_popup_class = jQuery(this).attr('data-popup-close');
+        $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+
+        e.preventDefault();
+      });
+    });
+
+    $(window).scroll(function () {
+      $(".scroll-header").each(function () {
+        var pageScrolled = $(window).scrollTop();
+        console.log(pageScrolled);
+        if (400 < pageScrolled) {
+          $(this).addClass('fixed-scroll');
+        } else {
+          $(this).removeClass('fixed-scroll');
+        }
+      });
+    });
+    undefined
+
+  </script>
 </body>
 </html>
