@@ -4,8 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { SearchComponent } from "../search/search.component";
 import { AboutComponent } from "../about/about.component";
 import { HotelDetailComponent } from "../hotel-detail/hotel-detail.component";
+import { HomeComponent } from "../home/home.component";
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'Search/:City',
+    component: SearchComponent
+  },
   {
     path: 'Search/:City',
     component: SearchComponent
@@ -15,11 +24,11 @@ const routes: Routes = [
     component: SearchComponent
   },
   {
-    path: 'hotel/:hotelId',
+    path: 'Hotel/:HotelId',
     component: HotelDetailComponent
   },
   {
-    path: 'about',
+    path: 'About',
     component: AboutComponent
   },
 ];

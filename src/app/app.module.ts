@@ -9,12 +9,14 @@ import { AboutComponent } from './about/about.component';
 import { SearchModule } from "./search/search.module";
 import { SearchService } from "./services/search-service.service";
 import { HotelDetailComponent } from './hotel-detail/hotel-detail.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    HotelDetailComponent
+    HotelDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
