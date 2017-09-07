@@ -1580,7 +1580,7 @@ select.error {
 }
 .product-container .product-column:nth-child(3n){margin:0px 0px 30px 0px;}
 .product-column-img{width:100%; overflow:hidden; height:220px; background:grey; position:relative;}
-.most-popular-btn{position:absolute; top:0px; left:0px; font-size:12px; font-weight:700; background:#8db74b; padding:10px 15px; color:#fff; text-transform:uppercase;}
+.most-popular-btn{position:absolute; top:0px; left:0px; font-size:12px; font-weight:700; background:#8db74b; padding:10px 15px; color:#fff; text-transform:uppercase; z-index:1;}
 .product-column-content{color:#222; padding:30px 20px;}
 .product-column-content p{font-size:16px; text-transform:uppercase;}
 .col-reviews{display:table; width:100%; margin:10px 0px;}

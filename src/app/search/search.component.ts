@@ -16,7 +16,8 @@ export class SearchComponent implements OnInit {
   constructor(private _searchService: SearchService,
     private activatedRoute: ActivatedRoute) { }
   City: string;
-  PageNo: number;
+  NextPageNo: number;
+  PrevPageNo: number;
   hotels: Hotel[];
   @Input() hotelId: number;
 
@@ -25,9 +26,10 @@ export class SearchComponent implements OnInit {
     this.activatedRoute.params.subscribe((params: Params) => {
       console.log(params);
       this.City = params['City'];
-      this.PageNo = parseInt(params['Page']);
-      console.log(this.City + "/" + this.PageNo);
-      this.Search_Click(this.City, this.PageNo);
+      this.NextPageNo = parseInt(params['Page']);
+      this.PrevPageNo = parseInt(params['Page']);
+      console.log(this.City + "/" + this.NextPageNo);
+      this.Search_Click(this.City, this.NextPageNo);
     });
   }
 
@@ -36,7 +38,8 @@ export class SearchComponent implements OnInit {
       .subscribe(
       hotels => {
         console.log(hotels);
-        this.PageNo += 1;
+        this.NextPageNo += 1;
+        this.PrevPageNo -= 1;
         this.hotels = hotels
       },
       err => {
