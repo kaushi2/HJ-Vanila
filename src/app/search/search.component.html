@@ -3,7 +3,7 @@
   <div class="inner-content">
     <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;<b>Luxury</b></div>
     <div class="page-heading">Luxury</div>
-    <div class="result-found">We found: <b>1200</b> hotels</div>
+    <div class="result-found">We found: <b *ngIf='hotels'>{{hotels.length}}</b> hotels</div>
   </div>
 </div>
 <!-- content ends here -->
@@ -309,7 +309,7 @@
                 <!-- <img *ngFor="#number of {{hotel.StarRating}}" src="../assets/images/search-form/rating-star.png" alt=""> -->
                 <label>485 Reviews</label>
               </span>
-              <div class="col-description-text" *ngFor="let facility of hotel.facilities">{{facility.FacilityName}}</div>
+              <div class="col-description-text" *ngFor="let facility of hotel.facilities | slice:0:2; let i=index">{{facility.FacilityName}}</div>
               <div class="col-description-text">{{hotel.Address}}</div>
               <div class="col-description-text">{{hotel.Location}}</div>
             </div>
@@ -325,7 +325,7 @@
         <div class="pagination">
           {{PrevPageNo}}
           <div class="pagination-col-1" *ngIf="PrevPageNo>0">
-            <a href="/Search/{{City}}/{{PrevPageNo}}"><button type="button" name="" value="" class="pg-button">Prev Page</button></a>
+            <a href="/Search/{{CountryCode}}/{{City}}/{{PrevPageNo}}"><button type="button" name="" value="" class="pg-button">Prev Page</button></a>
           </div>
           <div class="pagination-col-2">
             <ul>
@@ -338,7 +338,7 @@
             </ul>
           </div>
           <div class="pagination-col-3">
-            <a href="/Search/{{City}}/{{NextPageNo}}"><button type="button" name="" value="" class="pg-button">Next Page</button></a>
+            <a href="/Search/{{CountryCode}}/{{City}}/{{NextPageNo}}"><button type="button" name="" value="" class="pg-button">Next Page</button></a>
           </div>
         </div>
       </div>

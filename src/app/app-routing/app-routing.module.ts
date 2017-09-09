@@ -12,15 +12,15 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'Search/:City',
+    path: 'Search/:CountryCode/:City',
     component: SearchComponent
   },
   {
-    path: 'Search/:City',
+    path: 'Search/:CountryCode/:City',
     component: SearchComponent
   },
   {
-    path: 'Search/:City/:Page',
+    path: 'Search/:CountryCode/:City/:Page',
     component: SearchComponent
   },
   {

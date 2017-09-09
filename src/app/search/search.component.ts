@@ -16,6 +16,7 @@ export class SearchComponent implements OnInit {
   constructor(private _searchService: SearchService,
     private activatedRoute: ActivatedRoute) { }
   City: string;
+  CountryCode: string;
   NextPageNo: number;
   PrevPageNo: number;
   hotels: Hotel[];
@@ -26,15 +27,16 @@ export class SearchComponent implements OnInit {
     this.activatedRoute.params.subscribe((params: Params) => {
       console.log(params);
       this.City = params['City'];
+      this.CountryCode = params['CountryCode'];
       this.NextPageNo = parseInt(params['Page']);
       this.PrevPageNo = parseInt(params['Page']);
       console.log(this.City + "/" + this.NextPageNo);
-      this.Search_Click(this.City, this.NextPageNo);
+      this.Search_Click(this.CountryCode, this.City, this.NextPageNo);
     });
   }
 
-  public Search_Click(City: string, Page: number) {
-    this._searchService.getHotels(City, Page)
+  public Search_Click(CountryCode: string, City: string, Page: number) {
+    this._searchService.getHotels(CountryCode,City, Page)
       .subscribe(
       hotels => {
         console.log(hotels);
@@ -47,8 +49,8 @@ export class SearchComponent implements OnInit {
       });
   }
 
-  public NextPage(City: string, Page: number) {
-    this.Search_Click(City, Page);
+  public NextPage(CountryCode: string, City: string, Page: number) {
+    this.Search_Click(CountryCode, City, Page);
   }
   //   ngOnChanges(changes:any) {
   //     // Listen to the 'hotel' emitted event so as populate the model

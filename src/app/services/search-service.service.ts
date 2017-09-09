@@ -10,9 +10,9 @@ export class SearchService {
   // private instance variable to hold base url
   private HotelsAPIUrl = 'http://localhost:3000/Hotels/';
 
-  getHotels(City: string, Page: number) : Observable<Hotel[]> {
+  getHotels(CountryCode: string, City: string, Page: number) : Observable<Hotel[]> {
     // ....using get Request
-    return this.http.get(this.HotelsAPIUrl + City + "/" + Page)
+    return this.http.get(this.HotelsAPIUrl + CountryCode + "/" + City + "/" + Page)
       // ...and calling .json() on the response to return data
       .map((res:Response) => res.json())
       // ...errors if any
