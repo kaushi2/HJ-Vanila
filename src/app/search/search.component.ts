@@ -36,12 +36,15 @@ export class SearchComponent implements OnInit {
   }
 
   public Search_Click(CountryCode: string, City: string, Page: number) {
-    this._searchService.getHotels(CountryCode,City, Page)
+    console.log("Search_Clicked")
+    this._searchService.getHotels(CountryCode, City, Page)
       .subscribe(
       hotels => {
         console.log(hotels);
         this.NextPageNo += 1;
         this.PrevPageNo -= 1;
+        // Get prices for each hotel
+
         this.hotels = hotels
       },
       err => {

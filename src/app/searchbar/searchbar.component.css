@@ -1,0 +1,71 @@
+
+.frmSearch {}
+
+.frmSearch .country-listul {
+  position: relative;
+}
+
+#country-list {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 266px;
+  position: absolute;
+  z-index: 9999999;
+}
+
+#country-list li {
+  padding: 10px;
+  background: #FAFAFA;
+  border-bottom: #F0F0F0 1px solid;
+}
+
+#country-list li:hover {
+  background: #F0F0F0;
+}
+
+.search {
+  padding: 10px;
+  border: #F0F0F0 1px solid;
+}
+
+
+
+
+.searchIndIcn {
+  bottom: 8px;
+  position: absolute;
+  right: 6px;
+  width: 18px;
+}
+
+searchResultIndst {
+  background: #fff none repeat scroll 0 0;
+  border: 1px dotted #ccc;
+  box-shadow: 0 3px 2px 0 #999;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+  max-height: 162px;
+  display: none;
+}
+
+.searchResultIndst>ul {
+  margin: 0;
+  padding: 0;
+}
+
+.searchResultIndst li {
+  list-style: outside none none;
+  padding: 6px 8px;
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.searchResultIndst li:hover {
+  background: #486c8f none repeat scroll 0 0;
+  color: #fff;
+}

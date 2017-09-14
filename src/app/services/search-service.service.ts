@@ -8,7 +8,7 @@ export class SearchService {
   // Resolve HTTP using the constructor
   constructor(private http: Http) { }
   // private instance variable to hold base url
-  private HotelsAPIUrl = 'http://localhost:3000/Hotels/';
+  private HotelsAPIUrl = 'http://localhost:3000/Hotels/'; // Change
 
   getHotels(CountryCode: string, City: string, Page: number) : Observable<Hotel[]> {
     // ....using get Request

@@ -91,7 +91,7 @@ $(function() {
 $(window).scroll(function () {
     $(".scroll-header").each(function () {
         var pageScrolled = $(window).scrollTop();
-        console.log(pageScrolled);
+        // console.log(pageScrolled);
         if (400 < pageScrolled) { $(this).addClass('fixed-scroll'); }
         else { $(this).removeClass('fixed-scroll'); }
     });

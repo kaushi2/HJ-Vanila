@@ -16,10 +16,6 @@ const routes: Routes = [
     component: SearchComponent
   },
   {
-    path: 'Search/:CountryCode/:City',
-    component: SearchComponent
-  },
-  {
     path: 'Search/:CountryCode/:City/:Page',
     component: SearchComponent
   },
