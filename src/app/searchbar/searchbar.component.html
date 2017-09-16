@@ -18,17 +18,19 @@
 
       <div class="search-bar-cell">
         <label>Check In</label>
-        <input type="text" name="checkInDt" value="" placeholder="Yy-Mm-Dd" class="datepicker calendar" id="datepicker1">
+        <!-- <input type="text" name="checkInDt" [(ngModel)]="CheckInDate" value="" placeholder="Yy-Mm-Dd" class="datepicker calendar" id="datepicker1"> -->
+        <input type="date" name="CheckInDate" [(ngModel)]="CheckInDate" placeholder="Yy-Mm-Dd" class="" id="datepicker1" />
       </div>
 
       <div class="search-bar-cell">
         <label>Check Out</label>
-        <input type="text" name="checkOutDt" value="" placeholder="Yy-Mm-Dd" class="datepicker calendar" id="datepicker2">
+        <!-- <input type="text" name="checkOutDt" [(ngModel)]="CheckOutDate" value="" placeholder="Yy-Mm-Dd" class="datepicker calendar" id="datepicker2"> -->
+        <input type="date" name="CheckOutDate" [(ngModel)]="CheckOutDate" placeholder="Yy-Mm-Dd" class="" id="datepicker2" />
       </div>
 
       <div class="search-bar-cell">
         <label>Adults</label>
-        <select class="adults" name="adults">
+        <select class="adults" [(ngModel)]="NumOfAdults" name="adults">
               <option value="1" >01</option>
               <option value="2" >02</option>
               <option value="3" >03</option>
@@ -42,8 +44,7 @@
 
       <div class="search-bar-cell">
         <label>Kids</label>
-        <select class="kids" name="kids">
-              <option value="0" >00</option>
+        <select class="kids" [(ngModel)]="NumOfChildren" name="kids">
               <option value="1" >01</option>
               <option value="2" >02</option>
               <option value="3" >03</option>
@@ -54,13 +55,13 @@
       <div class="search-bar-cell">
         <label>Rooms</label>
         <select class="Rooms" name="Rooms">
-              <option value="1" >01</option>
+              <option selected value="1" >01</option>
               <option value="2" >02</option>
               <option value="3" >03</option>
               <option value="4" >04</option>
           </select>
       </div>
-      <input (click)="UserClick()" type="submit" name="submitForm" value="search now"> <br /> <br />
+      <input (click)="Search_Click()" type="submit" name="submitForm" value="search now"> <br /> <br />
       <div class="search-bar-cell">
         <label>Hotel Name</label>
         <div class="frmSearch">

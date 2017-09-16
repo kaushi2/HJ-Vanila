@@ -1,4 +1,7 @@
-import { Component, OnInit, EventEmitter, Output, Input, ViewChildren } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SearchService } from '../services/search-service.service';
+import { dateFormat } from 'dateFormat';
 
 @Component({
   selector: 'app-searchbar',
@@ -6,18 +9,26 @@ import { Component, OnInit, EventEmitter, Output, Input, ViewChildren } from '@a
   styleUrls: ['./searchbar.component.css']
 })
 export class SearchbarComponent implements OnInit {
-  @Input() name:string;
-  @Output() SearchClick = new EventEmitter<any>();
-  public SearchValue: string;
-  constructor() { }
+  SearchValue: string;
+  CheckInDate: string;
+  CheckOutDate: string;
+  NumOfAdults: number;
+  NumOfChildren: number;
+  Child1Age: number;
+  Child2Age: number;
+  Child3Age: number;
+  
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  public UserClick() {
-    console.log(this.SearchValue);
-    
-    this.SearchClick.emit({CountryCode:'dfds', City:'dfdf', Page:'dfdf'});
-  }
+  public Search_Click() {
+    var split = this.SearchValue.split(",");
+    // this.CheckInDate = dateFormat(this.CheckInDate, 'yyyy-mm-dd');
+    // this.CheckOutDate = dateFormat(this.CheckOutDate, 'yyyy-mm-dd');
+    console.log(this.CheckInDate );
+    this.router.navigateByUrl('/Search/' + split[1].trim() + "/" + split[0].trim() + "/1" + "/" + this.CheckInDate + "/" + this.CheckOutDate + "/" + this.NumOfAdults);
+  } 
   
 }

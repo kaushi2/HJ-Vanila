@@ -17,9 +17,18 @@ export class SearchComponent implements OnInit {
     private activatedRoute: ActivatedRoute) { }
   City: string;
   CountryCode: string;
+  CheckInDate: Date;
+  CheckOutDate: Date;
+  NumOfAdults: number;
+  NumOfChildren: number;
+  Child1Age: number;
+  Child2Age: number;
+  Child3Age: number;
+
   NextPageNo: number;
   PrevPageNo: number;
   hotels: Hotel[];
+
   @Input() hotelId: number;
 
   ngOnInit() {
@@ -28,16 +37,24 @@ export class SearchComponent implements OnInit {
       console.log(params);
       this.City = params['City'];
       this.CountryCode = params['CountryCode'];
+      this.CheckInDate = params['CheckInDate'];
+      this.CheckOutDate = params['CheckOutDate'];
+      this.NumOfAdults = params['NumOfAdults'];
+      this.NumOfChildren = params['NumOfAdults'];
+      if(this.CountryCode === undefined || this.City === undefined || this.NextPageNo === undefined || this.CheckInDate === undefined || 
+              this.CheckOutDate === undefined || this.NumOfAdults === undefined || this.NumOfChildren === undefined) {
+        return false;
+      }
+      
       this.NextPageNo = parseInt(params['Page']);
       this.PrevPageNo = parseInt(params['Page']);
       console.log(this.City + "/" + this.NextPageNo);
-      this.Search_Click(this.CountryCode, this.City, this.NextPageNo);
+      this.Search_Click(this.CountryCode, this.City, this.NextPageNo, this.CheckInDate, this.CheckOutDate, this.NumOfAdults, this.NumOfChildren);
     });
   }
 
-  public Search_Click(CountryCode: string, City: string, Page: number) {
-    console.log("Search_Clicked")
-    this._searchService.getHotels(CountryCode, City, Page)
+  public Search_Click(CountryCode: string, City: string, Page: number, CheckInDate: Date, CheckOutDate: Date, NumOfAdults: number, NumOfChildren: number) {
+    this._searchService.getHotels(CountryCode, City, Page, CheckInDate, CheckOutDate, NumOfAdults, NumOfChildren)
       .subscribe(
       hotels => {
         console.log(hotels);
@@ -52,8 +69,8 @@ export class SearchComponent implements OnInit {
       });
   }
 
-  public NextPage(CountryCode: string, City: string, Page: number) {
-    this.Search_Click(CountryCode, City, Page);
+  public NextPage(CountryCode: string, City: string, Page: number, CheckInDate: Date, CheckOutDate: Date, NumOfAdults: number, NumOfChildren: number) {
+    this.Search_Click(CountryCode, City, Page, CheckInDate, CheckOutDate, NumOfAdults, NumOfChildren);
   }
   //   ngOnChanges(changes:any) {
   //     // Listen to the 'hotel' emitted event so as populate the model

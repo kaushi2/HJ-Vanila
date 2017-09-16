@@ -20,6 +20,10 @@ const routes: Routes = [
     component: SearchComponent
   },
   {
+    path: 'Search/:CountryCode/:City/:Page/:CheckInDate/:CheckOutDate/:NumOfAdults',
+    component: SearchComponent
+  },
+  {
     path: 'Hotel/:HotelId',
     component: HotelDetailComponent
   },

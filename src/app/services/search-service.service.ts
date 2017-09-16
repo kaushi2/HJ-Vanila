@@ -8,11 +8,12 @@ export class SearchService {
   // Resolve HTTP using the constructor
   constructor(private http: Http) { }
   // private instance variable to hold base url
-  private HotelsAPIUrl = 'http://localhost:3000/Hotels/'; // Change
-
-  getHotels(CountryCode: string, City: string, Page: number) : Observable<Hotel[]> {
+  private HotelsAPIUrl = 'http://localhost:3000/api/'; // Change
+  private HotelsDbUrl = 'http://localhost:3000/Hotels/'; // Change
+  
+  getHotels(CountryCode: string, City: string, Page: number, CheckInDate: Date, CheckOutDate: Date, NumOfAdults: number, NumOfChildren: number) : Observable<Hotel[]> {
     // ....using get Request
-    return this.http.get(this.HotelsAPIUrl + CountryCode + "/" + City + "/" + Page)
+    return this.http.get(this.HotelsAPIUrl + CountryCode + "/" + City + "/" + Page + "/" + CheckInDate + "/" + CheckOutDate + "/" + NumOfAdults + "/" + NumOfChildren)
       // ...and calling .json() on the response to return data
       .map((res:Response) => res.json())
       // ...errors if any
