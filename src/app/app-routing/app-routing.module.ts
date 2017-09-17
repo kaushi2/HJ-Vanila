@@ -20,7 +20,7 @@ const routes: Routes = [
     component: SearchComponent
   },
   {
-    path: 'Search/:CountryCode/:City/:Page/:CheckInDate/:CheckOutDate/:NumOfAdults',
+    path: 'Search/:CountryCode/:City/:Page/:CheckInDate/:CheckOutDate/:NumOfAdults/:NumOfChildren',
     component: SearchComponent
   },
   {

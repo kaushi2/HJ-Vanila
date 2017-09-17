@@ -13,7 +13,7 @@ export class SearchbarComponent implements OnInit {
   CheckInDate: string;
   CheckOutDate: string;
   NumOfAdults: number;
-  NumOfChildren: number;
+  NumOfChildren: number = 0;
   Child1Age: number;
   Child2Age: number;
   Child3Age: number;
@@ -27,8 +27,8 @@ export class SearchbarComponent implements OnInit {
     var split = this.SearchValue.split(",");
     // this.CheckInDate = dateFormat(this.CheckInDate, 'yyyy-mm-dd');
     // this.CheckOutDate = dateFormat(this.CheckOutDate, 'yyyy-mm-dd');
-    console.log(this.CheckInDate );
-    this.router.navigateByUrl('/Search/' + split[1].trim() + "/" + split[0].trim() + "/1" + "/" + this.CheckInDate + "/" + this.CheckOutDate + "/" + this.NumOfAdults);
+    console.log(this.NumOfChildren);
+    this.router.navigateByUrl('/Search/' + split[1].trim() + "/" + split[0].trim() + "/1" + "/" + this.CheckInDate + "/" + this.CheckOutDate + "/" + this.NumOfAdults + "/" + this.NumOfChildren);
   } 
   
 }

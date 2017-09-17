@@ -295,11 +295,10 @@
               </span>
               <div class="col-description-text" *ngFor="let facility of hotel.facilities | slice:0:2; let i=index">{{facility.FacilityName}}</div>
               <div class="col-description-text">{{hotel.Address}}</div>
-              <div class="col-description-text">{{hotel.Location}}</div>
             </div>
 
             <div class="list-right-side">
-              <p class="price-text">from <br><b>TBA</b><br>per person</p>
+              <!-- <p class="price-text">from <br><b>{{hotel.Options.Option[0].TotalPrice}}</b><br>per person</p> -->
               <button type="button" name="" value="" class="book-now-btn">Book Now</button>
             </div>
           </div>

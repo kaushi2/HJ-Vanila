@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { Hotel } from "../model/hotel";
 import { SearchService } from "../services/search-service.service";
 // import { EmitterService } from '../services/emitter.service';
+import { _ } from 'lodash/core';
 
 @Component({
   selector: 'app-search',
@@ -29,7 +30,7 @@ export class SearchComponent implements OnInit {
   PrevPageNo: number;
   hotels: Hotel[];
 
-  @Input() hotelId: number;
+  // @Input() hotelId: number;
 
   ngOnInit() {
     // subscribe to router event
@@ -41,28 +42,40 @@ export class SearchComponent implements OnInit {
       this.CheckOutDate = params['CheckOutDate'];
       this.NumOfAdults = params['NumOfAdults'];
       this.NumOfChildren = params['NumOfAdults'];
-      if(this.CountryCode === undefined || this.City === undefined || this.NextPageNo === undefined || this.CheckInDate === undefined || 
-              this.CheckOutDate === undefined || this.NumOfAdults === undefined || this.NumOfChildren === undefined) {
-        return false;
-      }
-      
       this.NextPageNo = parseInt(params['Page']);
       this.PrevPageNo = parseInt(params['Page']);
+      if (this.CountryCode === undefined || this.City === undefined || this.NextPageNo === undefined || this.CheckInDate === undefined ||
+        this.CheckOutDate === undefined || this.NumOfAdults === undefined || this.NumOfChildren === undefined) {
+        console.log("Exiting as undefined");
+        return false;
+      }
+
       console.log(this.City + "/" + this.NextPageNo);
       this.Search_Click(this.CountryCode, this.City, this.NextPageNo, this.CheckInDate, this.CheckOutDate, this.NumOfAdults, this.NumOfChildren);
     });
   }
 
   public Search_Click(CountryCode: string, City: string, Page: number, CheckInDate: Date, CheckOutDate: Date, NumOfAdults: number, NumOfChildren: number) {
-    this._searchService.getHotels(CountryCode, City, Page, CheckInDate, CheckOutDate, NumOfAdults, NumOfChildren)
-      .subscribe(
-      hotels => {
-        console.log(hotels);
+    this._searchService.getHotelsByCityIdFromDb(CountryCode, City, Page)
+      .subscribe(hotels => {
+        //console.log(hotels);
         this.NextPageNo += 1;
         this.PrevPageNo -= 1;
-        // Get prices for each hotel
-
         this.hotels = hotels
+        //console.log(this.hotels);
+        // Get prices for each hotel
+        this._searchService.getHotelsByCityIdFromApi(CountryCode, City, Page, CheckInDate, CheckOutDate, NumOfAdults, NumOfChildren)
+          .subscribe(hotelsFromAPI => {
+            console.log(hotelsFromAPI);
+            var getTotalPrice = function (el) { 
+              return _.pick(el, 'hotelsFromAPI[0].Options.Option[0].TotalPrice'); 
+            }
+            var ht = _.merge(hotels, _.map(hotelsFromAPI, getTotalPrice));
+            console.log(ht);
+
+          }, err => {
+            //console.log(err);
+          });
       },
       err => {
         console.log(err);

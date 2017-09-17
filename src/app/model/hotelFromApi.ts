@@ -1,4 +1,4 @@
-export class Hotel {
+export class HotelFromApi {
     HotelId?: number;
     HotelName?: string;
     StarRating: number;
@@ -12,7 +12,6 @@ export class Hotel {
     Children: number;
 
     Options: any;
-    Option: any;
+    Option?: [any];
     TotalPrice: string;
-
-}
+}    
