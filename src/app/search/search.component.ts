@@ -6,6 +6,7 @@ import { Hotel } from "../model/hotel";
 import { SearchService } from "../services/search-service.service";
 // import { EmitterService } from '../services/emitter.service';
 import { _ } from 'lodash/core';
+import { HotelFromApi } from '../model/hotelFromApi';
 
 @Component({
   selector: 'app-search',
@@ -29,7 +30,8 @@ export class SearchComponent implements OnInit {
   NextPageNo: number;
   PrevPageNo: number;
   hotels: Hotel[];
-
+  hotelsFromAPI: HotelFromApi[];
+  
   // @Input() hotelId: number;
 
   ngOnInit() {
@@ -62,15 +64,17 @@ export class SearchComponent implements OnInit {
         this.NextPageNo += 1;
         this.PrevPageNo -= 1;
         this.hotels = hotels
-        //console.log(this.hotels);
         // Get prices for each hotel
+        console.log(this.hotels);
         this._searchService.getHotelsByCityIdFromApi(CountryCode, City, Page, CheckInDate, CheckOutDate, NumOfAdults, NumOfChildren)
-          .subscribe(hotelsFromAPI => {
-            console.log(hotelsFromAPI);
+          .subscribe(hotelsWithPrices => {
+            console.log(hotelsWithPrices);
+            this.hotelsFromAPI = hotelsWithPrices;
+
             var getTotalPrice = function (el) { 
-              return _.pick(el, 'hotelsFromAPI[0].Options.Option[0].TotalPrice'); 
+              return _.pick(el, 'Options.Option[0].TotalPrice'); 
             }
-            var ht = _.merge(hotels, _.map(hotelsFromAPI, getTotalPrice));
+            var ht = _.merge(hotels, _.map(this.hotelsFromAPI, getTotalPrice));
             console.log(ht);
 
           }, err => {

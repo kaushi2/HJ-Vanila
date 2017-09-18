@@ -30,5 +30,22 @@ export class SearchService {
       .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
 
   }
+  getHotelsByHotelIdFromApi(HotelId: number): Observable<Hotel[]> {
+    // ....using get Request
+    return this.http.get(this.HotelsAPIUrl + HotelId)
+    // ...and calling .json() on the response to return data
+    .map((res:Response) => res.json())
+    // ...errors if any
+    .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
 
+  }
+  getHotelsByHotelIdsFromApi(HotelIds: number[]): Observable<Hotel[]> {
+    // ....using get Request
+    return this.http.get(this.HotelsAPIUrl + HotelIds)
+    // ...and calling .json() on the response to return data
+    .map((res:Response) => res.json())
+    // ...errors if any
+    .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
+
+  }
 }
