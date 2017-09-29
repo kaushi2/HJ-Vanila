@@ -24,8 +24,8 @@ export class SearchComponent implements OnInit {
   Child1Age: number;
   Child2Age: number;
   Child3Age: number;
-  AllParamsCombined: Hotel = { HotelId: 0, City: "", CountryCode: "", CheckIn: "", CheckOut: "", Children: 0, Adults: 1 };
-  showSearchResults: boolean;
+  hotel: Hotel = { HotelId: 0, City: "", CountryCode: "", CheckIn: "", CheckOut: "", Children: 0, Adults: 1 };
+  showHotelDetail: boolean;
 
   NextPageNo: number;
   PrevPageNo: number;
@@ -36,16 +36,12 @@ export class SearchComponent implements OnInit {
     this.activatedRoute.params.subscribe((params: Params) => {
       console.log(params); // Displays Sydney and is type string
       
-      // Not working
-      this.AllParamsCombined = params;
-      console.log(this.AllParamsCombined);
-      
-      this.City = params['City'];
-      this.CountryCode = params['CountryCode'];
-      this.CheckInDate = params['CheckInDate'];
-      this.CheckOutDate = params['CheckOutDate'];
-      this.NumOfAdults = params['NumOfAdults'] || 1;
-      this.NumOfChildren = params['NumOfChildren'] || 0;
+      this.hotel.City = this.City = params['City'];
+      this.hotel.CountryCode = this.CountryCode = params['CountryCode'];
+      this.hotel.CheckIn = this.CheckInDate = params['CheckInDate'];
+      this.hotel.CheckOut = this.CheckOutDate = params['CheckOutDate'];
+      this.hotel.Adults = this.NumOfAdults = params['NumOfAdults'] || 1;
+      this.hotel.Children = this.NumOfChildren = params['NumOfChildren'] || 0;
       this.NextPageNo = parseInt(params['Page']);
       this.PrevPageNo = parseInt(params['Page']);
       if (this.CountryCode === undefined || this.City === undefined || this.NextPageNo === undefined || this.CheckInDate === undefined ||
@@ -77,8 +73,10 @@ export class SearchComponent implements OnInit {
   }
 
   private showHotelDetails(hotelId) {
-    this.showSearchResults = true;
-    this.AllParamsCombined.HotelId = hotelId;
+    this.showHotelDetail = true;
+    console.log(hotelId)
+    this.hotel.HotelId = hotelId;
+    console.log(this.hotel)
   }
   //   ngOnChanges(changes:any) {
   //     // Listen to the 'hotel' emitted event so as populate the model
