@@ -24,7 +24,7 @@ export class SearchComponent implements OnInit {
   Child1Age: number;
   Child2Age: number;
   Child3Age: number;
-  AllParamsCombined: Hotel;
+  AllParamsCombined: Hotel = { HotelId: 0, City: "", CountryCode: "", CheckIn: "", CheckOut: "", Children: 0, Adults: 1 };
   showSearchResults: boolean;
 
   NextPageNo: number;
@@ -34,21 +34,18 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
     // subscribe to router event
     this.activatedRoute.params.subscribe((params: Params) => {
-      console.log(params['City']);
-
-      // this.AllParamsCombined.CountryCode = params.CountryCode;
-      // this.AllParamsCombined.CheckIn = params.CheckInDate;
-      // this.AllParamsCombined.CheckOut = params.CheckOutDate;
-      // this.AllParamsCombined.Children = params.NumOfChildren;
-      // this.AllParamsCombined.Adults = params.NumOfAdults;
-      // this.AllParamsCombined.City = params.City;
+      console.log(params); // Displays Sydney and is type string
       
-      this.AllParamsCombined.City = this.City = params['City'];
-      this.AllParamsCombined.CountryCode = this.CountryCode = params['CountryCode'];
-      this.AllParamsCombined.CheckIn = this.CheckInDate = params['CheckInDate'];
-      this.AllParamsCombined.CheckOut = this.CheckOutDate = params['CheckOutDate'];
-      this.AllParamsCombined.Adults = this.NumOfAdults = params['NumOfAdults'] || 1;
-      this.AllParamsCombined.Children = this.NumOfChildren = params['NumOfChildren'] || 0;
+      // Not working
+      this.AllParamsCombined = params;
+      console.log(this.AllParamsCombined);
+      
+      this.City = params['City'];
+      this.CountryCode = params['CountryCode'];
+      this.CheckInDate = params['CheckInDate'];
+      this.CheckOutDate = params['CheckOutDate'];
+      this.NumOfAdults = params['NumOfAdults'] || 1;
+      this.NumOfChildren = params['NumOfChildren'] || 0;
       this.NextPageNo = parseInt(params['Page']);
       this.PrevPageNo = parseInt(params['Page']);
       if (this.CountryCode === undefined || this.City === undefined || this.NextPageNo === undefined || this.CheckInDate === undefined ||
