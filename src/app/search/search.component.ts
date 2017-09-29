@@ -1,12 +1,9 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+// import { Observable } from 'rxjs/Observable';
 
 import { Hotel } from "../model/hotel";
 import { SearchService } from "../services/search-service.service";
-// import { EmitterService } from '../services/emitter.service';
-import { _ } from 'lodash/core';
-import { HotelFromApi } from '../model/hotelFromApi';
 
 @Component({
   selector: 'app-search',
@@ -15,8 +12,9 @@ import { HotelFromApi } from '../model/hotelFromApi';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private _searchService: SearchService,
-    private activatedRoute: ActivatedRoute) { }
+  constructor(private _searchService: SearchService, 
+              private activatedRoute: ActivatedRoute) { }
+
   City: string;
   CountryCode: string;
   CheckInDate: Date;
@@ -26,24 +24,31 @@ export class SearchComponent implements OnInit {
   Child1Age: number;
   Child2Age: number;
   Child3Age: number;
+  AllParamsCombined: Hotel;
+  showSearchResults: boolean;
 
   NextPageNo: number;
   PrevPageNo: number;
   hotels: Hotel[];
-  hotelsFromAPI: HotelFromApi[];
   
-  // @Input() hotelId: number;
-
   ngOnInit() {
     // subscribe to router event
     this.activatedRoute.params.subscribe((params: Params) => {
-      console.log(params);
-      this.City = params['City'];
-      this.CountryCode = params['CountryCode'];
-      this.CheckInDate = params['CheckInDate'];
-      this.CheckOutDate = params['CheckOutDate'];
-      this.NumOfAdults = params['NumOfAdults'];
-      this.NumOfChildren = params['NumOfAdults'];
+      console.log(params['City']);
+
+      // this.AllParamsCombined.CountryCode = params.CountryCode;
+      // this.AllParamsCombined.CheckIn = params.CheckInDate;
+      // this.AllParamsCombined.CheckOut = params.CheckOutDate;
+      // this.AllParamsCombined.Children = params.NumOfChildren;
+      // this.AllParamsCombined.Adults = params.NumOfAdults;
+      // this.AllParamsCombined.City = params.City;
+      
+      this.AllParamsCombined.City = this.City = params['City'];
+      this.AllParamsCombined.CountryCode = this.CountryCode = params['CountryCode'];
+      this.AllParamsCombined.CheckIn = this.CheckInDate = params['CheckInDate'];
+      this.AllParamsCombined.CheckOut = this.CheckOutDate = params['CheckOutDate'];
+      this.AllParamsCombined.Adults = this.NumOfAdults = params['NumOfAdults'] || 1;
+      this.AllParamsCombined.Children = this.NumOfChildren = params['NumOfChildren'] || 0;
       this.NextPageNo = parseInt(params['Page']);
       this.PrevPageNo = parseInt(params['Page']);
       if (this.CountryCode === undefined || this.City === undefined || this.NextPageNo === undefined || this.CheckInDate === undefined ||
@@ -63,23 +68,7 @@ export class SearchComponent implements OnInit {
         //console.log(hotels);
         this.NextPageNo += 1;
         this.PrevPageNo -= 1;
-        this.hotels = hotels
-        // Get prices for each hotel
-        console.log(this.hotels);
-        this._searchService.getHotelsByCityIdFromApi(CountryCode, City, Page, CheckInDate, CheckOutDate, NumOfAdults, NumOfChildren)
-          .subscribe(hotelsWithPrices => {
-            console.log(hotelsWithPrices);
-            this.hotelsFromAPI = hotelsWithPrices;
-
-            var getTotalPrice = function (el) { 
-              return _.pick(el, 'Options.Option[0].TotalPrice'); 
-            }
-            var ht = _.merge(hotels, _.map(this.hotelsFromAPI, getTotalPrice));
-            console.log(ht);
-
-          }, err => {
-            //console.log(err);
-          });
+        this.hotels = hotels;
       },
       err => {
         console.log(err);
@@ -88,6 +77,11 @@ export class SearchComponent implements OnInit {
 
   public NextPage(CountryCode: string, City: string, Page: number, CheckInDate: Date, CheckOutDate: Date, NumOfAdults: number, NumOfChildren: number) {
     this.Search_Click(CountryCode, City, Page, CheckInDate, CheckOutDate, NumOfAdults, NumOfChildren);
+  }
+
+  private showHotelDetails(hotelId) {
+    this.showSearchResults = true;
+    this.AllParamsCombined.HotelId = hotelId;
   }
   //   ngOnChanges(changes:any) {
   //     // Listen to the 'hotel' emitted event so as populate the model

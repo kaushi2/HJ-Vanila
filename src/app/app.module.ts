@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 
 // import { EmitterService } from "./services/emitter.service";
+// import { CommonService } from './services/common.service';
 import { AboutComponent } from './about/about.component';
 import { SearchService } from "./services/search-service.service";
 import { HotelDetailComponent } from './hotel-detail/hotel-detail.component';

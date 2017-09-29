@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SearchService } from '../services/search-service.service';
-import { ActivatedRoute, Params } from '@angular/router';
 import { Hotel } from '../model/hotel';
 
 @Component({
@@ -9,28 +8,22 @@ import { Hotel } from '../model/hotel';
   styleUrls: ['./hotel-detail.component.css']
 })
 export class HotelDetailComponent implements OnInit {
+  constructor(private _searchService: SearchService) { }
 
-  constructor(private _searchService: SearchService,
-    private activatedRoute: ActivatedRoute) { }
-  HotelId: number;
-  hotels: Hotel[];
-  // @Input('hotelPrices') hotelPrices: Hotel[];
+  @Input() userSearch: Hotel;
+  hotel: Hotel;
   
   ngOnInit() {
-    this.activatedRoute.params.subscribe((params: Params) => {
-      console.log(params);
-      this.HotelId = params['HotelId'];
-
-      console.log(this.HotelId);
-      this._searchService.getHotelsByHotelIdFromApi(this.HotelId)
-      .subscribe(hotels => {
-        //console.log(hotels);
-        this.hotels = hotels
-      },
-      err => {
-        console.log(err);
-      });
+    console.log(this.userSearch);
+    this._searchService.getHotelByHotelIdFromApi(this.userSearch.HotelId)
+    .subscribe(hotelDetail => {
+      console.log(hotelDetail);
+      this.hotel = hotelDetail;
+    },
+    err => {
+      console.log(err);
     });
+  
+    // Read Values from Search Component
   }
-
 }

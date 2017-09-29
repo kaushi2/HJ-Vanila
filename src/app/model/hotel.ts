@@ -10,7 +10,9 @@ export class Hotel {
     CheckOut: string;
     Adults: number;
     Children: number;
-
+    CountryCode: string;
+    City: string;
+    
     Options: any;
     Option: any;
     TotalPrice: string;

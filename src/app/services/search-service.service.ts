@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Hotel } from "../model/hotel";
 import { Observable } from "rxjs/Rx";
-import { HotelFromApi } from '../model/hotelFromApi';
 
 @Injectable()
 export class SearchService {
@@ -21,7 +20,7 @@ export class SearchService {
       .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
 
   }
-  getHotelsByCityIdFromApi(CountryCode: string, City: string, Page: number, CheckInDate: Date, CheckOutDate: Date, NumOfAdults: number, NumOfChildren: number) : Observable<HotelFromApi[]> {
+  getHotelsByCityIdFromApi(CountryCode: string, City: string, Page: number, CheckInDate: Date, CheckOutDate: Date, NumOfAdults: number, NumOfChildren: number) : Observable<Hotel> {
     // ....using get Request
     return this.http.get(this.HotelsAPIUrl + CountryCode + "/" + City + "/" + Page + "/" + CheckInDate + "/" + CheckOutDate + "/" + NumOfAdults + "/" + NumOfChildren)
       // ...and calling .json() on the response to return data
@@ -30,7 +29,7 @@ export class SearchService {
       .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
 
   }
-  getHotelsByHotelIdFromApi(HotelId: number): Observable<Hotel[]> {
+  getHotelByHotelIdFromApi(HotelId: number): Observable<Hotel> {
     // ....using get Request
     return this.http.get(this.HotelsAPIUrl + HotelId)
     // ...and calling .json() on the response to return data

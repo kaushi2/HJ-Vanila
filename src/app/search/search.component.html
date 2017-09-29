@@ -1,333 +1,336 @@
-<!-- content starts here -->
-<div class="top-sec hotel-list">
-  <div class="inner-content">
-    <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;<b>Luxury</b></div>
-    <div class="page-heading">Hotels</div>
-    <div class="result-found">We found: <b *ngIf='hotels'>{{hotels.TotalRecords}}</b> hotels</div>
+<app-hotel-detail [userSearch]="AllParamsCombined" *ngIf="showHotelDetail"></app-hotel-detail>
+<div *ngIf="!showHotelDetail">
+  <!-- content starts here -->
+  <div class="top-sec hotel-list">
+    <div class="inner-content">
+      <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;<b>Luxury</b></div>
+      <div class="page-heading">Hotels</div>
+      <div class="result-found">We found: <b *ngIf='hotels'>{{hotels.TotalRecords}}</b> hotels</div>
+    </div>
   </div>
-</div>
-<!-- content ends here -->
+  <!-- content ends here -->
 
-<!-- page content starts here -->
-<div class="page-content">
-  <div class="wrapper">
+  <!-- page content starts here -->
+  <div class="page-content">
+    <div class="wrapper">
 
-    <div class="breadcrumb">
-      <ul>
-        <li><a href="#">home&nbsp;&nbsp;/&nbsp;&nbsp;</a></li>
-        <li><a href="#" class="active">Hotels</a></li>
-      </ul>
-    </div>
-
-    <div class="left-side">
-
-      <div class="space60"></div>
-
-      <div class="star-rating-left">
-        <h6>star rating</h6>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="one" class="css-checkbox" type="checkbox">
-            <label for="one" name="demo_lbl_1" class="css-label"></label>
-          </div>
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="two" class="css-checkbox" type="checkbox">
-            <label for="two" name="demo_lbl_1" class="css-label"></label>
-          </div>
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="three" class="css-checkbox" type="checkbox">
-            <label for="three" name="demo_lbl_1" class="css-label"></label>
-          </div>
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="four" class="css-checkbox" type="checkbox">
-            <label for="four" name="demo_lbl_1" class="css-label"></label>
-          </div>
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="five" class="css-checkbox" type="checkbox">
-            <label for="five" name="demo_lbl_1" class="css-label"></label>
-          </div>
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-        </div>
+      <div class="breadcrumb">
+        <ul>
+          <li><a href="#">home&nbsp;&nbsp;/&nbsp;&nbsp;</a></li>
+          <li><a href="#" class="active">Hotels</a></li>
+        </ul>
       </div>
 
-      <div class="space60"></div>
+      <div class="left-side">
 
-      <div class="facality">
-        <h6>facility</h6>
+        <div class="space60"></div>
 
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="new_one" class="css-checkbox" type="checkbox">
-            <label for="new_one" name="demo_lbl_1" class="css-label">Swimming Pool</label>
-          </div>
-        </div>
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="1" class="css-checkbox" type="checkbox">
-            <label for="1" name="demo_lbl_1" class="css-label">Gym / Fitness</label>
-          </div>
-        </div>
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="2" class="css-checkbox" type="checkbox">
-            <label for="2" name="demo_lbl_1" class="css-label">Car Park</label>
-          </div>
-        </div>
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="3" class="css-checkbox" type="checkbox">
-            <label for="3" name="demo_lbl_1" class="css-label">Spa / Sauna</label>
-          </div>
-        </div>
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="4" class="css-checkbox" type="checkbox">
-            <label for="4" name="demo_lbl_1" class="css-label">Airport Transfer</label>
-          </div>
-        </div>
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="5" class="css-checkbox" type="checkbox">
-            <label for="5" name="demo_lbl_1" class="css-label">Smoking Area</label>
-          </div>
-        </div>
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="6" class="css-checkbox" type="checkbox">
-            <label for="6" name="demo_lbl_1" class="css-label">Pet-friendly</label>
-          </div>
-        </div>
-      </div>
+        <div class="star-rating-left">
+          <h6>star rating</h6>
 
-      <div class="space60"></div>
-      <div class="review-score">
-        <h6>Review Score</h6>
-
-        <div class="review-score-col">
-
-          <p>5</p>
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <div class="clear"></div>
-          <div class="custom-checkbox">
-            <input id="20" class="css-checkbox" type="checkbox">
-            <label for="20" name="demo_lbl_1" class="css-label"></label>
-          </div>
-        </div>
-        <div class="review-score-col">
-
-          <p>4</p>
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <div class="clear"></div>
-          <div class="custom-checkbox">
-            <input id="21" class="css-checkbox" type="checkbox">
-            <label for="21" name="demo_lbl_1" class="css-label"></label>
-          </div>
-        </div>
-        <div class="review-score-col">
-
-          <p>3</p>
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <div class="clear"></div>
-          <div class="custom-checkbox">
-            <input id="23" class="css-checkbox" type="checkbox">
-            <label for="23" name="demo_lbl_1" class="css-label"></label>
-          </div>
-        </div>
-        <div class="review-score-col">
-
-          <p>2</p>
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <div class="clear"></div>
-          <div class="custom-checkbox">
-            <input id="24" class="css-checkbox" type="checkbox">
-            <label for="24" name="demo_lbl_1" class="css-label"></label>
-          </div>
-        </div>
-        <div class="review-score-col">
-
-          <p>1</p>
-          <img src="../assets/images/search-form/rating-star.png" alt="">
-          <div class="clear"></div>
-          <div class="custom-checkbox">
-            <input id="25" class="css-checkbox" type="checkbox">
-            <label for="25" name="demo_lbl_1" class="css-label"></label>
-          </div>
-        </div>
-      </div>
-
-      <div class="space60"></div>
-      <div class="others">
-        <h6>Others</h6>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="8" class="css-checkbox" type="checkbox">
-            <label for="8" name="demo_lbl_1" class="css-label">Earls Court</label>
-          </div>
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="9" class="css-checkbox" type="checkbox">
-            <label for="9" name="demo_lbl_1" class="css-label">Victoria and Westminster</label>
-          </div>
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="10" class="css-checkbox" type="checkbox">
-            <label for="10" name="demo_lbl_1" class="css-label">Bloomsbury - Fitzrovia</label>
-          </div>
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="11" class="css-checkbox" type="checkbox">
-            <label for="11" name="demo_lbl_1" class="css-label">West End -Soho</label>
-          </div>
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="12" class="css-checkbox" type="checkbox">
-            <label for="12" name="demo_lbl_1" class="css-label">Chelsea - Kensington</label>
-          </div>
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="13" class="css-checkbox" type="checkbox">
-            <label for="13" name="demo_lbl_1" class="css-label">Heathrow & Nearby</label>
-          </div>
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="14" class="css-checkbox" type="checkbox">
-            <label for="14" name="demo_lbl_1" class="css-label">Gatwick Airport & Nearby</label>
-          </div>
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="15" class="css-checkbox" type="checkbox">
-            <label for="15" name="demo_lbl_1" class="css-label">Heathrow & Nearby</label>
-          </div>
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="16" class="css-checkbox" type="checkbox">
-            <label for="16" name="demo_lbl_1" class="css-label">The City</label>
-          </div>
-        </div>
-
-        <div class="rating-row">
-          <div class="custom-checkbox">
-            <input id="17" class="css-checkbox" type="checkbox">
-            <label for="17" name="demo_lbl_1" class="css-label">Greenwich</label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- left side ends here -->
-
-    <!-- right side starts here -->
-    <div class="right-side">
-
-      <div class="sorting-row">
-        <button type="button" name="" value="" class="sorting-row-btn">Sort by price</button>
-        <button type="button" name="" value="" class="sorting-row-btn">Sort by ranking</button>
-
-        <div class="view-list-grid">
-          <p>View:</p>
-          <ul>
-            <li class="list-icon-selected"></li>
-            <li class="grid-icon grid-icon"></li>
-          </ul>
-        </div>
-
-        <div class="clear"></div>
-      </div>
-
-      <!-- hotel listing starts here -->
-      <div class="product-container">
-
-        <div class="product-column product-column-list" *ngFor="let hotel of hotels">
-          <a href="/Hotel/{{hotel.HotelId}}">
-            <div class="product-column-img">
-              <button type="button" name="" value="" class="most-popular-btn">Most Popular</button>
-              <div *ngFor="let image of hotel.images"><img src="{{image.Image}}" /></div>
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="one" class="css-checkbox" type="checkbox">
+              <label for="one" name="demo_lbl_1" class="css-label"></label>
             </div>
-            <div class="product-column-content">
-              <div class="list-left-side">
-                <div class="col-schedule">19.07 - 25.07 / 7 night</div>
-                <div class="col-heading-text">{{hotel.HotelName}}</div>
-                <span class="col-reviews">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="two" class="css-checkbox" type="checkbox">
+              <label for="two" name="demo_lbl_1" class="css-label"></label>
+            </div>
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="three" class="css-checkbox" type="checkbox">
+              <label for="three" name="demo_lbl_1" class="css-label"></label>
+            </div>
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="four" class="css-checkbox" type="checkbox">
+              <label for="four" name="demo_lbl_1" class="css-label"></label>
+            </div>
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="five" class="css-checkbox" type="checkbox">
+              <label for="five" name="demo_lbl_1" class="css-label"></label>
+            </div>
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+          </div>
+        </div>
+
+        <div class="space60"></div>
+
+        <div class="facality">
+          <h6>facility</h6>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="new_one" class="css-checkbox" type="checkbox">
+              <label for="new_one" name="demo_lbl_1" class="css-label">Swimming Pool</label>
+            </div>
+          </div>
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="1" class="css-checkbox" type="checkbox">
+              <label for="1" name="demo_lbl_1" class="css-label">Gym / Fitness</label>
+            </div>
+          </div>
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="2" class="css-checkbox" type="checkbox">
+              <label for="2" name="demo_lbl_1" class="css-label">Car Park</label>
+            </div>
+          </div>
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="3" class="css-checkbox" type="checkbox">
+              <label for="3" name="demo_lbl_1" class="css-label">Spa / Sauna</label>
+            </div>
+          </div>
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="4" class="css-checkbox" type="checkbox">
+              <label for="4" name="demo_lbl_1" class="css-label">Airport Transfer</label>
+            </div>
+          </div>
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="5" class="css-checkbox" type="checkbox">
+              <label for="5" name="demo_lbl_1" class="css-label">Smoking Area</label>
+            </div>
+          </div>
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="6" class="css-checkbox" type="checkbox">
+              <label for="6" name="demo_lbl_1" class="css-label">Pet-friendly</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="space60"></div>
+        <div class="review-score">
+          <h6>Review Score</h6>
+
+          <div class="review-score-col">
+
+            <p>5</p>
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <div class="clear"></div>
+            <div class="custom-checkbox">
+              <input id="20" class="css-checkbox" type="checkbox">
+              <label for="20" name="demo_lbl_1" class="css-label"></label>
+            </div>
+          </div>
+          <div class="review-score-col">
+
+            <p>4</p>
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <div class="clear"></div>
+            <div class="custom-checkbox">
+              <input id="21" class="css-checkbox" type="checkbox">
+              <label for="21" name="demo_lbl_1" class="css-label"></label>
+            </div>
+          </div>
+          <div class="review-score-col">
+
+            <p>3</p>
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <div class="clear"></div>
+            <div class="custom-checkbox">
+              <input id="23" class="css-checkbox" type="checkbox">
+              <label for="23" name="demo_lbl_1" class="css-label"></label>
+            </div>
+          </div>
+          <div class="review-score-col">
+
+            <p>2</p>
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <div class="clear"></div>
+            <div class="custom-checkbox">
+              <input id="24" class="css-checkbox" type="checkbox">
+              <label for="24" name="demo_lbl_1" class="css-label"></label>
+            </div>
+          </div>
+          <div class="review-score-col">
+
+            <p>1</p>
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <div class="clear"></div>
+            <div class="custom-checkbox">
+              <input id="25" class="css-checkbox" type="checkbox">
+              <label for="25" name="demo_lbl_1" class="css-label"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="space60"></div>
+        <div class="others">
+          <h6>Others</h6>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="8" class="css-checkbox" type="checkbox">
+              <label for="8" name="demo_lbl_1" class="css-label">Earls Court</label>
+            </div>
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="9" class="css-checkbox" type="checkbox">
+              <label for="9" name="demo_lbl_1" class="css-label">Victoria and Westminster</label>
+            </div>
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="10" class="css-checkbox" type="checkbox">
+              <label for="10" name="demo_lbl_1" class="css-label">Bloomsbury - Fitzrovia</label>
+            </div>
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="11" class="css-checkbox" type="checkbox">
+              <label for="11" name="demo_lbl_1" class="css-label">West End -Soho</label>
+            </div>
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="12" class="css-checkbox" type="checkbox">
+              <label for="12" name="demo_lbl_1" class="css-label">Chelsea - Kensington</label>
+            </div>
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="13" class="css-checkbox" type="checkbox">
+              <label for="13" name="demo_lbl_1" class="css-label">Heathrow & Nearby</label>
+            </div>
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="14" class="css-checkbox" type="checkbox">
+              <label for="14" name="demo_lbl_1" class="css-label">Gatwick Airport & Nearby</label>
+            </div>
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="15" class="css-checkbox" type="checkbox">
+              <label for="15" name="demo_lbl_1" class="css-label">Heathrow & Nearby</label>
+            </div>
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="16" class="css-checkbox" type="checkbox">
+              <label for="16" name="demo_lbl_1" class="css-label">The City</label>
+            </div>
+          </div>
+
+          <div class="rating-row">
+            <div class="custom-checkbox">
+              <input id="17" class="css-checkbox" type="checkbox">
+              <label for="17" name="demo_lbl_1" class="css-label">Greenwich</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- left side ends here -->
+
+      <!-- right side starts here -->
+      <div class="right-side">
+
+        <div class="sorting-row">
+          <button type="button" name="" value="" class="sorting-row-btn">Sort by price</button>
+          <button type="button" name="" value="" class="sorting-row-btn">Sort by ranking</button>
+
+          <div class="view-list-grid">
+            <p>View:</p>
+            <ul>
+              <li class="list-icon-selected"></li>
+              <li class="grid-icon grid-icon"></li>
+            </ul>
+          </div>
+
+          <div class="clear"></div>
+        </div>
+
+        <!-- hotel listing starts here -->
+        <div class="product-container">
+
+          <div class="product-column product-column-list" *ngFor="let hotel of hotels">
+            <a (click)="showHotelDetails(hotel.HotelId)">
+              <div class="product-column-img">
+                <button type="button" name="" value="" class="most-popular-btn">Most Popular</button>
+                <div *ngFor="let image of hotel.images"><img src="{{image.Image}}" /></div>
+              </div>
+              <div class="product-column-content">
+                <div class="list-left-side">
+                  <div class="col-schedule">19.07 - 25.07 / 7 night</div>
+                  <div class="col-heading-text">{{hotel.HotelName}}</div>
+                  <span class="col-reviews">
                   <!-- <img *ngFor="let number of Arr({{hotel.StarRating}}).fill(1);" src="../assets/images/search-form/rating-star.png" alt=""> -->
                 <!-- <label>485 Reviews</label> -->
               </span>
-                <div class="col-description-text" *ngFor="let facility of hotel.facilities | slice:0:2; let i=index">{{facility.FacilityName}}</div>
-                <div class="col-description-text">{{hotel.Address}}</div>
-              </div>
+                  <div class="col-description-text" *ngFor="let facility of hotel.facilities | slice:0:2; let i=index">{{facility.FacilityName}}</div>
+                  <div class="col-description-text">{{hotel.Address}}</div>
+                </div>
 
-              <div class="list-right-side">
-                <!-- <p class="price-text">from <br><b>{{hotel.Options.Option[0].TotalPrice}}</b><br>per person</p> -->
-                <button type="button" name="" value="" class="book-now-btn">Book Now</button>
+                <div class="list-right-side">
+                  <!-- <p class="price-text">from <br><b>{{hotel.Options.Option[0].TotalPrice}}</b><br>per person</p> -->
+                  <button type="button" name="" value="" class="book-now-btn">Book Now</button>
+                </div>
               </div>
+            </a>
+          </div>
+          <!-- hotel listing ends here -->
+
+          <div class="pagination">
+            {{PrevPageNo}}
+            <div class="pagination-col-1" *ngIf="PrevPageNo>0">
+              <a href="/Search/{{CountryCode}}/{{City}}/{{PrevPageNo}}"><button type="button" name="" value="" class="pg-button">Prev Page</button></a>
             </div>
-          </a>
-        </div>
-        <!-- hotel listing ends here -->
-
-        <div class="pagination">
-          {{PrevPageNo}}
-          <div class="pagination-col-1" *ngIf="PrevPageNo>0">
-            <a href="/Search/{{CountryCode}}/{{City}}/{{PrevPageNo}}"><button type="button" name="" value="" class="pg-button">Prev Page</button></a>
-          </div>
-          <div class="pagination-col-2">
-            <ul>
-              <li class="pg-button">1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>...</li>
-              <li>10</li>
-            </ul>
-          </div>
-          <div class="pagination-col-3">
-            <a href="/Search/{{CountryCode}}/{{City}}/{{NextPageNo}}"><button type="button" name="" value="" class="pg-button">Next Page</button></a>
+            <div class="pagination-col-2">
+              <ul>
+                <li class="pg-button">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>...</li>
+                <li>10</li>
+              </ul>
+            </div>
+            <div class="pagination-col-3">
+              <a href="/Search/{{CountryCode}}/{{City}}/{{NextPageNo}}"><button type="button" name="" value="" class="pg-button">Next Page</button></a>
+            </div>
           </div>
         </div>
+        <!-- right side ends here -->
       </div>
-      <!-- right side ends here -->
     </div>
+    <!-- page content ends here -->
   </div>
-  <!-- page content ends here -->
