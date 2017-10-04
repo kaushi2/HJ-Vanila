@@ -24,11 +24,11 @@ export class SearchbarComponent implements OnInit {
   }
 
   public Search_Click() {
+    console.log(this.SearchValue)
     var split = this.SearchValue.split(",");
     // this.CheckInDate = dateFormat(this.CheckInDate, 'yyyy-mm-dd');
     // this.CheckOutDate = dateFormat(this.CheckOutDate, 'yyyy-mm-dd');
-    console.log(this.NumOfChildren);
-    this.router.navigateByUrl('/Search/' + split[1].trim() + "/" + split[0].trim() + "/1" + "/" + this.CheckInDate + "/" + this.CheckOutDate + "/" + this.NumOfAdults + "/" + this.NumOfChildren);
+    this.router.navigateByUrl('/Search/' + split[1].trim() + "/" + split[0].trim() + "/1" + "/" + this.CheckInDate + "/" + this.CheckOutDate + "/" + this.NumOfAdults + "/" + this.NumOfChildren + "/results=true");
   } 
   
 }

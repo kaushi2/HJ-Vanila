@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 // import { Observable } from 'rxjs/Observable';
 
@@ -25,7 +25,7 @@ export class SearchComponent implements OnInit {
   Child2Age: number;
   Child3Age: number;
   hotel: Hotel = { HotelId: 0, City: "", CountryCode: "", CheckIn: "", CheckOut: "", Children: 0, Adults: 1 };
-  showHotelDetail: boolean;
+  @Input() showHotelDetail: boolean;
 
   NextPageNo: number;
   PrevPageNo: number;
@@ -34,7 +34,6 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
     // subscribe to router event
     this.activatedRoute.params.subscribe((params: Params) => {
-      console.log(params); // Displays Sydney and is type string
       
       this.hotel.City = this.City = params['City'];
       this.hotel.CountryCode = this.CountryCode = params['CountryCode'];
@@ -42,6 +41,7 @@ export class SearchComponent implements OnInit {
       this.hotel.CheckOut = this.CheckOutDate = params['CheckOutDate'];
       this.hotel.Adults = this.NumOfAdults = params['NumOfAdults'] || 1;
       this.hotel.Children = this.NumOfChildren = params['NumOfChildren'] || 0;
+      this.showHotelDetail = params['results'] == "results" ? false : true;
       this.NextPageNo = parseInt(params['Page']);
       this.PrevPageNo = parseInt(params['Page']);
       if (this.CountryCode === undefined || this.City === undefined || this.NextPageNo === undefined || this.CheckInDate === undefined ||
@@ -50,7 +50,6 @@ export class SearchComponent implements OnInit {
         return false;
       }
 
-      console.log(this.City + "/" + this.NextPageNo);
       this.Search_Click(this.CountryCode, this.City, this.NextPageNo, this.CheckInDate, this.CheckOutDate, this.NumOfAdults, this.NumOfChildren);
     });
   }
@@ -74,9 +73,7 @@ export class SearchComponent implements OnInit {
 
   private showHotelDetails(hotelId) {
     this.showHotelDetail = true;
-    console.log(hotelId)
     this.hotel.HotelId = hotelId;
-    console.log(this.hotel)
   }
   //   ngOnChanges(changes:any) {
   //     // Listen to the 'hotel' emitted event so as populate the model

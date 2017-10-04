@@ -29,9 +29,11 @@ export class SearchService {
       .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
 
   }
-  getHotelByHotelIdFromApi(HotelId: number): Observable<Hotel> {
+  getHotelByHotelIdFromApi(userSearch: Hotel, HotelId: number): Observable<Hotel> {
     // ....using get Request
-    return this.http.get(this.HotelsAPIUrl + HotelId)
+    return this.http.get(this.HotelsAPIUrl + userSearch.CountryCode + "/" + userSearch.City + "/1/" + 
+                          userSearch.CheckIn + "/" + userSearch.CheckOut + "/" + 
+                          userSearch.Adults + "/" + userSearch.Children + "/" + HotelId)
     // ...and calling .json() on the response to return data
     .map((res:Response) => res.json())
     // ...errors if any

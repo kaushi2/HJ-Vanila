@@ -1,3 +1,4 @@
+
 export class Hotel {
     HotelId?: number;
     HotelName?: string;
@@ -12,5 +13,13 @@ export class Hotel {
     Children?: number;
     CountryCode?: string;
     City?: string;
-    
+
+    Images?: any;
+    Image?: Array<string>;
+
+    Options?: any;
+    Option?: any;
+
+    Rooms?: any;
+    Room?: any;
 }

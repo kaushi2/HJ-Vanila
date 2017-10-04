@@ -1,0 +1,84 @@
+.defineBar {
+    width: 100%;
+}
+
+.leftBar {
+    width: 50%;
+    float: left;
+}
+
+.RightBar {
+    width: 50%;
+    float: left;
+}
+
+.maintain {
+    width: 100%;
+}
+
+#bookingTable th {
+    vertical-align: top;
+    text-align: center;
+    background: #4b74a7;
+    color: #fff;
+}    
+#bookingTable tr {
+    vertical-align: top;
+    text-align: center;
+    background: #ecf8ff;
+}    
+#bookingTable th, td {
+    vertical-align: top;
+    text-align: left;
+    border-left: 1px solid #aed6ff;
+}
+#bookingTable td {
+    border-top: 1px solid #aed6ff;
+}
+#bookingTable th:nth-last-child(), td:nth-last-child() {
+    vertical-align: top;
+    text-align: left;
+}
+#bookingTable td:nth-last-child() {
+    border-right: 1px solid #aed6ff;
+    border-bottom: 1px solid #aed6ff;
+}
+
+.roomFacilities ul {
+    margin: 0;
+    list-style-type: square;    
+    list-style-position: inside;
+}
+.roomFacilities li {
+    line-height: normal;
+    font-size: 0.75em;    
+}
+
+input[type="checkbox"] {
+    transform: scale(2);
+    margin: 40%;
+}
+
+.book {
+    text-align: center;
+    border-right: 1px solid #aed6ff;
+    border-bottom: 1px solid #aed6ff;
+
+}
+.bookButton {
+    background: -webkit-gradient(linear,left top,left bottom,from(#0079bc),to(#00509d));
+    padding: .5em 1.2em;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 rgba(0,0,0,0.04);
+    vertical-align: baseline;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    zoom: 1;
+    display: inline-block;
+    margin-top: 7%;
+}
