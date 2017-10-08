@@ -53,7 +53,8 @@ export class HotelDetailComponent implements OnInit {
   }
 
   book() {
-    console.log(this.options.filter(x => x.Checked == true));
+    console.log(this.selectedOption);
+
   }
 
   roomSelect(option) {

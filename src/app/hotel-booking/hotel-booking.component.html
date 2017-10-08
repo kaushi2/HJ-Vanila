@@ -1,0 +1,217 @@
+<div class="top-sec hotel-booking-sec">
+  <div class="inner-content">
+    <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;<b>Policies</b></div>
+    <div class="page-heading">Hotel Policies</div>
+  </div>
+</div>
+<!-- content ends here -->
+
+<table id="bookingTable" border=0 cellpadding=0 cellspacing=0>
+  <thead>
+    <tr id="maxotel_table_header">
+      <th class="" style="width: 245px;">Your Policies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Currency</td>
+      <td>{{hotelPolicy.Currency}}</td>
+    </tr>
+    <tr>
+      <td>Total Price</td>
+      <td>{{hotelPolicy.TotalPrice}}</td>
+    </tr>
+    <tr>
+      <td>Cancellation Deadline</td>
+      <td>{{hotelPolicy.CancellationDeadline}}</td>
+    </tr>
+    <tr>
+      <td>Policies</td>
+      <td>{{hotelPolicy.Policies.Policy}}</td>
+    </tr>
+    <tr>
+      <td>RESTRICTIONS</td>
+      <td>{{hotelPolicy.Restrictions.Restriction}}</td>
+    </tr>
+    <tr>
+      <td>ALERTS</td>
+      <td>{{hotelPolicy.Alerts.Alert}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- page content starts here -->
+<div class="page-content thanks-page-content booking-content">
+  <div class="wrapper">
+
+    <div class="booking-content-left">
+
+      <h6>Please Review Hotel Policies First</h6>
+
+      <div class="booking-form-container">
+        <div class="booking-row">
+          <label>Currency</label>
+          <input type="text" value="{{hotelPolicy.Currency}}">
+        </div>
+
+        <div class="booking-row">
+          <label>Total Price</label>
+          <input type="text" value="{{hotelPolicy.TotalPrice}}">
+        </div>
+
+        <div class="booking-row">
+          <label>Cancellation Deadline</label>
+          <input type="text" value="{{hotelPolicy.CancellationDeadline}}">
+        </div>
+
+        <div class="booking-row">
+          <label>Policies</label>
+          <div>
+            <ul *ngFor="let policy of hotelPolicy.Policies">
+              <li>
+                <ul>
+                  <li>
+                    {{policy.From}} {{policy.Type}} {{policy.Value}}
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="booking-row">
+          <label>RESTRICTIONS</label>
+          <input type="text" value="{{hotelPolicy.Restrictions.Restriction}}">
+        </div>
+
+        <div class="booking-row">
+          <label>ALERTS</label>
+          <input type="text" value="{{hotelPolicy.Alerts.Alert}}">
+        </div>
+
+      </div>
+
+
+      <h6>Your Personal Information</h6>
+      <div class="booking-form-container">
+        <div class="booking-row">
+          <label>Title</label>
+          <select name="title">
+            <option value="Mr.">Mr.</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Miss.">Miss.</option>
+          </select>
+        </div>
+
+        <div class="booking-row">
+          <label>First Name</label>
+          <input type="text" name="fname" placeholder="Enter your first name" value="">
+        </div>
+
+        <div class="booking-row">
+          <label>Last Name</label>
+          <input type="text" name="lname" placeholder="Enter your last name" value="">
+        </div>
+
+        <div class="booking-row">
+          <label>E-mail Adress</label>
+          <input type="text" name="email" placeholder="Enter your e-mail adress" value="">
+        </div>
+
+        <div class="booking-row">
+          <label>Verify E-mail Address</label>
+          <input type="text" name="vrfyMail" placeholder="Enter your e-mail adress for verify" value="">
+        </div>
+
+        <div class="booking-row">
+          <label>Country Code</label>
+          <select name="cntryCode">
+              <option value="GB">United Kingdom (+44)</option>
+            </select>
+        </div>
+
+        <div class="booking-row">
+          <label>Phone Number</label>
+          <input type="text" name="phn" placeholder="Enter your phone number" value="">
+        </div>
+
+      </div>
+
+      <div class="custom-checkbox">
+        <input id="newwew" class="css-checkbox" type="checkbox">
+        <label for="newwew" name="demo_lbl_1" class="css-label"> I want to receive Halal Journey promotional offers in the future</label>
+      </div>
+
+      <div class="space60"></div>
+      <h6>Your Card Information</h6>
+      <div class="booking-form-container">
+        <div class="booking-row">
+          <label>Credit Card Type</label>
+          <select name="">
+            <option value="">Select a card</option>
+          </select>
+        </div>
+
+        <div class="booking-row">
+          <label>Card Holder Name</label>
+          <input type="text" name="" value="" placeholder="Enter your card holder name">
+        </div>
+
+        <div class="booking-row">
+          <label>Card Number</label>
+          <input type="text" name="" value="" placeholder="Enter your card number">
+        </div>
+
+        <div class="booking-row">
+          <label>Card Identification Number</label>
+          <input type="text" name="" value="" placeholder="Enter your e-mail adress for verify">
+        </div>
+
+        <div class="booking-row">
+          <label>Expiration Date</label>
+          <select name="" class="month-input">
+              <option value="">Month</option>
+          </select>
+
+          <select name="" class="month-input month-input-two">
+              <option value="">Year</option>
+          </select>
+        </div>
+
+        <div class="booking-row">
+          <label>Billing Zip Code</label>
+          <input type="text" name="" value="" placeholder="Enter billing zip code">
+        </div>
+      </div>
+
+
+      <div class="custom-checkbox">
+        <input id="newwew2" class="css-checkbox" type="checkbox" required>
+        <label for="newwew2" name="demo_lbl_2" class="css-label">By continuing, you agree to the Terms and Conditions.</label>
+      </div>
+
+      <button type="submit" name="" value="" class="cofrm-booking">confirm booking</button>
+    </div>
+    <!-- left ends here -->
+
+
+    <div class="thanks-content-right">
+      <div class="useful-information">useful information</div>
+      <div class="need-help">
+        <h6>Need Help?</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua.
+        </p>
+        <ul>
+          <li class="thanks-call-icon">+xx xxx xxxxx</li>
+          <li class="thanks-mail-icon">Smile@halaljourney.com</li>
+        </ul>
+      </div>
+    </div>
+    <!-- right ends here -->
+
+    <div class="clear"></div>
+    <div class="space60"></div>
+  </div>
+</div>
+<!-- page content ends here -->

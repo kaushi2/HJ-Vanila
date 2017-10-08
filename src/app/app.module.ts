@@ -14,6 +14,7 @@ import { HotelDetailComponent } from './hotel-detail/hotel-detail.component';
 import { HomeComponent } from './home/home.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { SearchComponent } from './search/search.component';
+import { HotelBookingComponent } from './hotel-booking/hotel-booking.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SearchComponent } from './search/search.component';
     HotelDetailComponent,
     HomeComponent,
     SearchComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    HotelBookingComponent
   ],
   imports: [
     BrowserModule,

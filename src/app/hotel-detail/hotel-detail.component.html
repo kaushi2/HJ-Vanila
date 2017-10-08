@@ -62,46 +62,44 @@
 
           <div class="detail-img-content maintain">
             <span class="detail-img-content-left defineBar">
-                <p><b>Facilities</b></p>
-                <table id="bookingTable" border=0 cellpadding=0 cellspacing=0>
-                  <thead>
-                      <tr id="maxotel_table_header">
-                        <th class="" style="width: 245px;">Your room options</th>
-                        <th class="" style="width: 43px;">Sleeps</th>
-                        <th class="highlight" style="width: 60px;">Today's price</th>
-                        <th class="" style="width: 150px;">Your choices</th>
-                        <th class="" style="width: 60px;">Select rooms</th>
-                        <th class="" style="width: 153px;">Confirm your reservation</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let option of options; let i = index;">
-                      <td>
-                        <div class="roomName">{{option.Rooms.Room.RoomName}}</div>
-                        <div class="roomFacilities">
-                            <ul class="" *ngFor="let facilities of hotel.Facilities.Facility">
-                                <li>{{facilities.FacilityName}}</li>
-                            </ul>
-                        </div>
-                      </td>
-                      <td>{{option.BoardType}}</td>
-                      <td>
-                        <span class="strikethrough" *ngIf="option.Rooms.Room.DealName != null">{{option.Rooms.Room.RoomPrice}</span>
-                        <span class="strikethrough">${{option.TotalPrice}}</span>
-                      </td>
-                      <td>{{option.BoardType}}{{option.Rooms.Room.DealName}}</td>
-                      <td><input name="Room" value="{{option.OptionId}}" (click)="roomSelect(option)" [(ngModel)]="option.Checked" type="radio" /></td>
-                      <td class="book"><button class="bookButton" (click)="book()">I'll Book</button></td>
+              <p><b>Facilities</b></p>
+              <table id="bookingTable" border=0 cellpadding=0 cellspacing=0>
+                <thead>
+                    <tr id="maxotel_table_header">
+                      <th class="" style="width: 245px;">Your room options</th>
+                      <th class="" style="width: 43px;">Sleeps</th>
+                      <th class="highlight" style="width: 60px;">Today's price</th>
+                      <th class="" style="width: 150px;">Your choices</th>
+                      <th class="" style="width: 60px;">Select rooms</th>
+                      <th class="" style="width: 153px;">Confirm your reservation</th>
                     </tr>
-                  </tbody>
-                </table>
-
-
-            <ul class="leftBar">
-              <li></li>
-            </ul>
-            <ul class="RightBar">
-            </ul>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let option of options; let i = index;">
+                    <td>
+                      <div class="roomName">{{option.Rooms.Room.RoomName}}</div>
+                      <div class="roomFacilities">
+                          <ul class="" *ngFor="let facilities of hotel.Facilities.Facility">
+                              <li>{{facilities.FacilityName}}</li>
+                          </ul>
+                      </div>
+                    </td>
+                    <td>{{option.BoardType}}</td>
+                    <td>
+                      <span class="strikethrough" *ngIf="option.Rooms.Room.DealName != null">{{option.Rooms.Room.RoomPrice}</span>
+                      <span class="strikethrough">${{option.TotalPrice}}</span>
+                    </td>
+                    <td>{{option.BoardType}}{{option.Rooms.Room.DealName}}</td>
+                    <td><input name="Room" value="{{option.OptionId}}" (click)="roomSelect(option)" [(ngModel)]="option.Checked" type="radio" /></td>
+                    <td class="book"><button class="bookButton" (click)="book()">I'll Book</button></td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="leftBar">
+                <li></li>
+              </ul>
+              <ul class="RightBar">
+              </ul>
             </span>
             <!--<span class="detail-img-content-right"></span>-->
           </div>
@@ -136,7 +134,7 @@
         <!-- <p>Kind of Transport: <b>tourist bus</b></p> -->
         <!-- <p *ngIf="selectedOption.DiscountApplied">DISCOUNT: <b>${{selectedOption.DiscountApplied}} discount applied</b></p> -->
         <button type="button" name="" value="" class="view-on-map-btn">view on map</button>
-        <a target="_blank" href=""><button type="button" name="" value="" class="view-on-map-btn bok-btn">book now</button></a>
+        <a href="/HotelPolicy/{{selectedOption.OptionId}}"><button type="button" class="view-on-map-btn bok-btn">book now</button></a>
 
       </div>
 
@@ -155,13 +153,13 @@
           <p class="may-interest-date">July <b>19th</b> to July <b>26th</b></p>
           <h6>Turkey</h6>
           <span class="col-reviews">
-                <img src="../assets/images/search-form/rating-star.png" alt="">
-                <img src="../assets/images/search-form/rating-star.png" alt="">
-                <img src="../assets/images/search-form/rating-star.png" alt="">
-                <img src="../assets/images/search-form/rating-star.png" alt="">
-                <img src="../assets/images/search-form/rating-star.png" alt="">
-                <label>485 Reviews</label>
-            </span>
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <img src="../assets/images/search-form/rating-star.png" alt="">
+            <label>485 Reviews</label>
+          </span>
           <p class="may-interest-price">from <b>$273 </b>/ person</p>
         </div>
       </div>

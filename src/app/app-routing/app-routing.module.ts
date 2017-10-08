@@ -5,6 +5,7 @@ import { SearchComponent } from "../search/search.component";
 import { AboutComponent } from "../about/about.component";
 import { HotelDetailComponent } from "../hotel-detail/hotel-detail.component";
 import { HomeComponent } from "../home/home.component";
+import { HotelBookingComponent } from '../hotel-booking/hotel-booking.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'Hotel/:HotelId',
     component: HotelDetailComponent
+  },
+  {
+    path: 'HotelPolicy/:OptionId',
+    component: HotelBookingComponent
   },
   {
     path: 'About',

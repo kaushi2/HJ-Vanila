@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Hotel } from "../model/hotel";
 import { Observable } from "rxjs/Rx";
+import { HotelPolicy } from '../model/Policy';
+import { Option } from '../model/Option';
 
 @Injectable()
 export class SearchService {
@@ -43,6 +45,15 @@ export class SearchService {
   getHotelsByHotelIdsFromApi(HotelIds: number[]): Observable<Hotel[]> {
     // ....using get Request
     return this.http.get(this.HotelsAPIUrl + HotelIds)
+    // ...and calling .json() on the response to return data
+    .map((res:Response) => res.json())
+    // ...errors if any
+    .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
+
+  }
+  getHotelPolicyByOptionIdFromApi(OptionId: Option): Observable<HotelPolicy> {
+    // ....using get Request
+    return this.http.get(this.HotelsAPIUrl + "HotelPolicy/" + OptionId)
     // ...and calling .json() on the response to return data
     .map((res:Response) => res.json())
     // ...errors if any
