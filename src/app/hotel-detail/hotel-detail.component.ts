@@ -18,9 +18,23 @@ export class HotelDetailComponent implements OnInit {
   starRating: number[];
   images: Image[];
   options: Option[] = [{ OptionId: 0, Checked: false, OnRequest: 0, BoardType: '', TotalPrice: 0, DealName: '', Discount: '', Rooms: Array<Room>() }];
-  selectedOption: any[];
+  selectedOption: any;
+  location: string;
+  checkIn: string;
+  checkOut: string;
+  hotelName: string;
+  children: number;
+  adults: number;
+  priceFrom: string;
+  
   
   ngOnInit() {
+    this.location = this.userSearch.Location;
+    this.checkIn = this.userSearch.CheckIn;
+    this.checkOut = this.userSearch.CheckOut;
+    this.hotelName = this.userSearch.HotelName;
+    this.children = this.userSearch.Children;
+    this.adults = this.userSearch.Adults;
     this.starRating = Array(parseInt(this.userSearch.StarRating.toString())).fill(0).map((x, i) => i);
     // this.userSearch = { Adults: 1, Children: 0, CheckIn: '2017-10-18', CheckOut: '2017-10-19', City: 'Sydney', CountryCode: 'AU' };
     this._searchService.getHotelByHotelIdFromApi(this.userSearch, this.userSearch.HotelId)

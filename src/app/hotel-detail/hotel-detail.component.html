@@ -64,38 +64,37 @@
             <span class="detail-img-content-left defineBar">
                 <p><b>Facilities</b></p>
                 <table id="bookingTable" border=0 cellpadding=0 cellspacing=0>
-                    <thead>
-                        <tr id="maxotel_table_header">
-                            <th class="" style="width: 245px;">Your room options</th>
-                            <th class="" style="width: 43px;">Sleeps</th>
-                            <th class="highlight" style="width: 60px;">Today's price</th>
-                            <th class="" style="width: 150px;">Your choices</th>
-                            <th class="" style="width: 60px;">Select rooms</th>
-                            <th class="" style="width: 153px;">Confirm your reservation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let option of options; let i = index;">
-                            <td>
-                                <div class="roomName">{{option.Rooms.Room.RoomName}}</div>
-                                <div class="roomFacilities">
-                                    <ul class="" *ngFor="let facilities of hotel.Facilities.Facility">
-                                        <li>{{facilities.FacilityName}}</li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td>{{option.BoardType}}</td>
-                            <td>
-                                <span class="strikethrough" *ngIf="option.Rooms.Room.DealName != null">{{option.Rooms.Room.RoomPrice}</span>
-            <span class="strikethrough">${{option.TotalPrice}}</span>
-            </td>
-            <td>{{option.BoardType}}{{option.Rooms.Room.DealName}}</td>
-            <td><input name="Room" value="{{option.OptionId}}" (click)="roomSelect(option)" [(ngModel)]="option.Checked" type="radio"
-              /></td>
-            <td class="book"><button class="bookButton" (click)="book()">I'll Book</button></td>
-            </tr>
-            </tbody>
-            </table>
+                  <thead>
+                      <tr id="maxotel_table_header">
+                        <th class="" style="width: 245px;">Your room options</th>
+                        <th class="" style="width: 43px;">Sleeps</th>
+                        <th class="highlight" style="width: 60px;">Today's price</th>
+                        <th class="" style="width: 150px;">Your choices</th>
+                        <th class="" style="width: 60px;">Select rooms</th>
+                        <th class="" style="width: 153px;">Confirm your reservation</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let option of options; let i = index;">
+                      <td>
+                        <div class="roomName">{{option.Rooms.Room.RoomName}}</div>
+                        <div class="roomFacilities">
+                            <ul class="" *ngFor="let facilities of hotel.Facilities.Facility">
+                                <li>{{facilities.FacilityName}}</li>
+                            </ul>
+                        </div>
+                      </td>
+                      <td>{{option.BoardType}}</td>
+                      <td>
+                        <span class="strikethrough" *ngIf="option.Rooms.Room.DealName != null">{{option.Rooms.Room.RoomPrice}</span>
+                        <span class="strikethrough">${{option.TotalPrice}}</span>
+                      </td>
+                      <td>{{option.BoardType}}{{option.Rooms.Room.DealName}}</td>
+                      <td><input name="Room" value="{{option.OptionId}}" (click)="roomSelect(option)" [(ngModel)]="option.Checked" type="radio" /></td>
+                      <td class="book"><button class="bookButton" (click)="book()">I'll Book</button></td>
+                    </tr>
+                  </tbody>
+                </table>
 
 
             <ul class="leftBar">
@@ -122,18 +121,18 @@
 
     <div class="hotel-detail-content-right">
       <div class="book-now-top-cont">
-        <p>price from <b>$ </b> / night</p>
+        <p>price from <b>$</b> / night</p>
         <a target="_blank" href="hotelbooking.&roomId=<?=$roomId?>"> <button type="button" name="" value="" class="book-now-top-btn">Book now</button></a>
       </div>
       <div class="detail-green-box">
         <h6>details</h6>
         <p>Category: <b>{{selectedOption.Rooms.Room.RoomName}}</b></p>
         <p>Price: <b>${{selectedOption.TotalPrice}}/ night</b></p>
-        <p>Location: <b>{{userSearch.Location}}</b></p>
-        <p>Date: <b>{{userSearch.CheckIn | date: 'dd MMM yyyy'}}  to  {{userSearch.CheckOut | date: 'dd MMM yyyy'}}</b></p>
+        <p>Location: <b>{{location}}</b></p>
+        <p>Date: <b>{{checkIn | date: 'dd MMM yyyy'}}  to  {{checkOut | date: 'dd MMM yyyy'}}</b></p>
         <p>Rating: <b><img src="../assets/images/search-form/rating-star.png" alt="" *ngFor="let star of starRating"></b></p>
-        <p>Number of People: <b>{{userSearch.Adults}} / {{userSearch.Children}}</b></p>
-        <p>Hotel Name: <b>{{userSearch.HotelName}}</b></p>
+        <p>Number of People: <b>{{adults}} / {{children}}</b></p>
+        <p>Hotel Name: <b>{{hotelName}}</b></p>
         <!-- <p>Kind of Transport: <b>tourist bus</b></p> -->
         <!-- <p *ngIf="selectedOption.DiscountApplied">DISCOUNT: <b>${{selectedOption.DiscountApplied}} discount applied</b></p> -->
         <button type="button" name="" value="" class="view-on-map-btn">view on map</button>

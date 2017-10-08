@@ -283,11 +283,11 @@
         <!-- hotel listing starts here -->
         <div class="product-container">
 
-          <div class="product-column product-column-list" *ngFor="let hotel of hotels; let k = index;">
+          <div class="product-column product-column-list" *ngFor="let hotel of hotels; let k=index;">
 
             <div class="product-column-img">
               <button type="button" name="" value="" class="most-popular-btn">Most Popular</button>
-              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <div id="myCarousel{{k}}" class="carousel slide" data-ride="carousel">
                 <!-- Indicators
                   <ol class="carousel-indicators">
                     <li data-target="#myCarousel{{k}}" data-slide-to="{{i}}" *ngFor="let image of hotel.images; let i=index;" [ngClass]="i==0 ? 'active' : ''"></li>
@@ -301,11 +301,11 @@
                   </div>
                 </div>
                 <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <a class="left carousel-control" href="#myCarousel{{k}}" data-slide="prev">
                   <span class="glyphicon glyphicon-chevron-left"></span>
                   <span class="sr-only">Previous</span>
                 </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <a class="right carousel-control" href="#myCarousel{{k}}" data-slide="next">
                   <span class="glyphicon glyphicon-chevron-right"></span>
                   <span class="sr-only">Next</span>
                 </a>

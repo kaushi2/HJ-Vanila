@@ -590,7 +590,7 @@ nav ul li.menu-dropdown:hover .landing-pop-up{display:block;}
 .hotel-detail-information label{font-size:16px; color:#707070;}
 .hotel-detail-information h6{color:#222; font:bold 32px 'BrandonText-Bold'; text-transform:uppercase; letter-spacing:6px; padding:10px 0px 0px 0px;}
 
-.hotel-detail-slider{height:560px; background:#f9f9f9; margin:40px 0px 0px 0px;}
+.hotel-detail-slider{height:560px; background:#9393a0; /* margin:40px 0px 0px 0px;*/}
 
 .hotel-detail-tabs{width:100%; display:table}
 .nav-tabs{position:relative; z-index:10; display:table; width:100%;}
