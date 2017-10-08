@@ -6,7 +6,7 @@
       <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;<b>Luxury</b></div>
       <div class="page-heading">Hotels</div>
       <div class="result-found">We found: <b *ngIf='hotels'>{{hotels.TotalRecords}}</b> hotels</div>
-      <div class="result-found"> <b>{{hotel.CheckIn | date: 'dd/MM/yyyy'}} to {{hotel.CheckOut | date: 'dd/MM/yyyy'}}</b></div>
+      <div class="result-found"> <b>{{hotel.CheckIn | date: 'dd MMM yyyy'}} to {{hotel.CheckOut | date: 'dd MMM yyyy'}}</b></div>
     </div>
   </div>
   <!-- content ends here -->
@@ -283,21 +283,45 @@
         <!-- hotel listing starts here -->
         <div class="product-container">
 
-          <div class="product-column product-column-list" *ngFor="let hotel of hotels">
-            <a (click)="showHotelDetails(hotel.HotelId, hotel.StarRating, hotel.HotelName, hotel.Location)">
-              <div class="product-column-img">
-                <button type="button" name="" value="" class="most-popular-btn">Most Popular</button>
-                <div *ngFor="let image of hotel.images"><img src="{{image.Image}}" /></div>
+          <div class="product-column product-column-list" *ngFor="let hotel of hotels; let k = index;">
+
+            <div class="product-column-img">
+              <button type="button" name="" value="" class="most-popular-btn">Most Popular</button>
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel{{k}}" data-slide-to="{{i}}" *ngFor="let image of hotel.images; let i=index;" [ngClass]="i==0 ? 'active' : ''"></li>
+                  </ol> -->
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div *ngFor="let image of hotel.images; let i=index;" [ngClass]="i==0 ? 'item active' : 'item'">
+                    <a (click)="showHotelDetails(hotel.HotelId, hotel.StarRating, hotel.HotelName, hotel.Location)">
+                      <img src="{{image.Image}}" />
+                    </a>
+                  </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
               </div>
+
+            </div>
+            <a (click)="showHotelDetails(hotel.HotelId, hotel.StarRating, hotel.HotelName, hotel.Location)">
               <div class="product-column-content">
                 <div class="list-left-side">
-                  <div class="col-schedule">{{this.CheckInDate | date: 'dd MMM yyyy'}}  to  {{this.CheckOutDate | date: 'dd MMM yyyy'}}</div>
+                  <div class="col-schedule">{{this.CheckInDate | date: 'dd MMM yyyy'}} to {{this.CheckOutDate | date: 'dd MMM yyyy'}}</div>
                   <div class="col-heading-text">{{hotel.HotelName}}</div>
                   <span class="col-reviews">
                     <img src="../assets/images/search-form/rating-star.png" alt="" *ngFor="let star of getArray(hotel.StarRating)">
                     <!-- <label>485 Reviews</label> -->
                   </span>
-                  <div class="col-description-text"><span *ngFor="let facility of hotel.facilities | slice:0:5; let i=index">{{facility.FacilityName}} . </span></div>
+                  <div class="col-description-text"><span *ngFor="let facility of hotel.facilities | slice:0:5; let i=index">{{facility.FacilityName}} | </span></div>
                   <div class="col-description-text">{{hotel.Address}}</div>
                 </div>
 

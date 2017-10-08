@@ -1,19 +1,35 @@
+<div class="hotel-detail-content">
+  <div class="wrapper">
 
+    <div class="hotel-detail-content-left">
 
+      <div class="hotel-detail-breadcrumb">
+        <ul>
+          <li><a href="#">home&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a></li>
+          <li><a href="#">Luxury Collection&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;</a></li>
+          <li><a href="#" class="active">Hotel Details</a></li>
+        </ul>
+      </div>
+      <!-- hotel detail breadcrumb ends here -->
+      <div class="hotel-detail-information">
+        <label></label>
+        <h6></h6>
+        <span class="col-reviews">
+        <img src="../assets/images/search-form/rating-star.png" alt="" *ngFor="let star of starRating">
+        <label>No Reviews</label>
+        </span>
+      </div>
+      <!-- hotel detail information ends here -->
+
+      <div class="hotel-detail-slider">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="{{i}}" *ngFor="let image of images; let i=index;" [ngClass]="i==0 ? 'active' : ''"></li>
+          </ol> -->
           <div class="carousel-inner">
-            <div *ngFor="let image of images; let i = index;">
-              <div *ngIf="i==0;then content else othercontent"></div>
-              <ng-template #content>
-                <div class="item active">
-                  <img src="{{image}}">
-                </div>
-              </ng-template>
-              <ng-template #othercontent>
-                <div class="item">
-                  <img src="{{image}}">
-                </div>
-              </ng-template>
+            <div *ngFor="let image of images; let i=index;" [ngClass]="i==0 ? 'item active' : 'item'">
+              <img src="{{image}}" />
             </div>
           </div>
           <!-- Left and right controls -->
@@ -26,3 +42,131 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+      </div>
+      <!-- hotel detail slider ends here -->
+
+      <div class="hotel-detail-tabs">
+
+        <!-- <div class="nav-tabs">
+            <ul>
+            <li class="active"><a href="#tab1">Description</a></li>
+            <li><a href="#tab1">Availability</a></li>
+            <li><a href="#tab1">Amenities</a></li>
+            <li><a href="#tab1">Reviews</a></li>
+            <li><a href="#tab1">Write a Review</a></li>
+            </ul>
+        </div> -->
+        <div class="tab-content" id="tab1">
+          <h6>Rooms Information</h6>
+          <p></p>
+
+          <div class="detail-img-content maintain">
+            <span class="detail-img-content-left defineBar">
+                <p><b>Facilities</b></p>
+                <table id="bookingTable" border=0 cellpadding=0 cellspacing=0>
+                    <thead>
+                        <tr id="maxotel_table_header">
+                            <th class="" style="width: 245px;">Your room options</th>
+                            <th class="" style="width: 43px;">Sleeps</th>
+                            <th class="highlight" style="width: 60px;">Today's price</th>
+                            <th class="" style="width: 150px;">Your choices</th>
+                            <th class="" style="width: 60px;">Select rooms</th>
+                            <th class="" style="width: 153px;">Confirm your reservation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let option of options; let i = index;">
+                            <td>
+                                <div class="roomName">{{option.Rooms.Room.RoomName}}</div>
+                                <div class="roomFacilities">
+                                    <ul class="" *ngFor="let facilities of hotel.Facilities.Facility">
+                                        <li>{{facilities.FacilityName}}</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>{{option.BoardType}}</td>
+                            <td>
+                                <span class="strikethrough" *ngIf="option.Rooms.Room.DealName != null">{{option.Rooms.Room.RoomPrice}</span>
+            <span class="strikethrough">${{option.TotalPrice}}</span>
+            </td>
+            <td>{{option.BoardType}}{{option.Rooms.Room.DealName}}</td>
+            <td><input name="Room" value="{{option.OptionId}}" (click)="roomSelect(option)" [(ngModel)]="option.Checked" type="radio"
+              /></td>
+            <td class="book"><button class="bookButton" (click)="book()">I'll Book</button></td>
+            </tr>
+            </tbody>
+            </table>
+
+
+            <ul class="leftBar">
+              <li></li>
+            </ul>
+            <ul class="RightBar">
+            </ul>
+            </span>
+            <!--<span class="detail-img-content-right"></span>-->
+          </div>
+
+          <div class="clear"></div>
+
+          <!--<div class="need-to-know-cont">
+            <h6>you need to know</h6>
+            <p>Pellentesque ac turpis egestas, varius justo et, condimentum augue. Praesent aliquam, nisl feugiat vehicula condimentum, justo tellus scelerisque metus. Pellentesque varius justo et, condimentum augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>-->
+
+        </div>
+      </div>
+
+    </div>
+    <!-- left content ends here -->
+
+    <div class="hotel-detail-content-right">
+      <div class="book-now-top-cont">
+        <p>price from <b>$ </b> / night</p>
+        <a target="_blank" href="hotelbooking.&roomId=<?=$roomId?>"> <button type="button" name="" value="" class="book-now-top-btn">Book now</button></a>
+      </div>
+      <div class="detail-green-box">
+        <h6>details</h6>
+        <p>Category: <b>{{selectedOption.Rooms.Room.RoomName}}</b></p>
+        <p>Price: <b>${{selectedOption.TotalPrice}}/ night</b></p>
+        <p>Location: <b>{{userSearch.Location}}</b></p>
+        <p>Date: <b>{{userSearch.CheckIn | date: 'dd MMM yyyy'}}  to  {{userSearch.CheckOut | date: 'dd MMM yyyy'}}</b></p>
+        <p>Rating: <b><img src="../assets/images/search-form/rating-star.png" alt="" *ngFor="let star of starRating"></b></p>
+        <p>Number of People: <b>{{userSearch.Adults}} / {{userSearch.Children}}</b></p>
+        <p>Hotel Name: <b>{{userSearch.HotelName}}</b></p>
+        <!-- <p>Kind of Transport: <b>tourist bus</b></p> -->
+        <!-- <p *ngIf="selectedOption.DiscountApplied">DISCOUNT: <b>${{selectedOption.DiscountApplied}} discount applied</b></p> -->
+        <button type="button" name="" value="" class="view-on-map-btn">view on map</button>
+        <a target="_blank" href=""><button type="button" name="" value="" class="view-on-map-btn bok-btn">book now</button></a>
+
+      </div>
+
+      <div class="map-contttt"></div>
+      <button type="button" name="" value="" class="useful-information-btn"> useful information</button>
+    </div>
+    <!-- right content ends here -->
+
+    <div class="clear"></div>
+    <div class="may-interest-you-sec">
+      <h5>may interest you</h5>
+      <div class="may-interest-col">
+        <div class="may-interest-col-img">
+        </div>
+        <div class="may-interest-col-content">
+          <p class="may-interest-date">July <b>19th</b> to July <b>26th</b></p>
+          <h6>Turkey</h6>
+          <span class="col-reviews">
+                <img src="../assets/images/search-form/rating-star.png" alt="">
+                <img src="../assets/images/search-form/rating-star.png" alt="">
+                <img src="../assets/images/search-form/rating-star.png" alt="">
+                <img src="../assets/images/search-form/rating-star.png" alt="">
+                <img src="../assets/images/search-form/rating-star.png" alt="">
+                <label>485 Reviews</label>
+            </span>
+          <p class="may-interest-price">from <b>$273 </b>/ person</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- hotel detail content ends here -->
