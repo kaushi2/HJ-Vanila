@@ -18,15 +18,15 @@ export class HotelDetailComponent implements OnInit {
   starRating: number[];
   images: Image[];
   options: Option[] = [{ OptionId: 0, Checked: false, OnRequest: 0, BoardType: '', TotalPrice: 0, DealName: '', Discount: '', Rooms: Array<Room>() }];
-  selectedOptions: any[];
+  selectedOption: any[];
   
   ngOnInit() {
+    this.starRating = Array(parseInt(this.userSearch.StarRating.toString())).fill(0).map((x, i) => i);
     // this.userSearch = { Adults: 1, Children: 0, CheckIn: '2017-10-18', CheckOut: '2017-10-19', City: 'Sydney', CountryCode: 'AU' };
     this._searchService.getHotelByHotelIdFromApi(this.userSearch, this.userSearch.HotelId)
     //this._searchService.getHotelByHotelIdFromApi(this.userSearch, 1011550)
     .subscribe(hotelDetail => {
       this.hotel = hotelDetail;
-      this.starRating = Array(parseInt(this.hotel.StarRating.toString())).fill(0).map((x, i) => i);
       this.images = hotelDetail.Images.Image;
       this.options = hotelDetail.Options.Option;
       console.log(this.options);
@@ -38,7 +38,11 @@ export class HotelDetailComponent implements OnInit {
     // Read Values from Search Component
   }
 
-  book () {
+  book() {
     console.log(this.options.filter(x => x.Checked == true));
+  }
+
+  roomSelect(option) {
+      this.selectedOption = option;
   }
 }

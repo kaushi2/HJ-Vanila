@@ -6,6 +6,7 @@
       <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;<b>Luxury</b></div>
       <div class="page-heading">Hotels</div>
       <div class="result-found">We found: <b *ngIf='hotels'>{{hotels.TotalRecords}}</b> hotels</div>
+      <div class="result-found"> <b>{{hotel.CheckIn | date: 'dd/MM/yyyy'}} to {{hotel.CheckOut | date: 'dd/MM/yyyy'}}</b></div>
     </div>
   </div>
   <!-- content ends here -->
@@ -82,7 +83,7 @@
         <div class="space60"></div>
 
         <div class="facality">
-          <h6>facility</h6>
+          <h6>facilities</h6>
 
           <div class="rating-row">
             <div class="custom-checkbox">
@@ -283,20 +284,20 @@
         <div class="product-container">
 
           <div class="product-column product-column-list" *ngFor="let hotel of hotels">
-            <a (click)="showHotelDetails(hotel.HotelId)">
+            <a (click)="showHotelDetails(hotel.HotelId, hotel.StarRating, hotel.HotelName, hotel.Location)">
               <div class="product-column-img">
                 <button type="button" name="" value="" class="most-popular-btn">Most Popular</button>
                 <div *ngFor="let image of hotel.images"><img src="{{image.Image}}" /></div>
               </div>
               <div class="product-column-content">
                 <div class="list-left-side">
-                  <div class="col-schedule">19.07 - 25.07 / 7 night</div>
+                  <div class="col-schedule">{{this.CheckInDate | date: 'dd MMM yyyy'}}  to  {{this.CheckOutDate | date: 'dd MMM yyyy'}}</div>
                   <div class="col-heading-text">{{hotel.HotelName}}</div>
                   <span class="col-reviews">
-                  <!-- <img *ngFor="let number of Arr({{hotel.StarRating}}).fill(1);" src="../assets/images/search-form/rating-star.png" alt=""> -->
-                <!-- <label>485 Reviews</label> -->
-              </span>
-                  <div class="col-description-text" *ngFor="let facility of hotel.facilities | slice:0:2; let i=index">{{facility.FacilityName}}</div>
+                    <img src="../assets/images/search-form/rating-star.png" alt="" *ngFor="let star of getArray(hotel.StarRating)">
+                    <!-- <label>485 Reviews</label> -->
+                  </span>
+                  <div class="col-description-text"><span *ngFor="let facility of hotel.facilities | slice:0:5; let i=index">{{facility.FacilityName}} . </span></div>
                   <div class="col-description-text">{{hotel.Address}}</div>
                 </div>
 

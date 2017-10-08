@@ -4,6 +4,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { Hotel } from "../model/hotel";
 import { SearchService } from "../services/search-service.service";
+import { dateFormat } from "dateformat"
 
 @Component({
   selector: 'app-search',
@@ -24,8 +25,9 @@ export class SearchComponent implements OnInit {
   Child1Age: number;
   Child2Age: number;
   Child3Age: number;
-  hotel: Hotel = { HotelId: 0, City: "", CountryCode: "", CheckIn: "", CheckOut: "", Children: 0, Adults: 1 };
+  hotel: Hotel = { HotelId: 0, HotelName: "", Location: "", City: "", CountryCode: "", CheckIn: "", CheckOut: "", Children: 0, Adults: 1, StarRating: 0 };
   @Input() showHotelDetail: boolean;
+  noOfNights: number;
 
   NextPageNo: number;
   PrevPageNo: number;
@@ -71,9 +73,16 @@ export class SearchComponent implements OnInit {
     this.Search_Click(CountryCode, City, Page, CheckInDate, CheckOutDate, NumOfAdults, NumOfChildren);
   }
 
-  private showHotelDetails(hotelId) {
+  private showHotelDetails(hotelId, starRating, hotelName, location) {
     this.showHotelDetail = true;
     this.hotel.HotelId = hotelId;
+    this.hotel.StarRating = starRating;
+    this.hotel.HotelName = hotelName;
+    this.hotel.Location = location;
+  }
+
+  private getArray(StarRating) {
+    return Array(parseInt(StarRating.toString())).fill(0).map((x, i) => i);
   }
   //   ngOnChanges(changes:any) {
   //     // Listen to the 'hotel' emitted event so as populate the model
