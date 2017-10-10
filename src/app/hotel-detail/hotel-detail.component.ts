@@ -44,6 +44,10 @@ export class HotelDetailComponent implements OnInit {
       this.images = hotelDetail.Images.Image;
       this.options = hotelDetail.Options.Option;
       console.log(this.options);
+
+      if (this.options && this.options.length){
+        this.selectedOption = this.options[0];
+      }
     },
     err => {
       console.log(err);

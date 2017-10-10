@@ -90,7 +90,7 @@
                       <span class="strikethrough">${{option.TotalPrice}}</span>
                     </td>
                     <td>{{option.BoardType}}{{option.Rooms.Room.DealName}}</td>
-                    <td><input name="Room" value="{{option.OptionId}}" (click)="roomSelect(option)" [(ngModel)]="option.Checked" type="radio" /></td>
+                    <td><input name="Room" (click)="roomSelect(option)" [checked]="option == selectedOption" type="radio" /></td>
                     <td class="book"><button class="bookButton" (click)="book()">I'll Book</button></td>
                   </tr>
                 </tbody>
@@ -124,8 +124,8 @@
       </div>
       <div class="detail-green-box">
         <h6>details</h6>
-        <p>Category: <b>{{selectedOption.Rooms.Room.RoomName}}</b></p>
-        <p>Price: <b>${{selectedOption.TotalPrice}}/ night</b></p>
+        <p>Category: <b *ngIf="selectedOption">{{selectedOption.Rooms.Room.RoomName}}</b></p>
+        <p>Price: <b *ngIf="selectedOption">${{selectedOption.TotalPrice}}/ night</b></p>
         <p>Location: <b>{{location}}</b></p>
         <p>Date: <b>{{checkIn | date: 'dd MMM yyyy'}}  to  {{checkOut | date: 'dd MMM yyyy'}}</b></p>
         <p>Rating: <b><img src="../assets/images/search-form/rating-star.png" alt="" *ngFor="let star of starRating"></b></p>
