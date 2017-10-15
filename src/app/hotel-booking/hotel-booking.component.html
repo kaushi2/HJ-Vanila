@@ -1,44 +1,12 @@
 <div class="top-sec hotel-booking-sec">
   <div class="inner-content">
-    <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;<b>Policies</b></div>
+    <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;
+      <b>Policies</b>
+    </div>
     <div class="page-heading">Hotel Policies</div>
   </div>
 </div>
 <!-- content ends here -->
-
-<table id="bookingTable" border=0 cellpadding=0 cellspacing=0>
-  <thead>
-    <tr id="maxotel_table_header">
-      <th class="" style="width: 245px;">Your Policies</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Currency</td>
-      <td>{{hotelPolicy.Currency}}</td>
-    </tr>
-    <tr>
-      <td>Total Price</td>
-      <td>{{hotelPolicy.TotalPrice}}</td>
-    </tr>
-    <tr>
-      <td>Cancellation Deadline</td>
-      <td>{{hotelPolicy.CancellationDeadline}}</td>
-    </tr>
-    <tr>
-      <td>Policies</td>
-      <td>{{hotelPolicy.Policies.Policy}}</td>
-    </tr>
-    <tr>
-      <td>RESTRICTIONS</td>
-      <td>{{hotelPolicy.Restrictions.Restriction}}</td>
-    </tr>
-    <tr>
-      <td>ALERTS</td>
-      <td>{{hotelPolicy.Alerts.Alert}}</td>
-    </tr>
-  </tbody>
-</table>
 
 <!-- page content starts here -->
 <div class="page-content thanks-page-content booking-content">
@@ -50,28 +18,41 @@
 
       <div class="booking-form-container">
         <div class="booking-row">
-          <label>Currency</label>
-          <input type="text" value="{{hotelPolicy.Currency}}">
+          <label>CURRENCY</label>
+          <span>{{hotelPolicy[0].Currency[0]}}</span>
         </div>
 
         <div class="booking-row">
-          <label>Total Price</label>
-          <input type="text" value="{{hotelPolicy.TotalPrice}}">
+          <label>TOTAL PRICE</label>
+          <span>{{hotelPolicy[0].TotalPrice[0]}}</span>
         </div>
 
         <div class="booking-row">
-          <label>Cancellation Deadline</label>
-          <input type="text" value="{{hotelPolicy.CancellationDeadline}}">
+          <label>CANCELLATION DEADLINE</label>
+          <span>{{hotelPolicy[0].CancellationDeadline[0]}}</span>
         </div>
 
         <div class="booking-row">
-          <label>Policies</label>
+          <label>RESTRICTIONS</label>
+          <ul *ngFor="let restriction of hotelPolicy[0].Restrictions[0].Restriction">
+            <li>
+              <ul>
+                <li>{{restriction}}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="booking-row">
+          <label>CANCELLATION POLICIES</label>
           <div>
-            <ul *ngFor="let policy of hotelPolicy.Policies">
+            <ul *ngFor="let policy of hotelPolicy[0].Policies[0].Policy">
               <li>
                 <ul>
                   <li>
-                    {{policy.From}} {{policy.Type}} {{policy.Value}}
+                    DATE: {{policy.From | date:'dd-MMM-yyyy'}}
+                    {{policy.Value}}
+                    {{policy.Type}}
                   </li>
                 </ul>
               </li>
@@ -80,13 +61,14 @@
         </div>
 
         <div class="booking-row">
-          <label>RESTRICTIONS</label>
-          <input type="text" value="{{hotelPolicy.Restrictions.Restriction}}">
-        </div>
-
-        <div class="booking-row">
           <label>ALERTS</label>
-          <input type="text" value="{{hotelPolicy.Alerts.Alert}}">
+          <ul *ngFor="let alert of hotelPolicy[0].Alerts[0].Alert">
+            <li>
+              <ul>
+                <li>{{alert}}</li>
+              </ul>
+            </li>
+          </ul>
         </div>
 
       </div>
@@ -126,8 +108,12 @@
         <div class="booking-row">
           <label>Country Code</label>
           <select name="cntryCode">
-              <option value="GB">United Kingdom (+44)</option>
-            </select>
+            <option value="GB">United Kingdom (+44)</option>
+            <option value="GB">Australia (+61)</option>
+            <option value="GB">Switzerland (+41)</option>
+            <option value="GB">Saudi Arabia (+966)</option>
+            <option value="GB">Dubai (+971)</option>
+          </select>
         </div>
 
         <div class="booking-row">
@@ -170,11 +156,11 @@
         <div class="booking-row">
           <label>Expiration Date</label>
           <select name="" class="month-input">
-              <option value="">Month</option>
+            <option value="">Month</option>
           </select>
 
           <select name="" class="month-input month-input-two">
-              <option value="">Year</option>
+            <option value="">Year</option>
           </select>
         </div>
 
@@ -190,7 +176,7 @@
         <label for="newwew2" name="demo_lbl_2" class="css-label">By continuing, you agree to the Terms and Conditions.</label>
       </div>
 
-      <button type="submit" name="" value="" class="cofrm-booking">confirm booking</button>
+      <a href="/HotelBooking/{{hotelPolicy[0].OptionId[0]}}"><button type="submit" name="" value="" class="cofrm-booking">confirm booking</button></a>
     </div>
     <!-- left ends here -->
 

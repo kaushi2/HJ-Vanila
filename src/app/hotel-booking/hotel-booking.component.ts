@@ -27,8 +27,7 @@ export class HotelBookingComponent implements OnInit {
       this._searchService.getHotelPolicyByOptionIdFromApi(this.option)
       .subscribe(hotelPolicyBody => {
         this.hotelPolicy = hotelPolicyBody;
-        console.log(this.hotelPolicy.Policies)
-        console.log(typeof(this.hotelPolicy.Policies))
+        console.log(this.hotelPolicy)
       },
       err => {
         console.log(err);
