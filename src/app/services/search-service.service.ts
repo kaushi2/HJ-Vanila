@@ -5,6 +5,12 @@ import { Observable } from "rxjs/Rx";
 import { HotelPolicy } from '../model/Policy';
 import { Option } from '../model/Option';
 
+// Import RxJs required methods
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import { HotelBookingDetails } from '../model/HotelBookingDetails';
+import { HotelBooking } from '../model/HotelBooking';
+
 @Injectable()
 export class SearchService {
   // Resolve HTTP using the constructor
@@ -14,50 +20,39 @@ export class SearchService {
   private HotelsDbUrl = 'http://132.148.134.86:3000/Hotels/'; // Change
   
   getHotelsByCityIdFromDb(CountryCode: string, City: string, Page: number) : Observable<Hotel[]> {
-    // ....using get Request
     return this.http.get(this.HotelsDbUrl + CountryCode + "/" + City + "/" + Page)
-      // ...and calling .json() on the response to return data
       .map((res:Response) => res.json())
-      // ...errors if any
       .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
-
   }
   getHotelsByCityIdFromApi(CountryCode: string, City: string, Page: number, CheckInDate: Date, CheckOutDate: Date, NumOfAdults: number, NumOfChildren: number) : Observable<Hotel> {
-    // ....using get Request
     return this.http.get(this.HotelsAPIUrl + CountryCode + "/" + City + "/" + Page + "/" + CheckInDate + "/" + CheckOutDate + "/" + NumOfAdults + "/" + NumOfChildren)
-      // ...and calling .json() on the response to return data
       .map((res:Response) => res.json())
-      // ...errors if any
       .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
-
   }
   getHotelByHotelIdFromApi(userSearch: Hotel, HotelId: number): Observable<Hotel> {
-    // ....using get Request
     return this.http.get(this.HotelsAPIUrl + userSearch.CountryCode + "/" + userSearch.City + "/1/" + 
                           userSearch.CheckIn + "/" + userSearch.CheckOut + "/" + 
                           userSearch.Adults + "/" + userSearch.Children + "/" + HotelId)
-    // ...and calling .json() on the response to return data
     .map((res:Response) => res.json())
-    // ...errors if any
     .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
-
   }
   getHotelsByHotelIdsFromApi(HotelIds: number[]): Observable<Hotel[]> {
-    // ....using get Request
     return this.http.get(this.HotelsAPIUrl + HotelIds)
-    // ...and calling .json() on the response to return data
     .map((res:Response) => res.json())
-    // ...errors if any
     .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
-
   }
   getHotelPolicyByOptionIdFromApi(OptionId: Option): Observable<HotelPolicy> {
-    // ....using get Request
     return this.http.get(this.HotelsAPIUrl + "HotelPolicy/" + OptionId)
-    // ...and calling .json() on the response to return data
     .map((res:Response) => res.json())
-    // ...errors if any
     .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
-
+  }
+  makeHotelBookingByOptionIdRoomIdFromApi(OptionId: Option, body: HotelBookingDetails): Observable<HotelBooking> {
+    let bodyString = JSON.stringify(body); // Stringify payload
+    let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
+    let options = new RequestOptions({ headers: headers }); // Create a request option
+    
+    return this.http.post(this.HotelsAPIUrl + "HotelBooking/" + OptionId, bodyString, options)
+    .map((res:Response) => res.json())
+    .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
   }
 }

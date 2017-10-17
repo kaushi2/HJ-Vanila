@@ -6,6 +6,7 @@ import { AboutComponent } from "../about/about.component";
 import { HotelDetailComponent } from "../hotel-detail/hotel-detail.component";
 import { HomeComponent } from "../home/home.component";
 import { HotelBookingComponent } from '../hotel-booking/hotel-booking.component';
+import { HotelPoliciesComponent } from '../hotel-policies/hotel-policies.component';
 
 const routes: Routes = [
   {
@@ -37,7 +38,11 @@ const routes: Routes = [
     component: HotelDetailComponent
   },
   {
-    path: 'HotelPolicy/:OptionId',
+    path: 'HotelPolicy/:OptionId/:RoomId',
+    component: HotelPoliciesComponent
+  },
+  {
+    path: 'HotelBooking/:OptionId/:RoomId',
     component: HotelBookingComponent
   },
   {
