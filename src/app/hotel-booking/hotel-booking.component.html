@@ -1,0 +1,42 @@
+<!-- hotel booking confirmation content starts here -->
+<div class="hotel-detail-content">
+  <div class="PageMainContent">
+    <div class="PageMainContent-Width">
+      <div id="ViewCartPage">
+        <div class="BookingSteps">
+            <b>{{hotelBooking.BookingStatus}}</b>
+          <h1>
+            <b>ALL CONFIRMED !</b>
+          </h1>
+          <br>
+          <br>
+          <br>
+          <b>BookingID:- </b>{{hotelBooking.BookingReference}}
+          <br>
+          <br>
+          <br>
+          <b>Hotel:- </b>{{hotelBooking.HotelName}}
+          <br>
+          <b>Check-in Date:- </b>{{hotelBooking.CheckIn}}
+          <br>
+          <b>Check-out Date:- </b>{{hotelBooking.CheckOut}}
+          <br>
+          <br>
+          <b>Total Price:- </b>{{hotelBooking.TotalPrice}}
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <a href="/CancelBooking/?refId=BookingReference=">
+            <h3>CancelBooking</h3>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- hotel detail confirmation ends here -->

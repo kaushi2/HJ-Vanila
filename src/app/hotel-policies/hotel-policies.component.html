@@ -1,4 +1,5 @@
-<div class="top-sec hotel-booking-sec">
+<app-hotel-booking [InputHotelBookingPersonalDetails]="hotelBookingPersonalDetails" [InputOptionId]="optionId" [InputRoomId]="roomId" *ngIf="showHotelBooking"></app-hotel-booking>
+<div *ngIf="!showHotelBooking" class="top-sec hotel-booking-sec">
   <div class="inner-content">
     <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;
       <b>Policies</b>
@@ -73,12 +74,11 @@
 
       </div>
 
-
       <h6>Your Personal Information</h6>
       <div class="booking-form-container">
         <div class="booking-row">
           <label>Title</label>
-          <select name="title">
+          <select name="title" [(ngModel)]="hotelBookingPersonalDetails.Title">
             <option value="Mr.">Mr.</option>
             <option value="Mrs.">Mrs.</option>
             <option value="Miss.">Miss.</option>
@@ -87,17 +87,17 @@
 
         <div class="booking-row">
           <label>First Name</label>
-          <input type="text" name="fname" placeholder="Enter your first name" value="">
+          <input type="text" name="fname" [(ngModel)]="hotelBookingPersonalDetails.FirstName" placeholder="Enter your first name" value="">
         </div>
 
         <div class="booking-row">
           <label>Last Name</label>
-          <input type="text" name="lname" placeholder="Enter your last name" value="">
+          <input type="text" name="lname" [(ngModel)]="hotelBookingPersonalDetails.LastName" placeholder="Enter your last name" value="">
         </div>
 
         <div class="booking-row">
           <label>E-mail Adress</label>
-          <input type="text" name="email" placeholder="Enter your e-mail adress" value="">
+          <input type="text" name="email" [(ngModel)]="hotelBookingPersonalDetails.Email" placeholder="Enter your e-mail adress" value="">
         </div>
 
         <div class="booking-row">
@@ -118,7 +118,7 @@
 
         <div class="booking-row">
           <label>Phone Number</label>
-          <input type="text" name="phn" placeholder="Enter your phone number" value="">
+          <input type="text" name="phn" [(ngModel)]="hotelBookingPersonalDetails.Phone" placeholder="Enter your phone number" value="">
         </div>
 
       </div>
@@ -176,7 +176,7 @@
         <label for="newwew2" name="demo_lbl_2" class="css-label">By continuing, you agree to the Terms and Conditions.</label>
       </div>
 
-      <a href="/HotelBooking/{{hotelPolicy[0].OptionId[0]}}"><button type="submit" name="" value="" class="cofrm-booking">confirm booking</button></a>
+      <button (click)="showHotelBookingComponent()" type="submit" name="" value="" class="cofrm-booking">confirm booking</button>
     </div>
     <!-- left ends here -->
 

@@ -1,0 +1,1245 @@
+.defineBar {
+  width:100%;
+}
+.leftBar {
+ width:50%;
+ float:left;
+}
+.RightBar {
+ width:50%;
+ float:left;
+}
+.maintain {
+ width:100%;
+}
+
+Body {
+  color: #444444;
+  font-family: "Open Sans",sans-serif;
+  font-size: 13px;
+}
+.PageMainContent {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #fff;
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  clear: both;
+  float: left;
+  padding-bottom: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 20px;
+  width: 100%;
+}
+#trViewCart {
+  clear: both;
+  float: left;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.grid1_price {
+  color: #182841;
+  font-size: 15px !important;
+  font-weight: bold;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+.trViewCart-Bg {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #ffffff;
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  border-bottom-color: #d2dde3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-source: none;
+  border-image-width: 1 1 1 1;
+  border-left-color: #d2dde3;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #d2dde3;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #d2dde3;
+  border-top-style: solid;
+  border-top-width: 1px;
+  display: table-cell;
+}
+.trViewCart-Bg {
+  display: table-cell;
+}
+.ui-jqgrid .ui-subgrid tr.jqgrow .subgrid-grp1, .subgrid-grp1 {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #f1f1f1;
+  /* background-image: url("images/SubGrid_Grp_1.gif"); */
+  background-origin: padding-box;
+  background-position-x: left;
+  background-position-y: bottom;
+  background-repeat: repeat-x;
+  background-size: auto auto;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 0;
+  padding-top: 3px;
+    color: #575757;
+}
+#ViewCartPage .stripbg {
+  height: 24px;
+}
+.intl-tel-input .flag-dropdown .selected-flag {
+  margin-bottom: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-top: 1px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  padding-right: 16px;
+  padding-top: 6px;
+  width: auto;
+}
+.f16 .sg {
+  background-position-x: 0;
+  background-position-y: -3216px;
+}
+.f16 .flag {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  /* background-image: url("../images/flags16.png"); */
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  height: 16px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  width: 16px;
+}
+.intl-tel-input .flag-dropdown .selected-flag .down-arrow {
+  border-left-color: transparent;
+  border-left-style: solid;
+  border-left-width: 4px;
+  border-right-color: transparent;
+  border-right-style: solid;
+  border-right-width: 4px;
+  border-top-color: black;
+  border-top-style: solid;
+  border-top-width: 4px;
+  height: 0;
+  left: 20px;
+  position: relative;
+  top: 6px;
+  width: 0;
+}
+.intl-tel-input .flag-dropdown .country-list {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-color: white;
+  border-bottom-color: #cccccc;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-source: none;
+  border-image-width: 1 1 1 1;
+  border-left-color: #cccccc;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #cccccc;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #cccccc;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  max-height: 200px;
+  overflow-y: scroll;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  position: absolute;
+  top: 29px;
+  width: 330px;
+  z-index: 1;
+}
+.intl-tel-input .hide {
+  display: none;
+}
+.CusDetailsForm .CDForm-CheckBox {
+  clear: both;
+}
+.intl-tel-input .flag-dropdown {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  z-index: 1;
+}
+.ContactDetailForm div {
+  float: left;
+  margin-bottom: 15px;
+  width: 200px;
+}
+.ContactDetailForm {
+  border-bottom-color: #ff9900 !important;
+  border-left-color: #ff9900 !important;
+  border-right-color: #ff9900 !important;
+  border-top-color: -moz-use-text-color !important;
+}
+.ContactDetailForm {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #ffffff;
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  border-bottom-color: #d2dde3;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-source: none;
+  border-image-width: 1 1 1 1;
+  border-left-color: #d2dde3;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #d2dde3;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: -moz-use-text-color;
+  border-top-style: none;
+  border-top-width: medium;
+  clear: both;
+  float: left;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  width: 938px;
+}
+.BtmDtlSection {
+  clear: both;
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+}
+.BtmDtlSection .BigButton {
+  float: right;
+}
+.BigButton, .BigButton input, #NearByHotels h2, #BE-Widget-Inside .BE-Widget-Title, #Filter-Widget h2, #WishList-Widget h2, #HotelPage .HotelPage-TopBtn a, #HotelPage .table-body .reservation-book-button, .SmallButton, #MyViewHotels h2, .ResvPage-TopLinks a, .Label-Button:hover, .ThanksPage .ThanksPage-Msg a, .SmallButton input {
+  background-attachment: scroll !important;
+  background-clip: border-box !important;
+  background-color: #df2e6c !important;
+  background-image: none !important;
+  background-origin: padding-box !important;
+  background-position-x: 0 !important;
+  background-position-y: 0 !important;
+  background-repeat: repeat !important;
+  background-size: auto auto !important;
+}
+.BigButton {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #ffce00;
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  float: right;
+  height: 35px;
+  padding-left: 6px;
+}
+.BigButton input:hover, .BigButton:hover, #HotelPage .table-body .reservation-book-button:hover, #HotelPage .HotelPage-TopBtn a:hover, .SmallButton:hover, .SmallButton input:hover, .ThanksPage .ThanksPage-Msg a:hover {
+  background-attachment: scroll !important;
+  background-clip: border-box !important;
+  background-color: #f95d93 !important;
+  background-image: none !important;
+  background-origin: padding-box !important;
+  background-position-x: 0 !important;
+  background-position-y: 0 !important;
+  background-repeat: repeat !important;
+  background-size: auto auto !important;
+}
+.intl-tel-input .flag-dropdown .selected-flag:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.stripbg {
+  color: #333333;
+  font-size: 12px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  white-space: nowrap;
+}
+element.style {
+  visibility: hidden;
+}
+input, textarea {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-bottom-color: #8f8f8f;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-source: none;
+  border-image-width: 1 1 1 1;
+  border-left-color: #8f8f8f;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #8f8f8f;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #8f8f8f;
+  border-top-style: solid;
+  border-top-width: 1px;
+  color: #646464;
+  font-size: 12px;
+  padding-bottom: 0;
+  padding-left: 2px;
+  padding-right: 0;
+  padding-top: 2px;
+}
+element.style {
+  margin-top: -18px;
+}
+.Promotion-Icon {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  /* background-image: url("images/CommonIcons.png"); */
+  background-origin: padding-box;
+  background-position-x: left;
+  background-position-y: -2885px;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  cursor: pointer;
+  float: left;
+  height: 21px;
+  width: 18px;
+}
+a {
+  color: #003366;
+  text-decoration-color: -moz-use-text-color;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+.stripbg {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.stripbg {
+  color: #333333;
+  font-size: 12px;
+  height: 30px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  white-space: nowrap;
+}
+.delete_link {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  /* background-image: url("images/CommonIcons.png"); */
+  background-origin: padding-box;
+  background-position-x: left;
+  background-position-y: -1281px;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  color: #000000;
+  font-size: 11px;
+  padding-left: 20px;
+  text-decoration-color: -moz-use-text-color;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+}
+.delete_link:hover {
+  text-decoration-color: -moz-use-text-color;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+.grid1_hide {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  /* background-image: url("images/CommonIcons.png"); */
+  background-origin: padding-box;
+  background-position-x: left;
+  background-position-y: -1506px;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  color: #000000;
+  display: block;
+  font-size: 11px;
+  padding-left: 20px;
+  text-decoration-color: -moz-use-text-color;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  width: 70px;
+}
+.CartItem {
+  clear: both;
+  color: #000000;
+  float: left;
+  margin-bottom: 5px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5px;
+}
+.CartItem-Top {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  clear: both;
+  float: left;
+  height: 0;
+  width: 980px;
+}
+.BE-Widget-Extended #BE-Widget-Bdr, .Label-Button, #HotelPage .table-header td, .CartItem-Bg, .CartItem-L, DIV.dp-popup H2, TABLE.jCalendar TD.dp-hover, .ResvPage-TopLinks a:hover {
+  background-attachment: scroll !important;
+  background-clip: border-box !important;
+  background-color: #ff9900 !important;
+  background-image: none !important;
+  background-origin: padding-box !important;
+  background-position-x: 0 !important;
+  background-position-y: 0 !important;
+  background-repeat: repeat !important;
+  background-size: auto auto !important;
+}
+.CartItem-Bg {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #ffce00;
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  border-bottom-color: #d2dde3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-source: none;
+  border-image-width: 1 1 1 1;
+  border-left-color: #d2dde3;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #d2dde3;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #d2dde3;
+  border-top-style: solid;
+  border-top-width: 1px;
+  clear: both;
+  float: left;
+  width: 980px;
+}
+.CartItem-L {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  float: left;
+  min-height: 70px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+  width: 158px;
+}
+.CartItem-L span {
+  clear: both;
+  color: #000000;
+  float: left;
+  font-size: 11px;
+  margin-bottom: 5px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+.BigButton input:hover, .BigButton:hover, .BigButton input, .Label-Button a:link, .Label-Button a:active, .Label-Button a:visited, #HotelPage .HotelPage-TopBtn a:hover, #HotelPage .HotelPage-TopBtn a, #HotelPage .table-header td, #HotelPage .table-body .reservation-book-button, .CartItem-L span, .CartItem-L h2, .CartItem-L b, .SmallButton input {
+  color: #fff !important;
+}
+.CartItem-L h2 {
+  clear: both;
+  color: #000000;
+  float: left;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+.CartItem-L b {
+  clear: both;
+  color: #000000;
+  float: right;
+  font-size: 11px;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 10px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+.CartItem-R {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #ffffff;
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  border-right-color: #d2dde3;
+  border-right-style: solid;
+  border-right-width: 1px;
+  float: left;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 10px;
+  width: 791px;
+}
+.CartItem-Img {
+  float: left;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0;
+}
+element.style {
+  height: 128px;
+  width: 128px;
+}
+.CartItem-Dtl {
+  float: left;
+}
+
+.CartItem {
+  color: #000000;
+}
+.CartItem-Dtl h2 {
+  color: #ffce00;
+  float: left;
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+.CartItem-Dtl ul.sters {
+  float: left;
+  margin-left: 8px !important;
+  margin-top: 7px !important;
+}
+.sters {
+  list-style-image: none !important;
+  list-style-position: outside !important;
+  list-style-type: none !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
+}
+ul, li {
+  color: #666666;
+  font-size: 13px;
+}
+.sters li {
+  -moz-border-bottom-colors: none !important;
+  -moz-border-left-colors: none !important;
+  -moz-border-right-colors: none !important;
+  -moz-border-top-colors: none !important;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  /* background-image: url("images/CommonIcons.png"); */
+  background-origin: padding-box;
+  background-position-x: left;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  border-bottom-color: -moz-use-text-color !important;
+  border-bottom-style: none !important;
+  border-bottom-width: medium !important;
+  border-image-outset: 0 0 0 0 !important;
+  border-image-repeat: stretch stretch !important;
+  border-image-slice: 100% 100% 100% 100% !important;
+  border-image-source: none !important;
+  border-image-width: 1 1 1 1 !important;
+  border-left-color: -moz-use-text-color !important;
+  border-left-style: none !important;
+  border-left-width: medium !important;
+  border-right-color: -moz-use-text-color !important;
+  border-right-style: none !important;
+  border-right-width: medium !important;
+  border-top-color: -moz-use-text-color !important;
+  border-top-style: none !important;
+  border-top-width: medium !important;
+  float: left !important;
+  font-size: 0 !important;
+  height: 11px !important;
+  margin-bottom: 0 !important;
+  margin-left: 1px !important;
+  margin-right: 1px !important;
+  margin-top: 0 !important;
+  width: 11px !important;
+}
+.CartItem-Dtl #cartDetailPromotion {
+  float: left;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+.Promotion-Icon {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  /* background-image: url("images/CommonIcons.png"); */
+  background-origin: padding-box;
+  background-position-x: left;
+  background-position-y: -2885px;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  cursor: pointer;
+  float: left;
+  height: 21px;
+  width: 18px;
+}
+a {
+  color: #003366;
+  text-decoration-color: -moz-use-text-color;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+.CartItem-Dtl-L {
+  clear: both;
+  float: left;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  width: 320px;
+}
+.CartItem-Dtl-L li {
+  clear: both;
+  float: left;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-bottom: 7px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+.CartItem-Dtl-L span {
+  color: #636363;
+  float: left;
+  font-size: 12px;
+  width: 90px;
+}
+.CartItem-Dtl-L li {
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+}
+.CartItem-Dtl-L b {
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  max-width: 226px;
+}
+.CartItem-Dtl-R {
+  float: left;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  width: 280px;
+}
+.CartItem-Dtl-R li {
+  clear: both;
+  float: left;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-bottom: 7px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+element.style {
+  width: 185px;
+}
+.CartItem-Dtl-R span {
+  color: #636363;
+  float: left;
+  font-size: 12px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 185px;
+}
+.CartItem-Btm {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  clear: both;
+  float: left;
+  height: 0;
+  width: 980px;
+}
+.CartItem-Dtl-L a {
+  color: #ffce00;
+  float: left;
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 5px;
+  text-decoration-color: -moz-use-text-color;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+}
+.CartItem-Dtl-L a:hover {
+  text-decoration-color: -moz-use-text-color;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+.CartItem {
+  color: #000000;
+}
+#Filter-Widget #PriceFilter h3:hover, #Filter-Widget #StarRatings h3:hover, #Filter-Widget #SearchByHotelName h3:hover, #WishList-Widget a, #Filter-Widget .OtherFilters h3:hover, #Filter-Widget .filter-results, #show-hide-map, .Box-A-Title, .CartItem-Dtl-L a, #PaymentPage #paymentdueMessage, .Detail-Grid-Header:link, .Detail-Grid-Header:visited, .Detail-Grid-Header:active, .Detail-Grid-Header, #HotelPage .HotelPage-Rooms h2, #HotelPage .HotelPage-Info h2, #MostViewHotels h2, .BookingSteps h1, .PriceInfo-Sec .TotalPrice, #SignupPage h2, #Filter-Widget #PriceFilter h3.FilterAct, #Filter-Widget #StarRatings h3.FilterAct, #Filter-Widget #SearchByHotelName h3.FilterAct, #Filter-Widget .OtherFilters h3.FilterAct, #Filter-Widget #PriceFilter h3.FilterAct, #Filter-Widget #StarRatings h3.FilterAct, #Filter-Widget #SearchByHotelName h3.FilterAct, #WishList-Popup h2, .MybookingShowlink, #ReservationPage .ResvPage-HotelSec a, #ReservationPopup .ResvPopup-CheckBox a {
+  color: #ff9900 !important;
+}
+.CartItem-Dtl-R li {
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+}
+#NearByHotels .NearByHotels-BtmLinks a, #MostViewHotels h2, .CartItem-Dtl h2, .CartItem-Dtl-R b, .PriceInfo-Sec .Price_grid, .CusDetailsForm h3, .SignupPageForm .CheckBoxDiv label a, #HotelPage .HotelPage-NameAdd h1, .BookingSteps h1 b, .ui-dialog .ui-dialog-titlebar, .ChangeDates-Popup h3, .ChangeRooms-Popup h3, #ReservationPage h1, #ReservationPopup .ResvPopup-SecForm b, #ReservationPage h3, .ThanksPage .ThanksPage-Msg h3, .ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column, .ui-jqgrid tr.jqgroup td, .booking-subgrid td, .page-mytravelers #trStatusLegend h4 {
+  color: #df2e6c !important;
+}
+
+.CartItem-Dtl-R b {
+  color: #ffce00;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.CartItem-Dtl-R li {
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+}
+.SignupPage-Bg, .PriceInfo-Sec {
+  -moz-border-bottom-colors: none !important;
+  -moz-border-left-colors: none !important;
+  -moz-border-right-colors: none !important;
+  -moz-border-top-colors: none !important;
+  border-bottom-color: #df2e6c !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 1px !important;
+  border-image-outset: 0 0 0 0 !important;
+  border-image-repeat: stretch stretch !important;
+  border-image-slice: 100% 100% 100% 100% !important;
+  border-image-source: none !important;
+  border-image-width: 1 1 1 1 !important;
+  border-left-color: #df2e6c !important;
+  border-left-style: solid !important;
+  border-left-width: 1px !important;
+  border-right-color: #df2e6c !important;
+  border-right-style: solid !important;
+  border-right-width: 1px !important;
+  border-top-color: #df2e6c !important;
+  border-top-style: solid !important;
+  border-top-width: 1px !important;
+}
+.PriceInfo-Sec {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #ffffff;
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  border-bottom-color: #d2dde3;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-source: none;
+  border-image-width: 1 1 1 1;
+  border-left-color: #d2dde3;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #d2dde3;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #d2dde3;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-style: solid;
+  border-top-width: 1px;
+  float: none;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+}
+.PriceInfo-Sec {
+  box-sizing: border-box;
+  clear: both;
+  float: left;
+  margin-top: 30px;
+  width: 100%;
+}
+#Filter-Widget #PriceFilter h3:hover, #Filter-Widget #StarRatings h3:hover, #Filter-Widget #SearchByHotelName h3:hover, #WishList-Widget a, #Filter-Widget .OtherFilters h3:hover, #Filter-Widget .filter-results, #show-hide-map, .Box-A-Title, .CartItem-Dtl-L a, #PaymentPage #paymentdueMessage, .Detail-Grid-Header:link, .Detail-Grid-Header:visited, .Detail-Grid-Header:active, .Detail-Grid-Header, #HotelPage .HotelPage-Rooms h2, #HotelPage .HotelPage-Info h2, #MostViewHotels h2, .BookingSteps h1, .PriceInfo-Sec .TotalPrice, #SignupPage h2, #Filter-Widget #PriceFilter h3.FilterAct, #Filter-Widget #StarRatings h3.FilterAct, #Filter-Widget #SearchByHotelName h3.FilterAct, #Filter-Widget .OtherFilters h3.FilterAct, #Filter-Widget #PriceFilter h3.FilterAct, #Filter-Widget #StarRatings h3.FilterAct, #Filter-Widget #SearchByHotelName h3.FilterAct, #WishList-Popup h2, .MybookingShowlink, #ReservationPage .ResvPage-HotelSec a, #ReservationPopup .ResvPopup-CheckBox a {
+  color: #ff9900 !important;
+}
+.PriceInfo-Sec .TotalPrice {
+  color: #323232;
+  font-size: 22px;
+  font-weight: bold;
+}
+.CusDetailsSection {
+  clear: both;
+  float: left;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.CusDetailsSection h2, .ContactDetailSection h2, #trCartListPaymentMode h2, .VerifyEmailSec h2 {
+  background-attachment: scroll !important;
+  background-clip: border-box !important;
+  background-color: #ff9900 !important;
+  background-image: none !important;
+  background-origin: padding-box !important;
+  background-position-x: 0 !important;
+  background-position-y: 0 !important;
+  background-repeat: repeat !important;
+  background-size: auto auto !important;
+  border-bottom-color: -moz-use-text-color !important;
+  border-left-color: #ff9900 !important;
+  border-right-color: #ff9900 !important;
+  border-top-color: #ff9900 !important;
+  color: #fff !important;
+}
+.CusDetailsSection h2 {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  /* background-image: url("images/ReservationPage-Bg.png"); */
+  background-origin: padding-box;
+  background-position-x: left;
+  background-position-y: -16px;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  border-bottom-color: -moz-use-text-color;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-source: none;
+  border-image-width: 1 1 1 1;
+  border-left-color: #d2dde3;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #d2dde3;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #d2dde3;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-style: solid;
+  border-top-width: 1px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  height: 22px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 0;
+  padding-top: 12px;
+  width: 958px;
+}
+.CusDetailsSection .Dnn-MinusIcon {
+  background-attachment: scroll !important;
+  background-clip: border-box !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  /* background-image: url("images/CommonIcons.png") !important; */
+  background-origin: padding-box !important;
+  background-position-x: left !important;
+  background-position-y: -1853px !important;
+  background-repeat: no-repeat !important;
+  background-size: auto auto !important;
+}
+.CusDetailsSection .Dnn-MinusIcon {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  /* background-image: url("images/CommonIcons.png"); */
+  background-origin: padding-box;
+  background-position-x: left;
+  background-position-y: -1853px;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  cursor: pointer;
+  float: right;
+  height: 19px;
+  margin-right: 10px;
+  margin-top: -33px;
+  width: 19px;
+}
+.CusDetailsSection #hotel-step-main-content {
+  clear: both;
+  float: left;
+  width: 100%;
+}
+.CusDetailsForm-Top {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #ffffff;
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  clear: both;
+  float: left;
+  height: 0;
+  width: 805px;
+}
+.CusDetailsForm {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #ffffff;
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: repeat;
+  background-size: auto auto;
+  border-bottom-color: #d2dde3;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-source: none;
+  border-image-width: 1 1 1 1;
+  border-left-color: #d2dde3;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #d2dde3;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: -moz-use-text-color;
+  border-top-style: none;
+  border-top-width: medium;
+  clear: both;
+  float: left;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 0;
+  width: 938px;
+}
+.CusDetailsForm h4 {
+  color: #333333;
+  font-size: 14px;
+  font-weight: normal;
+  height: 35px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 20px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+.CusDetailsForm h4 {
+  color: #333333;
+  font-size: 14px;
+ }
+.CusDetailsForm div {
+  float: left;
+  margin-bottom: 15px;
+  width: 200px;
+}
+.CusDetailsForm label {
+  clear: both;
+  color: #000000;
+  float: left;
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  width: 230px;
+}
+.CusDetailsForm input {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-bottom-color: #d8d8d8;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-source: none;
+  border-image-width: 1 1 1 1;
+  border-left-color: #d8d8d8;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #d8d8d8;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #d8d8d8;
+  border-top-style: solid;
+  border-top-width: 1px;
+  clear: both;
+  float: left;
+  font-size: 12px;
+  height: 22px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  width: 180px;
+}
+
+.CusDetailsForm select {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-bottom-color: #d8d8d8;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch stretch;
+  border-image-slice: 100% 100% 100% 100%;
+  border-image-source: none;
+  border-image-width: 1 1 1 1;
+  border-left-color: #d8d8d8;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #d8d8d8;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #d8d8d8;
+  border-top-style: solid;
+  border-top-width: 1px;
+  clear: both;
+  float: left;
+  height: 30px;
+  padding-bottom: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 3px;
+  width: 188px;
+}
+input, textarea, select {
+  color: #888888;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 12px;
+}
+.PageMainContent-Width {
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  width: 980px;
+}
+.BookingSteps {
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#Filter-Widget #PriceFilter h3:hover, #Filter-Widget #StarRatings h3:hover, #Filter-Widget #SearchByHotelName h3:hover, #WishList-Widget a, #Filter-Widget .OtherFilters h3:hover, #Filter-Widget .filter-results, #show-hide-map, .Box-A-Title, .CartItem-Dtl-L a, #PaymentPage #paymentdueMessage, .Detail-Grid-Header:link, .Detail-Grid-Header:visited, .Detail-Grid-Header:active, .Detail-Grid-Header, #HotelPage .HotelPage-Rooms h2, #HotelPage .HotelPage-Info h2, #MostViewHotels h2, .BookingSteps h1, .PriceInfo-Sec .TotalPrice, #SignupPage h2, #Filter-Widget #PriceFilter h3.FilterAct, #Filter-Widget #StarRatings h3.FilterAct, #Filter-Widget #SearchByHotelName h3.FilterAct, #Filter-Widget .OtherFilters h3.FilterAct, #Filter-Widget #PriceFilter h3.FilterAct, #Filter-Widget #StarRatings h3.FilterAct, #Filter-Widget #SearchByHotelName h3.FilterAct, #WishList-Popup h2, .MybookingShowlink, #ReservationPage .ResvPage-HotelSec a, #ReservationPopup .ResvPopup-CheckBox a {
+  color: #ff9900 !important;
+}
+#NearByHotels .NearByHotels-BtmLinks a, #MostViewHotels h2, .CartItem-Dtl h2, .CartItem-Dtl-R b, .PriceInfo-Sec .Price_grid, .CusDetailsForm h3, .SignupPageForm .CheckBoxDiv label a, #HotelPage .HotelPage-NameAdd h1, .BookingSteps h1 b, .ui-dialog .ui-dialog-titlebar, .ChangeDates-Popup h3, .ChangeRooms-Popup h3, #ReservationPage h1, #ReservationPopup .ResvPopup-SecForm b, #ReservationPage h3, .ThanksPage .ThanksPage-Msg h3, .ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column, .ui-jqgrid tr.jqgroup td, .booking-subgrid td, .page-mytravelers #trStatusLegend h4 {
+  color: #df2e6c !important;
+}
+.BookingSteps h1 b {
+  color: #000000;
+  font-size: 21px;
+  font-weight: bold;
+}
+.BookingSteps div {
+  clear: both;
+  color: #333333;
+  float: left;
+  font-size: 12px;
+}
+.TermsImage {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  /* background-image: url("images/CommonIcons.png"); */
+  background-origin: padding-box;
+  background-position-x: left;
+  background-position-y: -1616px;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  height: 18px;
+  width: 15px;
+}
+#ViewCartPage {
+  clear: both;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+}

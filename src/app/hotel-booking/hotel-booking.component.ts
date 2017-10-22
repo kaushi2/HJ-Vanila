@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { SearchService } from '../services/search-service.service';
 import { Hotel } from '../model/hotel';
 import { Option } from '../model/Option';
 import { Room } from '../model/Room';
 import { HotelPolicy } from '../model/Policy';
-import { HotelBookingDetails } from '../model/HotelBookingDetails';
+import { HotelBookingPersonalDetails } from '../model/HotelBookingPersonalDetails';
 import { HotelBooking } from '../model/HotelBooking';
 
 @Component({
@@ -15,20 +15,18 @@ import { HotelBooking } from '../model/HotelBooking';
 })
 export class HotelBookingComponent implements OnInit {
 
-  hotelBookingDetails: HotelBookingDetails = new HotelBookingDetails();
+  @Input() InputHotelBookingPersonalDetails: HotelBookingPersonalDetails;
+  @Input() InputOptionId: string;
+  @Input() InputRoomId: string;
   hotelBooking: HotelBooking;
-  hotel: Hotel;
-  starRating: number[];
-  option: Option;
 
   constructor(private _searchService: SearchService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     // subscribe to router event
     this.activatedRoute.params.subscribe((params: Params) => {
-      this.option = params['OptionId'];
 
-      this._searchService.makeHotelBookingByOptionIdRoomIdFromApi(this.option, this.hotelBookingDetails)
+      this._searchService.makeHotelBookingByOptionIdRoomIdFromApi(this.InputOptionId, this.InputRoomId, this.InputHotelBookingPersonalDetails)
       .subscribe(hotelBooking => {
         this.hotelBooking = hotelBooking;
         console.log(this.hotelBooking)

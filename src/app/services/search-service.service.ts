@@ -8,7 +8,7 @@ import { Option } from '../model/Option';
 // Import RxJs required methods
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import { HotelBookingDetails } from '../model/HotelBookingDetails';
+import { HotelBookingPersonalDetails } from '../model/HotelBookingPersonalDetails';
 import { HotelBooking } from '../model/HotelBooking';
 
 @Injectable()
@@ -41,17 +41,17 @@ export class SearchService {
     .map((res:Response) => res.json())
     .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
   }
-  getHotelPolicyByOptionIdFromApi(OptionId: Option): Observable<HotelPolicy> {
+  getHotelPolicyByOptionIdFromApi(OptionId: string): Observable<HotelPolicy> {
     return this.http.get(this.HotelsAPIUrl + "HotelPolicy/" + OptionId)
     .map((res:Response) => res.json())
     .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
   }
-  makeHotelBookingByOptionIdRoomIdFromApi(OptionId: Option, body: HotelBookingDetails): Observable<HotelBooking> {
+  makeHotelBookingByOptionIdRoomIdFromApi(OptionId: string, RoomId: string, body: HotelBookingPersonalDetails): Observable<HotelBooking> {
     let bodyString = JSON.stringify(body); // Stringify payload
     let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
     let options = new RequestOptions({ headers: headers }); // Create a request option
     
-    return this.http.post(this.HotelsAPIUrl + "HotelBooking/" + OptionId, bodyString, options)
+    return this.http.post(this.HotelsAPIUrl + "HotelBooking/" + OptionId + "/" + RoomId, bodyString, options)
     .map((res:Response) => res.json())
     .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
   }
