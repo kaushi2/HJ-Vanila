@@ -3,7 +3,7 @@
   <div class="PageMainContent">
     <div class="PageMainContent-Width">
       <div id="ViewCartPage">
-        <div class="BookingSteps">
+        <div class="BookingSteps" *ngIf="hotelBooking">
             <b>{{hotelBooking.BookingStatus}}</b>
           <h1>
             <b>ALL CONFIRMED !</b>

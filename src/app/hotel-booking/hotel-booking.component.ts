@@ -23,6 +23,7 @@ export class HotelBookingComponent implements OnInit {
   constructor(private _searchService: SearchService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    console.log(this.InputHotelBookingPersonalDetails);
     // subscribe to router event
     this.activatedRoute.params.subscribe((params: Params) => {
 

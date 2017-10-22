@@ -12,8 +12,10 @@
 <!-- page content starts here -->
 <div class="page-content thanks-page-content booking-content">
   <div class="wrapper">
-
-    <div class="booking-content-left">
+    <div class="booking-content-left" *ngIf="hotelPolicy[0].Error">
+      <h6>TIME OUT ! PLEASE TRY AGAIN !</h6>
+    </div>
+    <div class="booking-content-left" *ngIf="hotelPolicy && !hotelPolicy[0].Error">
 
       <h6>Please Review Hotel Policies First</h6>
 

@@ -1,6 +1,6 @@
 
 export class HotelBookingPersonalDetails {
-    RoomId: string;
+    YourReference: string;
     Title: string;
     FirstName: string;
     LastName: string;

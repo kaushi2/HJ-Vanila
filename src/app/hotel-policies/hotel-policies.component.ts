@@ -16,8 +16,6 @@ export class HotelPoliciesComponent implements OnInit {
   showHotelBooking: boolean;
   hotelPolicy: HotelPolicy;
   hotelBookingPersonalDetails: HotelBookingPersonalDetails = new HotelBookingPersonalDetails();
-  hotel: Hotel;
-  starRating: number[];
   optionId: string;
   roomId: string;
 
@@ -40,6 +38,8 @@ export class HotelPoliciesComponent implements OnInit {
     });
   }
   public showHotelBookingComponent() {
+    this.hotelBookingPersonalDetails.YourReference = "XMLTEST";
+    console.log(this.hotelBookingPersonalDetails);
     this.showHotelBooking = true;
   }
 }
