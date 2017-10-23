@@ -1,4 +1,3 @@
-<app-hotel-booking [InputHotelBookingPersonalDetails]="hotelBookingPersonalDetails" [InputOptionId]="optionId" [InputRoomId]="roomId" *ngIf="showHotelBooking"></app-hotel-booking>
 <div *ngIf="!showHotelBooking" class="top-sec hotel-booking-sec">
   <div class="inner-content">
     <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -7,10 +6,19 @@
     <div class="page-heading">Hotel Policies</div>
   </div>
 </div>
+<div *ngIf="showHotelBooking" class="top-sec hotel-booking-sec">
+  <div class="inner-content">
+    <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;
+      <b>Booking</b>
+    </div>
+    <div class="page-heading">Hotel Booking</div>
+  </div>
+</div>
+<app-hotel-booking [InputHotelBookingPersonalDetails]="hotelBookingPersonalDetails" [InputOptionId]="optionId" [InputRoomId]="roomId" *ngIf="showHotelBooking"></app-hotel-booking>
 <!-- content ends here -->
 
 <!-- page content starts here -->
-<div class="page-content thanks-page-content booking-content">
+<div *ngIf="!showHotelBooking" class="page-content thanks-page-content booking-content">
   <div class="wrapper">
     <div class="booking-content-left" *ngIf="hotelPolicy[0].Error">
       <h6>TIME OUT ! PLEASE TRY AGAIN !</h6>

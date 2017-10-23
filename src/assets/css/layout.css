@@ -113,7 +113,7 @@ input, select, textarea{font-family:'Source Sans Pro', sans-serif; border:none;}
 header{width:100%; display:table; background:#fff;}
 .logo{margin:15px 50px 10px 0px; display:block; float:left;}
 
-nav{float:left; margin:45px 0px 0px 0px; position:relative;}
+nav{float:left; margin:25px 0px 0px 0px; position:relative;}
 nav ul{}
 nav ul li{
     font-weight:700; 
@@ -151,7 +151,7 @@ nav .landing-pop-col{border-bottom:0px; margin-bottom:20px;}
 
 nav ul li.menu-dropdown:hover .landing-pop-up{display:block;}
 
-.user-sec{float:right; margin:45px 0px 0px 0px;}
+.user-sec{float:right; margin:0px 0px 0px 0px;}
 .user-sec button{color:#8db74a; font-size:16px; font-weight:400; height:22px; line-height:22px; margin:0px 0px 0px 25px; float:left; cursor:pointer;}
 .user-sec button.login-btn{background:url(../images/login-icon.png)/*tpa=http://www.halaljourney.com/images/login-icon.png*/ left no-repeat; padding:0px 0px 0px 25px;}
 .user-sec button.cart-btn{background:url(../images/cart-icon.png)/*tpa=http://www.halaljourney.com/images/cart-icon.png*/ left no-repeat; padding:0px 0px 0px 25px;}

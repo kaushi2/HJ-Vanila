@@ -38,8 +38,8 @@ export class HotelPoliciesComponent implements OnInit {
     });
   }
   public showHotelBookingComponent() {
+    this.showHotelBooking = true;
     this.hotelBookingPersonalDetails.YourReference = "XMLTEST";
     console.log(this.hotelBookingPersonalDetails);
-    this.showHotelBooking = true;
   }
 }

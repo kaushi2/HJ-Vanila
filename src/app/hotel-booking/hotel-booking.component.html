@@ -4,11 +4,9 @@
     <div class="PageMainContent-Width">
       <div id="ViewCartPage">
         <div class="BookingSteps" *ngIf="hotelBooking">
+          <h6>
             <b>{{hotelBooking.BookingStatus}}</b>
-          <h1>
-            <b>ALL CONFIRMED !</b>
-          </h1>
-          <br>
+          </h6>
           <br>
           <br>
           <b>BookingID:- </b>{{hotelBooking.BookingReference}}
@@ -26,17 +24,13 @@
           <br>
           <br>
           <br>
-          <br>
-
           <a href="/CancelBooking/?refId=BookingReference=">
             <h3>CancelBooking</h3>
           </a>
         </div>
-
       </div>
     </div>
   </div>
 </div>
-
 
 <!-- hotel detail confirmation ends here -->
