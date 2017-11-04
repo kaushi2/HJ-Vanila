@@ -3,29 +3,27 @@
 <div class="search-bar">
   <div class="wrapper">
 
-    <form method="get">
+    <form method="get" name="myform">
 
       <div class="search-bar-cell">
         <label>Your Destination</label>
         <div class="frmSearch">
-          <input type="text" name="countryName" [(ngModel)]="SearchValue" value="" placeholder="Enter a destination" class="search" autocomplete="off">
-          <div id="suggesstion-box" class="country-listul"></div>
+          <!-- <input type="text" name="countryName" [(ngModel)]="SearchValue" value="" placeholder="Enter a destination" class="search" autocomplete="off"> -->
+          <ng2-completer name="countryName" value="" placeholder="Enter a destination" [(ngModel)]="SearchValue" [datasource]="dataService" 
+          [minSearchLength]="2" [openOnClick]="true" [textSearching]="" [maxChars]="4"></ng2-completer>
         </div>
-        <input type="hidden" class="countryId" value="" name="countryCode" />
-        <input type="hidden" class="cityId" value="" name="cityCode" />
-        <div class="indEror hide_now"></div>
       </div>
 
       <div class="search-bar-cell">
         <label>Check In</label>
         <!-- <input type="text" name="checkInDt" [(ngModel)]="CheckInDate" value="" placeholder="Yy-Mm-Dd" class="datepicker calendar" id="datepicker1"> -->
-        <input type="date" name="CheckInDate" [(ngModel)]="CheckInDate" placeholder="Yy-Mm-Dd" class="" id="datepicker1" />
+        <input type="date" name="CheckInDate" [(ngModel)]="CheckInDate" placeholder="Yy-Mm-Dd" class="calendar" id="datepicker1" />
       </div>
 
       <div class="search-bar-cell">
         <label>Check Out</label>
         <!-- <input type="text" name="checkOutDt" [(ngModel)]="CheckOutDate" value="" placeholder="Yy-Mm-Dd" class="datepicker calendar" id="datepicker2"> -->
-        <input type="date" name="CheckOutDate" [(ngModel)]="CheckOutDate" placeholder="Yy-Mm-Dd" class="" id="datepicker2" />
+        <input type="date" name="CheckOutDate" [(ngModel)]="CheckOutDate" placeholder="Yy-Mm-Dd" class="calendar" id="datepicker2" />
       </div>
 
       <div class="search-bar-cell">
@@ -55,7 +53,7 @@
       <div class="search-bar-cell">
         <label>Rooms</label>
         <select class="Rooms" name="Rooms">
-              <option selected value="1" >01</option>
+              <option value="1" >01</option>
               <option value="2" >02</option>
               <option value="3" >03</option>
               <option value="4" >04</option>

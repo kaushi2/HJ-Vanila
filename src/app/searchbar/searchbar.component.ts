@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SearchService } from '../services/search-service.service';
 import { dateFormat } from 'dateFormat';
+import { CompleterService, CompleterData, RemoteData } from 'ng2-completer';
+import { City } from '../model/City';
 
 @Component({
   selector: 'app-searchbar',
@@ -17,8 +19,24 @@ export class SearchbarComponent implements OnInit {
   Child1Age: number;
   Child2Age: number;
   Child3Age: number;
+
+  protected searchStr: string;
+  protected dataService: CompleterData;
+  cities: City[];
+  private HotelsDbUrl = 'http://132.148.134.86:3000/Hotels/getAllCities/'; // Change
   
-  constructor(private router: Router) { }
+  
+  constructor(private router: Router, private completerService: CompleterService, private _searchService: SearchService) {
+    // this._searchService.getAllCitiesFromDb()
+    // .subscribe(cities => {
+    //   this.cities = cities;
+    //   console.log("SUB: " + this.cities[0]);
+    // },
+    // err => {
+    //   console.log(err);
+    // });
+      this.dataService = completerService.remote(this.HotelsDbUrl, 'cities', 'cities');
+  }
 
   ngOnInit() {
   }

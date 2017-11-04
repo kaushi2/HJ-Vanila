@@ -16,6 +16,7 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { SearchComponent } from './search/search.component';
 import { HotelBookingComponent } from './hotel-booking/hotel-booking.component';
 import { HotelPoliciesComponent } from './hotel-policies/hotel-policies.component';
+import { Ng2CompleterModule } from "ng2-completer";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HotelPoliciesComponent } from './hotel-policies/hotel-policies.componen
     BrowserModule,
     HttpModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Ng2CompleterModule
   ],
   providers: [SearchService],
   bootstrap: [AppComponent]

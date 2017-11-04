@@ -10,6 +10,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { HotelBookingPersonalDetails } from '../model/HotelBookingPersonalDetails';
 import { HotelBooking } from '../model/HotelBooking';
+import { City } from '../model/City';
 
 @Injectable()
 export class SearchService {
@@ -55,4 +56,10 @@ export class SearchService {
     .map((res:Response) => res.json())
     .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
   }
+  getAllCitiesFromDb() : Observable<City[]> {
+    return this.http.get(this.HotelsDbUrl + "getAllCities")
+      .map((res:Response) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
+  }
+  
 }
