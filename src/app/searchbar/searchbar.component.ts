@@ -21,7 +21,7 @@ export class SearchbarComponent implements OnInit {
   Child3Age: number;
 
   protected searchStr: string;
-  protected dataService: CompleterData;
+  public dataService: CompleterData;
   private HotelsDbUrl = 'http://132.148.134.86:3000/Hotels/getAllCities/'; // Change
   
   constructor(private router: Router, private completerService: CompleterService, private _searchService: SearchService) {
