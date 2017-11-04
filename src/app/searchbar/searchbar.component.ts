@@ -22,24 +22,13 @@ export class SearchbarComponent implements OnInit {
 
   protected searchStr: string;
   protected dataService: CompleterData;
-  cities: City[];
   private HotelsDbUrl = 'http://132.148.134.86:3000/Hotels/getAllCities/'; // Change
   
-  
   constructor(private router: Router, private completerService: CompleterService, private _searchService: SearchService) {
-    // this._searchService.getAllCitiesFromDb()
-    // .subscribe(cities => {
-    //   this.cities = cities;
-    //   console.log("SUB: " + this.cities[0]);
-    // },
-    // err => {
-    //   console.log(err);
-    // });
       this.dataService = completerService.remote(this.HotelsDbUrl, 'cities', 'cities');
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public Search_Click() {
     console.log(this.SearchValue)
