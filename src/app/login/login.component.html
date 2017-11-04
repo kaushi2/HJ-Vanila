@@ -1,0 +1,113 @@
+<!-- login pop up ends here -->    
+<div class="pop-up" id="loginPopup" data-popup="popup-2">
+  <div class="pop-up-container">
+      
+      <button type="button" name="" value="" data-popup-close="popup-2" class="close-btn"></button>
+      
+      <h6>Welcome back!<i>Please login to your account</i></h6>
+      <div class="social-login">
+          <!-- <?=$output?>
+        
+            <?=$googleButton?> -->
+      </div>
+      <div class="form">
+      <form method="post" id="loginForm">
+        <span id="validationError" class="error" style="display:none;">Email or Password Not matched!</span>
+          <span id="unknownError" class="error" style="display:none;">Unknown Error Try After Sometime!</span>
+          <input type="text" name="userEmail" id="userEmail" value="" class="" placeholder="Enter your email">
+          <input type="password" name="userPass" id="userPass" value="" placeholder="Enter your password">
+          
+          <div class="clear"></div>
+          
+          <div class="custom-checkbox NewCheck_box">
+          <input id="Two" class="css-checkbox" type="checkbox">
+          <label for="Two" name="demo_lbl_1" class="css-label">Remember Me</label>
+          </div>
+          
+          <div class="custom-checkbox NewCheck_box" style="text-align:right;">
+           <label name="demo_lbl_1" style="color:#0EB2B3" class="registerNow" onclick="hidelogin();" data-popup-open="popup-3" >Register Now</label>
+          </div> 
+          <input type="submit" name="submit" class="registerNow" value="LOGIN TO YOUR ACCOUNT">
+          <div class="forgetPsd">
+           <label name="forgot_pass" style="color:#0EB2B3" class="registerNow" onclick="hidelogin();" data-popup-open="popup-4" >Forgot Password?</label>
+          </div> 
+  </form>        
+      </div>
+  </div>    
+  </div>  
+  <!-- login pop up starts here -->    
+      
+  <!-- Registration pop up ends here -->    
+  <div class="pop-up" id="regPopup" data-popup="popup-3">
+  <div class="pop-up-container register-pop-container">
+      
+      <button type="button" name="" value="" data-popup-close="popup-3" class="close-btn"></button>
+      
+      <h6>Don’t have an Account?<br>Register Now</h6>
+      <div class="social-login">
+          <button type="button" name="" value="" class="fb-btn">login via facebook</button>
+          <button type="button" name="" value="" class="tw-btn">login via Twitter</button>
+      </div>
+      <div class="form">
+        <form method="post" id="regForm">
+              <input type="text" name="userName" id="userName" value="" placeholder="Enter your Username">
+              <span id="uservalidError" class="error" style="display:none;">Username Already Exits!</span>
+              <input type="text" name="name" id="name" value="" placeholder="Enter your Name">
+              <input type="text" name="email" id="email" value="" placeholder="Enter your email">
+              <span id="emailvalidError" class="error" style="display:none;">Email Already Exits!</span>
+              <input type="password" name="password" id="password" value="" placeholder="Enter your password">
+              <input type="password" name="confirmpassword" id="confirmpassword" value="" placeholder="Re-enter password">
+  
+              <div class="custom-checkbox accept-terms-checkbox">
+              <input id="three" class="css-checkbox" name="termCondition" type="checkbox" value="1"> 
+               <label class="css-label" for="three" name="demo_lbl_1" id="labelthree"> I agree with terms and conditions </label>
+             </div> 
+              
+              <div class="custom-checkbox">
+              <input id="four" class="css-checkbox" name="offers" type="checkbox" value="1">
+              <label for="four" name="demo_lbl_1" class="css-label">I want to receive offers and news</label>
+              </div>         
+          
+          <input type="submit" name="" id="subUser" class="registerNow" value="register now">
+          </form>
+      </div>
+  </div>    
+  </div>  
+  <!-- Registration pop up starts here --> 
+  
+  <!-- search starts here -->    
+  <div class="pop-up" data-popup="popup-1">
+  <div class="wrapper">
+  <div class="search-container">
+  
+  <div class="search-contr">
+  <input type="text" name="" value="" placeholder="search">
+  <input type="submit" name="" value="">
+  </div>        
+      
+      <button value="" name="" type="button" data-popup-close="popup-1" class="close-btn"></button>
+      
+  </div>
+  </div>    
+  </div>    
+  <!-- search ends here -->
+  <!-- Forgot Password pop up starts here -->    
+  <div class="pop-up" id="regPopup" data-popup="popup-4">
+  <div class="pop-up-container register-pop-container forgot-pop-container">
+      
+      <button type="button" name="" value="" data-popup-close="popup-4" class="close-btn"></button>
+      
+      <h6>Forgot Your Password?</h6>
+      <!--<div class="social-login">
+          <button type="button" name="" value="" class="fb-btn">login via facebook</button>
+          <button type="button" name="" value="" class="tw-btn">login via Twitter</button>
+      </div>-->
+      <div class="form">
+        <form method="post" id="forgotpassForm">
+              <input type="text" name="passEmail" id="passEmail" value="" placeholder="Enter your Email">
+            <input type="submit" name="" id="" class="registerNow" value="Forgot Password">
+          </form>
+      </div>
+  </div>    
+  </div>  
+  <!-- Forgot Password pop up ends here --> 

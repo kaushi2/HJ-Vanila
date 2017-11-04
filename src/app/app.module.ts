@@ -17,6 +17,8 @@ import { SearchComponent } from './search/search.component';
 import { HotelBookingComponent } from './hotel-booking/hotel-booking.component';
 import { HotelPoliciesComponent } from './hotel-policies/hotel-policies.component';
 import { Ng2CompleterModule } from "ng2-completer";
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { Ng2CompleterModule } from "ng2-completer";
     SearchComponent,
     SearchbarComponent,
     HotelBookingComponent,
-    HotelPoliciesComponent
+    HotelPoliciesComponent,
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
