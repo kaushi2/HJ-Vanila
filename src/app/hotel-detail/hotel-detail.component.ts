@@ -26,9 +26,10 @@ export class HotelDetailComponent implements OnInit {
   children: number;
   adults: number;
   priceFrom: string;
-  
+  isBusy: boolean;
   
   ngOnInit() {
+    window.scrollTo(0, 100);
     this.location = this.userSearch.Location;
     this.checkIn = this.userSearch.CheckIn;
     this.checkOut = this.userSearch.CheckOut;
@@ -36,10 +37,13 @@ export class HotelDetailComponent implements OnInit {
     this.children = this.userSearch.Children;
     this.adults = this.userSearch.Adults;
     this.starRating = Array(parseInt(this.userSearch.StarRating.toString())).fill(0).map((x, i) => i);
+    
+    this.isBusy = true;
     // this.userSearch = { Adults: 1, Children: 0, CheckIn: '2017-10-18', CheckOut: '2017-10-19', City: 'Sydney', CountryCode: 'AU' };
     this._searchService.getHotelByHotelIdFromApi(this.userSearch, this.userSearch.HotelId)
     //this._searchService.getHotelByHotelIdFromApi(this.userSearch, 1011550)
     .subscribe(hotelDetail => {
+      this.isBusy = false;
       this.hotel = hotelDetail;
       this.images = hotelDetail.Images.Image;
       this.options = hotelDetail.Options.Option;
@@ -50,6 +54,7 @@ export class HotelDetailComponent implements OnInit {
       }
     },
     err => {
+      this.isBusy = false;
       console.log(err);
     });
   

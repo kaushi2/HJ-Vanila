@@ -18,7 +18,8 @@ export class HotelPoliciesComponent implements OnInit {
   hotelBookingPersonalDetails: HotelBookingPersonalDetails = new HotelBookingPersonalDetails();
   optionId: string;
   roomId: string;
-
+  isBusy: boolean;
+  
   constructor(private _searchService: SearchService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
@@ -27,15 +28,19 @@ export class HotelPoliciesComponent implements OnInit {
       this.optionId = params['OptionId'];
       this.roomId = params['RoomId'];
       
+      this.isBusy = true;
       this._searchService.getHotelPolicyByOptionIdFromApi(this.optionId)
       .subscribe(hotelPolicyBody => {
+        this.isBusy = false;
         this.hotelPolicy = hotelPolicyBody;
         console.log(this.hotelPolicy)
       },
       err => {
+        this.isBusy = false;
         console.log(err);
       });
     });
+    window.scrollTo(0, 400);
   }
   public showHotelBookingComponent() {
     this.showHotelBooking = true;

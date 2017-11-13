@@ -18,7 +18,11 @@
 <!-- content ends here -->
 
 <!-- page content starts here -->
-<div *ngIf="!showHotelBooking" class="page-content thanks-page-content booking-content">
+<div class="isBusy" *ngIf="isBusy">
+    <img src="../assets/images/isBusy.gif" />
+    <span>Please Wait while we fetch the Booking Policies...</span>
+  </div>
+<div *ngIf="!showHotelBooking" [ngClass]="{'disabled': isBusy }" class="page-content thanks-page-content booking-content">
   <div class="wrapper">
     <div class="booking-content-left" *ngIf="hotelPolicy[0].Error">
       <h6>TIME OUT ! PLEASE TRY AGAIN !</h6>

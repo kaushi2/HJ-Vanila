@@ -32,6 +32,7 @@ export class SearchComponent implements OnInit {
   NextPageNo: number;
   PrevPageNo: number;
   hotels: Hotel[];
+  isBusy: boolean;
   
   ngOnInit() {
     // subscribe to router event
@@ -57,14 +58,18 @@ export class SearchComponent implements OnInit {
   }
 
   public Search_Click(CountryCode: string, City: string, Page: number, CheckInDate: Date, CheckOutDate: Date, NumOfAdults: number, NumOfChildren: number) {
+    window.scrollTo(0, 500);
+    this.isBusy = true;
     this._searchService.getHotelsByCityIdFromDb(CountryCode, City, Page)
       .subscribe(hotels => {
+        this.isBusy = false;
         //console.log(hotels);
         this.NextPageNo += 1;
         this.PrevPageNo -= 1;
         this.hotels = hotels;
       },
       err => {
+        this.isBusy = false;
         console.log(err);
       });
   }

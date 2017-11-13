@@ -1683,6 +1683,22 @@ select.error {
 }
 .pg-button:hover{background:#0eb2b3; color:#fff;}
 
+.disabled {
+    /*src="../assets/images/isBusy.gif"*/
+    pointer-events: none;
+    opacity: 0.4;
+}
+.isBusy{
+    position: absolute;
+    z-index: 1;
+    left: 40%;
+    width: 25%;
+    text-align: center;
+}
+.isBusy span {
+    display: inline-block;
+    font-size: 2em;
+}
 
 /* hotel detail content starts here */
 

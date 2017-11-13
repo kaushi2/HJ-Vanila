@@ -82,3 +82,8 @@ input[type="radio"] {
     display: inline-block;
     margin-top: 7%;
 }
+
+.hotel-detail-slider .carousel-inner .item img {
+    width: 784px;
+    height: 559px;
+}

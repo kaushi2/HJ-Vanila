@@ -1,24 +1,38 @@
 <app-hotel-detail [userSearch]="hotel" *ngIf="showHotelDetail"></app-hotel-detail>
+
 <div *ngIf="!showHotelDetail">
   <!-- content starts here -->
   <div class="top-sec hotel-list">
     <div class="inner-content">
-      <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;<b>Luxury</b></div>
+      <div class="page-location">Home&nbsp;&nbsp;|&nbsp;&nbsp;
+        <b>Luxury</b>
+      </div>
       <div class="page-heading">Hotels</div>
-      <div class="result-found">We found: <b *ngIf='hotels'>{{hotels.TotalRecords}}</b> hotels</div>
-      <div class="result-found"> <b>{{hotel.CheckIn | date: 'dd MMM yyyy'}} to {{hotel.CheckOut | date: 'dd MMM yyyy'}}</b></div>
+      <div class="result-found">We found:
+        <b *ngIf='hotels'>{{hotels.TotalRecords}}</b> hotels</div>
+      <div class="result-found">
+        <b>{{hotel.CheckIn | date: 'dd MMM yyyy'}} to {{hotel.CheckOut | date: 'dd MMM yyyy'}}</b>
+      </div>
     </div>
   </div>
   <!-- content ends here -->
 
   <!-- page content starts here -->
-  <div class="page-content">
+  <div class="isBusy" *ngIf="isBusy">
+    <img src="../assets/images/isBusy.gif" />
+    <span>Please Wait while we fetch the search results...</span>
+  </div>
+  <div class="page-content" [ngClass]="{'disabled': isBusy }">
     <div class="wrapper">
 
       <div class="breadcrumb">
         <ul>
-          <li><a href="#">home&nbsp;&nbsp;/&nbsp;&nbsp;</a></li>
-          <li><a href="#" class="active">Hotels</a></li>
+          <li>
+            <a href="#">home&nbsp;&nbsp;/&nbsp;&nbsp;</a>
+          </li>
+          <li>
+            <a href="#" class="active">Hotels</a>
+          </li>
         </ul>
       </div>
 
@@ -321,7 +335,9 @@
                     <img src="../assets/images/search-form/rating-star.png" alt="" *ngFor="let star of getArray(hotel.StarRating)">
                     <!-- <label>485 Reviews</label> -->
                   </span>
-                  <div class="col-description-text"><span *ngFor="let facility of hotel.facilities | slice:0:5; let i=index">{{facility.FacilityName}} | </span></div>
+                  <div class="col-description-text">
+                    <span *ngFor="let facility of hotel.facilities | slice:0:5; let i=index">{{facility.FacilityName}} | </span>
+                  </div>
                   <div class="col-description-text">{{hotel.Address}}</div>
                 </div>
 
@@ -337,7 +353,9 @@
           <div class="pagination">
             {{PrevPageNo}}
             <div class="pagination-col-1" *ngIf="PrevPageNo>0">
-              <a href="/Search/{{CountryCode}}/{{City}}/{{PrevPageNo}}"><button type="button" name="" value="" class="pg-button">Prev Page</button></a>
+              <a href="/Search/{{CountryCode}}/{{City}}/{{PrevPageNo}}">
+                <button type="button" name="" value="" class="pg-button">Prev Page</button>
+              </a>
             </div>
             <div class="pagination-col-2">
               <ul>
@@ -350,7 +368,9 @@
               </ul>
             </div>
             <div class="pagination-col-3">
-              <a href="/Search/{{CountryCode}}/{{City}}/{{NextPageNo}}"><button type="button" name="" value="" class="pg-button">Next Page</button></a>
+              <a href="/Search/{{CountryCode}}/{{City}}/{{NextPageNo}}">
+                <button type="button" name="" value="" class="pg-button">Next Page</button>
+              </a>
             </div>
           </div>
         </div>
