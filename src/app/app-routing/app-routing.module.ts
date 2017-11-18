@@ -38,6 +38,10 @@ const routes: Routes = [
     component: HotelDetailComponent
   },
   {
+    path: 'Hotel/:CountryCode/:City/:CheckInDate/:CheckOutDate/:NumOfAdults/:NumOfChildren/:HotelId',
+    component: HotelDetailComponent
+  },
+  {
     path: 'HotelPolicy/:OptionId/:RoomId',
     component: HotelPoliciesComponent
   },

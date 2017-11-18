@@ -31,6 +31,9 @@ export class SearchService {
       .catch((error:any) => Observable.throw(error.json().error || 'Server Error'));
   }
   getHotelByHotelIdFromApi(userSearch: Hotel, HotelId: number): Observable<Hotel> {
+    console.log(this.HotelsAPIUrl + userSearch.CountryCode + "/" + userSearch.City + "/1/" + 
+                userSearch.CheckIn + "/" + userSearch.CheckOut + "/" + 
+                userSearch.Adults + "/" + userSearch.Children + "/" + HotelId);
     return this.http.get(this.HotelsAPIUrl + userSearch.CountryCode + "/" + userSearch.City + "/1/" + 
                           userSearch.CheckIn + "/" + userSearch.CheckOut + "/" + 
                           userSearch.Adults + "/" + userSearch.Children + "/" + HotelId)
